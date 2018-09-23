@@ -1,0 +1,31 @@
+Django:
+
+Pour Creer une nouvelle app
+
+-1)cmd, powershell ou autre invite de commande
+-2)se placer dans le dossier que l'on veut, grace à la commande 'cd' par exemple
+-3)python manage.py startapp nomdetonapp
+
+
+Pour Lancer un serveur local
+1)cmd, powershell ou autre invite de commande
+2)se placer dans le dossier que l'on veut, grace à la commande 'cd' par exemple
+3)python manage.py runserver
+4)Accès du site en localhost:8000
+
+
+urls.py: Sert à rédiriger les urls vers views.py, permet l'execution de function en python
+et affichage de template HTML.
+il y a un urls.py à la racine du site "MyWebsite", ce sera le premier urls.py qui sera lu lorsqu'un 
+utilisateur accède à l'url du site. Après on peut rediriger vers le urls.py de notre application.
+
+models.py: Contient les tables
+forms.py: Contient les formulaires permettant par exemple de faire des INSERT dans la base de données.
+
+
+
+
+
+pour modifier base de donnée, après avoir creer une table dans models.py
+python manage.py makemigrations
+python manage.py migrate
