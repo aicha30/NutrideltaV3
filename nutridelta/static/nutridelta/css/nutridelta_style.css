@@ -1,0 +1,76 @@
+    html, body{margin:0;padding:0;}
+    div{border:	0px solid black;}
+
+
+/*contenu principal d'une page*/
+
+.main_content{margin-top:20px;width:100%;padding:9px;max-width:1000px;margin:auto;}
+
+.content_test{margin-top:1.5%;}
+/*contenu principal d'une page*/
+   
+
+
+
+/*header*/
+
+.header{height:65px;background-color:#555555;box-shadow:1px 1px 5px #777777;}
+
+
+/*header*/
+
+
+
+
+
+
+
+.container_new_aliment{margin-bottom:6%;}
+#new_aliment{width:23%;margin:auto;text-align:center;min-height:29px;}
+
+
+.container_categorie{width:100%;margin-bottom:6%;}
+
+.categorie{width:23%;margin-left:0.5%;margin-right:0.5%;min-height:50px;text-align:center;
+}
+.categorie_title{padding:5px;background-color:#E17632;}
+@media screen and (max-width:900px){
+	.categorie{width:45%;margin-bottom:2%;}
+	#new_aliment{width:45%;}
+}
+
+.content_categorie{width:100%;flex-flow: wrap;font-size:16px;
+	justify-content: center;overflow:auto;padding-top:15px;padding-bottom:15px;min-height:50px;}
+        
+
+.aliment{max-width:140px;margin:auto;box-shadow:2px 2px 3px #BBBBBB;border:1px solid #CCCCCC;:3px 5px 3px 5px;cursor:pointer;padding:3px 6px 3px 6px;background-color:#FFFFFF;}
+.aliment_text{}
+
+.volaille{background:url('../img/category/volaille.jpg')center/cover;}
+
+
+
+
+
+
+
+
+/*button*/
+
+.button1{margin:3px;margin:auto;padding:4px 10px 4px 10px;font-size:20px;
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);}
+.button1:hover{background-color:#E4E4E4;}
+.button1:active{box-shadow: 0 0px 3px rgba(0,0,0,0.38), 0 0px 2px rgba(0,0,0,0.55);}
+/*button*/
+
+
+
+
+/*shadow*/
+
+.shadow_google{box-shadow: 0 0px 3px rgba(0,0,0,0.18), 0 0px 2px rgba(0,0,0,0.35);
+    border-radius:3px;}
+
+
+/*shadow*/

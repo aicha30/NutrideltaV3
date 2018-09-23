@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content1 %}
+<div class="cadre-principal">
+            {% if latest_question_list %}
+            
+            <div class="container-questions">
+            
+            {% for question in latest_question_list %}
+            
+            <div class="container-question">
+            
+            <div class="question">
+                <a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a>
+            </div>
+          
+
+            <div class="container-reponse">
+            
+            <form action="{% url 'polls:vote' question.id %}" method="post">
+            {% for choice in question.choice_set.all %}
+            {% csrf_token %}
+            ({{choice.votes}}) {{choice.choice_text}}
+            <input type="radio" name="choice" value="{{ choice.id }}"  />
+            <br><br>
+            {% endfor %}
+            <input type="submit" value="Vote" />
+            </form>
+            
+                 
+            </div>
+
+            </div>
+            {% endfor %}
+            
+            {% else %}
+            <p>No polls are available.</p>
+            {% endif %}
+            
+            </div>
+            
+</div>
+{% endblock %}

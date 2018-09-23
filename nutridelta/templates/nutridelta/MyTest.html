@@ -1,0 +1,73 @@
+{% extends 'header.html' %}
+{% block body %}
+
+
+
+
+
+
+
+
+
+{{ Aliment.aliment_name}}
+  <div class="main_content content_test">
+    <div style="width:100%;text-align:center;font-size:20px;">A quelle fréquence consommez vous...</div>
+<div class="container_new_aliment"style="width:100%;-top:50px;margin-top:1%;">
+      <div  id="new_aliment">
+        <div class='aliment' ><span class='aliment_text'></span></div>
+   </div>
+</div>
+
+
+<div class="container_categorie" >
+  <div style=":auto;display:flex;justify-content: center;flex-flow:wrap;">
+    
+      <div class="categorie shadow_google">
+      <div class="categorie_title">Rarement</div>
+      <div class="content_categorie"  id="rarely" >
+     
+      </div>
+      </div>
+
+
+     <div class="categorie shadow_google">
+      <div class="categorie_title">Parfois</div>
+      <div class="content_categorie"  id="sometimes" >
+     
+      </div>
+      </div>
+    
+
+
+      <div class="categorie shadow_google">
+      <div class="categorie_title">Souvent</div>
+      <div class="content_categorie"  id="often" >
+     
+      </div>
+      </div>
+
+
+      <div class="categorie shadow_google">
+      <div class="categorie_title">Toujours</div>
+      <div class="content_categorie"  id="always" >
+     
+      </div>
+      </div>
+    
+ 
+
+
+
+</div>
+</div>
+
+<div style="width:100%;display:flex;margin-top:40px;">
+  <div  class="button1 shadow_google" onclick="algo_nutrition();"><div style="margin:3px;cursor:pointer;" >Calculer</div></div>
+</div>
+
+
+</div>
+
+
+{% endblock %}
+
