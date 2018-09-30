@@ -1,18 +1,22 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404, redirect
 from django.template.response import TemplateResponse
 from django.urls import reverse
 from django.http import HttpResponse,HttpResponseRedirect
 from .models import aliment
-from .forms import formaliment
+from .forms import form_aliment, SignUpForm, loginForm
+from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth.forms import UserCreationForm
+
 
 # Create your views here.
 
 def index(request):
+
 	return render(request, 'nutridelta/index.html', locals())
 
-def MyTest(request):
+def mytest(request):
 	if request.method == "GET":
-		form= formaliment(request.GET)
+		form= form_aliment(request.GET)
 
 		if(form.is_valid()):
 
@@ -23,17 +27,57 @@ def MyTest(request):
 			if not Aliment_obj:
 				form.save()
 
-			
-
-
-
 			return render(request, 'nutridelta/MyTest.html', locals())
 
-
-	
-
-	
 	return render(request, 'nutridelta/MyTest.html', locals())
+
+
+
+
+def register(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            
+            username = form.cleaned_data.get('username')
+            raw_password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=raw_password)
+            login(request, user)
+            return redirect('nutridelta:index')
+    else:
+        form = SignUpForm()
+
+   
+    return render(request, 'nutridelta/signup.html', {'form': form})
+
+
+
+
+def loginMeplease(request):
+    error = False
+    
+
+    if request.method == "POST":
+        form = loginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data["username"]
+            password = form.cleaned_data["password"]
+            user = authenticate(username=username, password=password)  # Nous vérifions si les données sont correctes
+            if user:  # Si l'objet renvoyé n'est pas None
+                login(request, user)  # nous connectons l'utilisateur
+                return redirect('nutridelta:connexion')
+            else: # sinon une erreur sera affichée
+                error = True
+    else:
+        form = loginForm()
+
+    return render(request, 'nutridelta/login.html', locals())
+
+
+def deco(request):
+    logout(request)
+    return redirect(reverse('nutridelta:login'))
 
 
 

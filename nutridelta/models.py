@@ -9,3 +9,5 @@ class aliment(models.Model):
 	frequency = models.CharField(max_length=200,default='')
 
 
+
+
