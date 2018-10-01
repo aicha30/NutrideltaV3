@@ -67,6 +67,7 @@ def loginMeplease(request):
         form = loginForm(request.POST)
         if form.is_valid():
             username = form.cleaned_data["email"]
+          
             password = form.cleaned_data["password"]
             user = authenticate(username=username, password=password)  # Nous vérifions si les données sont correctes
             if user:  # Si l'objet renvoyé n'est pas None
