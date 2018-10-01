@@ -34,6 +34,10 @@ def mytest(request):
 
 
 
+
+
+
+
 def register(request):
     if request.method == 'POST':
         form = SignUpForm(request.POST)
@@ -59,20 +63,24 @@ def loginMeplease(request):
     
 
     if request.method == "POST":
+        next = request.POST.get('next', '/')
         form = loginForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data["username"]
+            username = form.cleaned_data["email"]
             password = form.cleaned_data["password"]
             user = authenticate(username=username, password=password)  # Nous vérifions si les données sont correctes
             if user:  # Si l'objet renvoyé n'est pas None
                 login(request, user)  # nous connectons l'utilisateur
-                return redirect('nutridelta:connexion')
+                return HttpResponseRedirect(next)
             else: # sinon une erreur sera affichée
                 error = True
     else:
         form = loginForm()
 
     return render(request, 'nutridelta/login.html', locals())
+
+
+
 
 
 def deco(request):

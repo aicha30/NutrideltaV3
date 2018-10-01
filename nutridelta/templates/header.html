@@ -51,16 +51,19 @@
   </div>
 </div> 
 
-           <form class="flex-row justify-content-between ml-auto form-inline my-2 my-lg-0" style="margin-left:25px;">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+          
 
             
             
             <ul class="nav navbar-nav flex-row justify-content-between ml-auto">
                <button type="button" onclick="window.location.href='register';"class="btn btn-outline-secondary margin-right" >Inscription</button>
-                <button type="button" onclick="window.location.href='connexion';"class="btn btn-outline-secondary margin-right" >Connexion</button>
+                
+                {% if user.is_authenticated %}
+                <button type="button" onclick="window.location.href='logout';"class="btn btn-outline-secondary margin-right" >deconnexion</button>
+                {% else %}
+                 <button type="button" onclick="window.location.href='login';"class="btn btn-outline-secondary margin-right" >Connexion</button>
+                 {% endif %}
+
 
             </ul>
         </div>
