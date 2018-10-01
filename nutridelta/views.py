@@ -84,8 +84,9 @@ def loginMeplease(request):
 
 
 def deco(request):
+    next = request.POST.get('next', '/')
     logout(request)
-    return redirect(reverse('nutridelta:login'))
+    return HttpResponseRedirect(next)
 
 
 

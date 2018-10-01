@@ -15,12 +15,22 @@
 
 
 
+/*header*/
+.main_content1{max-width:900px;margin:auto;}
+/*header*/
+
+
+
+
+
+
+
 /*page MyTest.html*/
 
 .container_new_aliment{margin-bottom:6%;}
 #new_aliment{width:23%;margin:auto;text-align:center;min-height:29px;}
 .container_categorie{width:100%;margin-bottom:6%;}
-.categorie{width:23%;margin-left:0.5%;margin-right:0.5%;min-height:50px;text-align:center;}
+.categorie{width:23%;margin-left:0.5%;margin-right:0.5%;min-height:50px;text-align:center;cursor:pointer;}
 .categorie_title{padding:5px;background-color:#E17632;}
 
 @media screen and (max-width:900px){
@@ -29,7 +39,9 @@
 }
 
 .content_categorie{width:100%;flex-flow: wrap;font-size:16px;
-	justify-content: center;overflow:auto;padding-top:15px;padding-bottom:15px;min-height:50px;.aliment{max-width:140px;margin:auto;box-shadow:2px 2px 3px #BBBBBB;border:1px solid #CCCCCC;:3px 5px 3px 5px;cursor:pointer;padding:3px 6px 3px 6px;background-color:#FFFFFF;}
+	justify-content: center;overflow:auto;padding-top:15px;padding-bottom:15px;min-height:50px;
+}
+.aliment{max-width:140px;margin:auto;box-shadow:2px 2px 3px #BBBBBB;border:1px solid #CCCCCC;:3px 5px 3px 5px;cursor:pointer;padding:3px 6px 3px 6px;background-color:#FFFFFF;}
 
 
 
