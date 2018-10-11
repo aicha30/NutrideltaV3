@@ -2,10 +2,11 @@ from django.shortcuts import render,get_object_or_404, redirect
 from django.template.response import TemplateResponse
 from django.urls import reverse
 from django.http import HttpResponse,HttpResponseRedirect
-from .models import aliment
+from .models import *
 from .forms import form_aliment, SignUpForm, loginForm
-from django.contrib.auth import logout, login, authenticate
+from django.contrib.auth import logout, login, authenticate,get_user_model
 from django.contrib.auth.forms import UserCreationForm
+
 
 
 # Create your views here.
@@ -66,10 +67,20 @@ def loginMeplease(request):
         next = request.POST.get('next', '/')
         form = loginForm(request.POST)
         if form.is_valid():
-            username = form.cleaned_data["email"]
-          
+            usernameOrEmail=form.cleaned_data["usernameOrEmail"]
+            if '@' in usernameOrEmail:
+                email= usernameOrEmail
+                loginName = User.objects.get(email=email).username
+            else:
+                loginName= usernameOrEmail
+                
+            
+            
             password = form.cleaned_data["password"]
-            user = authenticate(username=username, password=password)  # Nous vérifions si les données sont correctes
+            
+            user = authenticate(username=loginName, password=password)  # Nous vérifions si les données sont correctes
+           
+            
             if user:  # Si l'objet renvoyé n'est pas None
                 login(request, user)  # nous connectons l'utilisateur
                 return HttpResponseRedirect(next)

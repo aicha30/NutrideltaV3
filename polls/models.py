@@ -9,7 +9,7 @@ import datetime
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateField('date', default=datetime.date.today);
+    pub_date = models.DateTimeField('date');
 
 
 class Choice(models.Model):
