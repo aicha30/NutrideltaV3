@@ -9,6 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 
+
 # Create your views here.
 
 def index(request):
@@ -44,11 +45,10 @@ def register(request):
         form = SignUpForm(request.POST)
         if form.is_valid():
             form.save()
-            
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
-            user = authenticate(username=username, password=raw_password)
-            login(request, user)
+            # user = authenticate(username=username, password=raw_password)
+            # login(request, user)
             return redirect('nutridelta:index')
     else:
         form = SignUpForm()
@@ -66,6 +66,7 @@ def loginMeplease(request):
     if request.method == "POST":
         next = request.POST.get('next', '/')
         form = loginForm(request.POST)
+        
         if form.is_valid():
             usernameOrEmail=form.cleaned_data["usernameOrEmail"]
             if '@' in usernameOrEmail:
@@ -77,7 +78,6 @@ def loginMeplease(request):
             
             
             password = form.cleaned_data["password"]
-            
             user = authenticate(username=loginName, password=password)  # Nous vérifions si les données sont correctes
            
             

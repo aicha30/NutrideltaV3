@@ -12,4 +12,3 @@ class aliment(models.Model):
 
 
 
-
