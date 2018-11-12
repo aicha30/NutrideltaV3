@@ -52,32 +52,38 @@
 
  /* permet de déclarer nos variables en css */
  :root {
+  --mediumScreen:900px;
 	--Smargin1: 0.33em;
 	--Smargin2: 0.66em;
 	--Smargin3: 1em;
 	--Nmargin1:1.33em;
 	--Nmargin2:1.66em;
 	--Nmargin3:2em;
+	--respFont1:20px;
+	--respMargin1:2em;
  }
 
  /* si la taille d'écran est en dessous de 900px (ex: telephone, tablette) */
  /* on change la valeur de nos variables  */
- @media screen and (max-width:900px) {
+ @media screen and (max-width:var(--mediumScreen)) {
  	:root {
 		 --Smargin1: 0.15em;
+		 --respFont1:12px;
+		 --respMargin1:0.5em;
 		
  	}
- }
-
+}
 
  html, body {
 	margin: 0;
 	padding: 0;
 	font-family: 'kelson_lt', sans-serif;
+  background-image:url('../themeNutridelta/fond_result.jpg');
+	
 }
 
 div {
-	border: 0px solid black;
+	border: 0px solid #666666;
 }
 
  /*header*/
@@ -86,7 +92,8 @@ div {
 	 margin:var(--Nmargin1) auto var(--Nmargin1) auto;
 	 width:100%;
 	 max-width:800px;
-	 
+   padding:1.25em;
+
 	 
  }
 
@@ -95,8 +102,10 @@ div {
 
   /*div de contenu principale*/
  .main_content1 {
-	max-width: 900px;
-	margin: auto;
+	width:100%;display:flex;
+  max-width:800px;margin:auto;
+  padding:0.76em;
+  background-color:rgba(255,255,255,0.88);
 }
 /*div de contenu principale*/
 
@@ -200,10 +209,10 @@ div {
 
  /*shadow*/
 
- .shadow-google {
- 	padding: 1.2em;
- 	box-shadow: 0 0px 3px rgba(0, 0, 0, 0.18), 0 0px 2px rgba(0, 0, 0, 0.35);
- 	border-radius: 3px;
+ .shadow_google {
+
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+ 
  }
 
  /*shadow*/
@@ -222,3 +231,13 @@ div {
  .margin-left {
  	margin-left: var(--margin1);
  }
+  /*margin */
+
+
+
+
+
+  
+
+
+

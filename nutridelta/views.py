@@ -103,3 +103,7 @@ def deco(request):
 
 
 
+
+
+def test(request, numberQuestion):
+    return render(request,'nutridelta/questions/Question1.html')

@@ -1,21 +1,23 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>Se connecter</h1>
-
-{% if error %}
-<p><strong>Utilisateur inconnu ou mauvais de mot de passe.</strong></p>
-{% endif %}
-
-{% if user.is_authenticated %}
-
-Vous êtes connecté, {{ user.username }} !
-{% else %}
-{{username}}
-<form method="post" action="">
+<div class="shadow-google">
+  <h2>Connexion</h2>
+  <form method="post">
     {% csrf_token %}
-    {{ form.as_p }}
-    <input type="submit" value="Se connecter" />
-</form>
-{% endif %}
+    {% for field in form %}
+      <div>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="color: grey">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+    {% endfor %}
+    <button type="submit">Connexion</button>
+  </form>
+</div>
 {% endblock %}
