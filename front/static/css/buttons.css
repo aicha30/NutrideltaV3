@@ -1,0 +1,25 @@
+.button1
+{
+  width:100%;
+  box-shadow: 3px 3px;
+  margin: auto;
+  font-family: 'kelson_md', sans-serif;
+  background-color: #e6432e;
+  transition: all 0.13s;
+  cursor: pointer;
+  padding: 10px;
+  border: 2px solid white;
+  color: white;
+  display: block;
+
+
+}
+.button1:hover{
+
+  opacity:0.75;
+}
+.button1:active 
+{
+  transform: translate(3px, 3px);
+  box-shadow: none;
+}

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light header1 shadow_google" >
+  <a class="navbar-brand" href="{% url 'nutridelta:index' %}">Nutridelta</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Le Test</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">La boutique</a>
+      </li>
+    </ul>
+        {% if user.is_authenticated %}
+            <a class="btn btn-light" href="{% url 'nutridelta:logout' %}">Deconnexion</a>
+           
+        {% else %}
+             <a class="btn btn-light" href="{% url 'nutridelta:register' %}">Inscription</a>
+            <a class="btn btn-light"" href="{% url 'nutridelta:login' %}">Connexion</a>
+        {% endif %}
+            
+    </span>
+  </div>
+        
+</nav>

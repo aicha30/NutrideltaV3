@@ -9,9 +9,7 @@ urlpatterns = [
     
     path('test/<int:numberQuestion>', views.test, name='test'),
 
-    path('register', views.register, name='register'),
-    path('login', views.loginMeplease, name='login'),
-    path('logout', views.deco, name='logout'),
+  
     path('mytest', views.mytest, name='mytest'),
     
     

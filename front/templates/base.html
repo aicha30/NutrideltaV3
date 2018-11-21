@@ -1,0 +1,86 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutridelta V3</title>
+
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="{% static 'css/nutridelta_style.css' %}">
+
+
+
+
+</head>
+
+<body>
+    
+<nav class="navbar navbar-expand-lg navbar-light bg-light header1 shadow_google" >
+  <a class="navbar-brand" href="{% url 'nutridelta:index' %}">Nutridelta</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Le Test</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">La boutique</a>
+      </li>
+    </ul>
+        {% if user.is_authenticated %}
+            <a class="btn btn-light" href="{% url 'account:logout' %}">Deconnexion</a>
+           
+        {% else %}
+             <a class="btn btn-light" href="{% url 'account:register' %}">Inscription</a>
+            <a class="btn btn-light"" href="{% url 'account:login' %}">Connexion</a>
+        {% endif %}
+            
+    </span>
+  </div>
+        
+</nav>
+        
+
+
+            
+            {% block content %}
+            
+            {% endblock %}
+         
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+<script src="{% static 'js/jquery-2.1.3.js' %}"></script>
+<script src="{% static 'js/jquery-ui.js' %}"></script>
+
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+
+<script src="{% static 'js/drag_aliments.js' %}"></script>
+<script src="{% static 'js/nutridelta_style.js' %}"></script>
+
+
+</body>
+</html>
+
+
+
