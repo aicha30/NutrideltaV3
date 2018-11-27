@@ -1,8 +1,9 @@
 .button1
 {
+
   width:100%;
   box-shadow: 3px 3px;
-  margin: auto;
+  margin: 2em auto auto auto ;
   font-family: 'kelson_md', sans-serif;
   background-color: #e6432e;
   transition: all 0.13s;

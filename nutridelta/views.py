@@ -9,7 +9,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 
 
-
+app_name='nutridelta'
 # Create your views here.
 
 def index(request):

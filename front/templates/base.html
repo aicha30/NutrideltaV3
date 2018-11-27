@@ -8,10 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nutridelta V3</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
 
 
 <link rel="stylesheet" href="{% static 'css/nutridelta_style.css' %}">
@@ -23,57 +24,171 @@
 
 <body>
     
-<nav class="navbar navbar-expand-lg navbar-light bg-light header1 shadow_google" >
-  <a class="navbar-brand" href="{% url 'nutridelta:index' %}">Nutridelta</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark text-center " style="box-shadow:2px 2px 2px #AAAAAA;">
+  <div class="container-fluid">
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#collapse_target">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Le Test</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">La boutique</a>
-      </li>
+  <div class="collapse navbar-collapse" id="collapse_target">
+    <div class="navbar-header">
+      <!--L'emplancement du logo de Nutridelta -->
+      <a class="navbar-brand" href="{% url 'nutridelta:index' %}"><img id="logo" src="{% static 'themeNutridelta/logo-minimaliste.png' %}"></a>
+        <!--L'emplancement du logo de Nutridelta -->
+
+     
+    </div>
+
+
+
+  <!--les différents choix pour l'utilisateur dans le menu -->
+  <!--Chaque option du menu est soit en clair soit en gris-->
+  <ul class="navbar-nav" >
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'nutridelta:index' %}">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Test</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Fiches</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link " href="#">A propos</a>
+    </li>
     </ul>
-        {% if user.is_authenticated %}
-            <a class="btn btn-light" href="{% url 'account:logout' %}">Deconnexion</a>
-           
-        {% else %}
-             <a class="btn btn-light" href="{% url 'account:register' %}">Inscription</a>
-            <a class="btn btn-light"" href="{% url 'account:login' %}">Connexion</a>
-        {% endif %}
-            
-    </span>
-  </div>
-        
+  
+     <!--<li class="nav-item">
+      <a class="nav-link" href="#"><span class="navbar-search-icon"></span></a>
+    </li>-->
+    <ul class="navbar-nav right">
+    <li class="nav-item">
+    {% if user.is_authenticated %}
+        <a class="nav-link" href="{% url 'accounts:logout' %}">Deconnexion</a>   
+    {% else %}
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'accounts:register' %}"><span class="glyphicon glyphicon-user"></span> Inscription</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'accounts:connexion' %}"><span class="glyphicon glyphicon-log-in"></span> Connexion</a>
+    {% endif %}
+    </li>
+   <!-- <form class="form-inline" action="#">
+    <input class="form-control mr-sm-2" type="text" placeholder="Taper votre texte !" style="height:25px;font-size:12px;">
+    <button class="btn btn-danger" type="submit" style="height:25px;font-size:12px;display:flex;padding:0;padding-left:0.4em;padding-right:0.4em;"><div style="margin:auto;">Search</div></button>
+  </form>-->
+  </ul>
+</div>
+</div>
 </nav>
         
 
 
-            
+         <main style="min-height: 50%; ">
             {% block content %}
+           
+              <!--  On affiche ici les messages(qu'on peut generer dans les views) -->
+                {% if messages %}
+                    {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}" role="alert">
+                        <p>{{ message }}</p>
+                    </div>
+                    {% endfor %}
+                {% endif %}
             
+
             {% endblock %}
-         
+          </main>
+<!-- Footer -->
+         <!-- Footer -->
+          <footer class="mastfoot mt-auto">
+
+            <!-- Footer Elements -->
+            <div class="container-fluid text-center text-md-left mt-5" style="margin:0;padding:0;">
+              <div class="card text-white bg-dark mb-23" style="margin:0;padding:0em;">
+                <div class="card-footer bg-transparent" style="margin:0;">
+
+                  <!-- Social buttons -->
+
+
+                  <div class="footer-center magic_flos_responsive">
+                    <a href="#"><img id="logo" src="{% static 'themeNutridelta/logo-footer.png' %}"></a>
+                  </div>
+
+                  <div class="footer-center magic_flos_responsive linksite">
+                   <div class="margin-right"><a href="">Acceuil</a></div>
+                   <div class="margin-right"><a href="">Faire le test</a></div>
+                   <div class="margin-right"><a href="">Mon profil</a></div>
+                   <div class="margin-right"><a href=""> A propos</a></div>
+                   <div class="margin-right"><a href="">Mention légales et CGU</a></div>
+                   <div class="margin-right"><a href="">Contact</a></div>
+                 </div>
+
+              <div class="footer-center magic_flos_responsive margin-bottom" >
+
+                  <ul class="list-unstyled list-inline text-left" style="font-size: 40px;">
+
+                    <!-- Facebook -->
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-fb mx-1" style="color:#3B5998" href="https://www.facebook.com/">
+                        <i class="fa fa-facebook"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-tw mx-1" style="color:#33CCFF">
+                        <i class="fa fa-twitter"> </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-gplus mx-1"style="color:#DD4B39">
+                        <i class="fa fa-google-plus"> </i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a class="btn-floating btn-li mx-1" style="color:#0e76a8">
+                        <i class="fa fa-linkedin"> </i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+        <!-- contact --> 
+        <div class="row margin-bottom">
+         <div style="margin:auto;text-align:center;">
+          <div><i class="fa fa-home mr-3"></i>79 Avenue de la République, 17210 Montlieu la garde, France</div>
+
+          <div><i class="fa fa-phone mr-3 hover"></i> 05 46 48 34 30</div>
+
+          <div><i class="fa fa-envelope mr-3"></i><a href="mailto:contact@nutridelta.fr">contact@nutridelta.fr</a></div>
+
+        </div>
+      </div>
+      <!-- Copyright -->
+        <div class="row" style="margin-top:1.6em;">
+          <div class="small_font_size" style="margin:auto;text-align:center;">
+          <cite ><i>Tous droits réservés. Nutridelta 2018 - 2019
+          . Made with by GPhy</i></cite>
+        </div>
+        <!-- Copyright -->
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer -->
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
-<script src="{% static 'js/jquery-2.1.3.js' %}"></script>
-<script src="{% static 'js/jquery-ui.js' %}"></script>
+
 
 
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script> 
+
 
 <script src="{% static 'js/drag_aliments.js' %}"></script>
 <script src="{% static 'js/nutridelta_style.js' %}"></script>

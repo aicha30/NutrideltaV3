@@ -1,16 +1,39 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load static %}
 
 
 
 
 
 
-    <div class="button1" style="margin:auto;cursor:pointer;" 
-        onclick="window.location.href='test/1'">
-      Faire le test
-    </div>
 
+<div style="width:100%;display:flex;">
+<div class="left_side_index">
+	<div style="display:flex; box-shadow: 10px 10px 10px black;margin:auto;border-radius:5px;" >
+		<button  class="btn btn-outline-danger btn-lg btn-block">FAIRE LE TEST RAPIDE</button>
+	</div>
+<div style="display:flex; box-shadow: 10px 10px 10px black;margin:auto;border-radius:5px;margin-top:20px" >
+		<button  class="btn btn-outline-danger btn-lg btn-block">FAIRE LE TEST COMPLET</button>
+	</div>
+
+
+
+	<div style="margin-top: 50px; ">
+		<a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-bienetre.png' %}" style="width: 15.5%;" /></a>
+		<a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-sport.png' %}" style="width: 15.5%; "/></a>
+		<a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-examen.png' %}" style="width: 15.5%;" /></a>
+		<a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-grossesse.png' %}" style="width: 15.5%;"/></a>
+		<a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-regime.png' %}" style="width: 15.5%;"  /></a>
+		<a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-sante.png' %}" style="width: 15.5%;" /></a>
+	</div>
+</div>
+
+
+
+
+
+	<div class="logo" ><img style="width:100%;  " src="{% static 'themeNutridelta/logo_transparent.png' %}"></div> 
 
 
 

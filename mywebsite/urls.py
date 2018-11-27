@@ -9,7 +9,7 @@ urlpatterns = [
 	path('', include('nutridelta.urls')),
     
    path('admin/', admin.site.urls),
-   path('account/', include('account.urls')),
+   path('accounts/', include('accounts.urls')),
 
 
 

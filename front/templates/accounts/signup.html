@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<div class="content1">
+
+
+  <div class="form-group title1" ><b>Inscription</b></div>
+  
+  <form method="post">
+    {% csrf_token %}
+
+    {% if custom_error %}
+    {% for elem in custom_error %}
+    <div class="alert alert-danger" role="alert">{{ elem }}</div>
+    {% endfor %}
+    {% endif %}
+
+    {% for field in form %}
+    {% for error in field.errors %}
+    <div class="alert alert-danger" role="alert" >{{ error }}</div>
+    {% endfor %}
+    {% endfor %}
+
+
+    <div class="form-group">
+      <label for="id_username" style="">Nom d'utilisateur</label>
+      <input type="text" class="form-control" required name="username" id="id_username" >
+    </div>
+
+    <div class="form-group">
+      <label for="id_email" style="">Adresse email</label>
+      <input type="email" class="form-control" required name="email" id="id_email" aria-describedby="emailHelp" >
+      <small id="emailHelp" class="form-text text-muted">Nous ne partegerons jamais votre adresse email.</small>
+    </div>
+
+    <div class="form-group">
+      <label for="id_password1" style="">Mot de passe</label>
+      <input type="password" class="form-control"  required name="password1" id="id_password1" >
+    </div>
+
+    <div class="form-group">
+      <label for="id_password2" style="">Confirmation de mot de passe</label>
+      <input type="password" class="form-control" required name="password2" id="id_password2" >
+    </div>
+
+
+      <div class="form-group">
+    <input type="checkbox"  required class="margin-right">J'ai bien lu et j'accepte les conditions générales d'utilisation.
+      <div style="">
+        <input type="submit" id="btn-next" class="button1"  value="Inscription" > 
+      </div>   
+
+    </div>
+  </form>
+
+
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--  {% for field in form %}
+  <div style="margin-top:15px;font-size:13px;font-weight:">
+    <div><b>{{ field.label_tag }}</b></div>
+    <div style="margin-top:-7px;font-size:17px;">{{ field }}</div>
+  </div>
+  
+
+        {% if field.help_text %}
+          <small style="color: grey;font-size:11px;">{{ field.help_text }}</small>
+          {% endif %} 
+          {% endfor %} -->

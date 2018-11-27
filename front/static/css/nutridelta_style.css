@@ -57,6 +57,7 @@
   --mediumScreen:900px;
   --mediumPadding:1.77em;
   --mediumMargin:1.77em;
+  --bigmargin:3em;
 
   --smallPadding:0.77em;
   --smallMargin:0.77em;
@@ -68,6 +69,8 @@
 	--respMargin1:2em;
 
 	--nutrideltaColor:#E64632;
+
+	--light_shadow:0px 0px 1.5px #999999;
 
  }
 
@@ -85,14 +88,13 @@
 
 
 
- html, body {
-	margin: 0;
-	padding: 0;
-	font-family: 'kelson_mt', sans-serif;
-	background-color:#DDDDDD;
-  /*background-image:url('../themeNutridelta/fond_result.jpg');*/
-	
+body, html {
+ height: 100%;
+ padding: 0;
+ background-image:url('../themeNutridelta/fond_result.jpg');
+
 }
+
 
 div {
 	border: 0px solid #666666;
@@ -105,33 +107,42 @@ div {
 	 margin:var(--Nmargin1) auto var(--Nmargin1) auto;
 	 width:100%;
 	 max-width:1200px;
-   
+  
 
 	 
  }
 
  /*header*/
-
-
-  /*div de contenu principale*/
- .main_content1 {
-display:flex;
- max-width:900px;
- background-color:white;
- margin:var(--mediumPadding) auto var(--mediumPadding) auto;
+.right{
+	margin-left:auto;
 }
 
-.main_content2 {
-
- max-width:700px;
- background-color:white;
- padding:var(--mediumPadding);
- margin:var(--mediumPadding) auto var(--mediumPadding) auto;
- box-shadow:0px 0px 14px #AAAAAA;
- border-radius:var(--smallBorderRadius);
+  /*div de contenu principale*/
+ main{
+ 	max-width:1080px;
+ 	
+ 	
+ 	margin:auto;
+ 	margin-top:var(--bigmargin);
+ }
 
 /*div de contenu principale*/
+.content1{
 
+margin:var(--bigmargin);
+background-color:white;
+padding:var(--mediumPadding);
+box-shadow:var(--light_shadow);
+}
+@media screen and (max-width:900px){
+	.content1{
+
+margin:0.33em;
+background-color:white;
+padding:var(--mediumPadding);
+box-shadow:var(--light_shadow);
+}
+}
 
 /*container*/
 
@@ -151,11 +162,15 @@ font-size:var(--respTitle1);
 
 
 
+.magic_flos_responsive{
+	display:flex;flex-wrap: wrap;justify-content:center;
+}
 
 
 
-
-
+.small_font_size{
+	font-size:10px;
+}
 
  /*shadow*/
 
@@ -168,19 +183,30 @@ font-size:var(--respTitle1);
  /*shadow*/
 
 
-
-
+footer .linksite a{
+	color:white;
+}
+footer .linksite a:hover{
+	
+	
+}
 
 
  /*margin */
 
  .margin-right {
- 	margin-right: var(--margin1);
+ 	margin-right: var(--smallMargin);
  }
 
  .margin-left {
- 	margin-left: var(--margin1);
+ 	margin-left: var(--smallMargin);
  }
+
+ .margin-bottom {
+ 	margin-bottom: var(--smallMargin);
+ }
+
+
   /*margin */
 
 
@@ -203,72 +229,27 @@ font-size:var(--respTitle1);
 
 
 
+.left_side_index{padding-top:65px;padding-right:10vw;padding-left:2vw;width:75%;}
+.logo{width:23%;}
 
+.logo  img{
+  -webkit-transition:-webkit-transform .5s; 
+  -moz-transition:-moz-transform .5s;       
+  -o-transition:-o-transform .5s;           
+  -ms-transition:-ms-transform .5s;         
+  transition:transform .5s;
+}
+  .logo  img:hover{
+  -webkit-transform:rotate(360deg); 
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg); 
+  -ms-transform:rotate(360deg); 
+  transform:rotate(360deg);
+} 
 
-
- /*page MyTest.html*/
-
- .container_new_aliment {
- 	margin-bottom: 6%;
- }
-
- #new_aliment {
- 	width: 23%;
- 	margin: auto;
- 	text-align: center;
- 	min-height: 29px;
- }
-
- .container_categorie {
- 	width: 100%;
- 	margin-bottom: 6%;
- }
-
- .categorie {
- 	width: 23%;
- 	margin-left: 0.5%;
- 	margin-right: 0.5%;
- 	min-height: 50px;
- 	text-align: center;
- 	cursor: pointer;
- }
-
- .categorie_title {
- 	padding: 5px;
- 	background-color: #E17632;
- }
-
- @media screen and (max-width:900px) {
- 	.categorie {
- 		width: 45%;
- 		margin-bottom: 2%;
- 	}
- 	#new_aliment {
- 		width: 45%;
- 	}
- }
-
- .content_categorie {
- 	width: 100%;
- 	flex-flow: wrap;
- 	font-size: 16px;
- 	justify-content: center;
- 	overflow: auto;
- 	padding-top: 15px;
- 	padding-bottom: 15px;
- 	min-height: 50px;
- }
-
- .aliment {
- 	max-width: 140px;
- 	margin: auto;
- 	box-shadow: 2px 2px 3px #BBBBBB;
- 	border: 1px solid #CCCCCC;
- 	margin: 3px 5px 3px 5px;
- 	cursor: pointer;
- 	padding: 3px 6px 3px 6px;
- 	background-color: #FFFFFF;
- }
-
- /*page MyTest.html*/
-
+@media screen and (max-width:900px){
+	.logo{
+		display:none;
+	}
+	.left_side_index{width:96%;margin:auto;padding-right:2vw;}
+}
