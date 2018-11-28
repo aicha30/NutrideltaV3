@@ -34,7 +34,8 @@ def register(request):
 
 def connexion(request):
     error = False
-    
+    custom_error=[]
+    # messages.error(request, 'test')
 
     if request.method == "POST":
         next = request.POST.get('next', '/')
@@ -43,9 +44,11 @@ def connexion(request):
         if form.is_valid():
             usernameOrEmail=form.cleaned_data["usernameOrEmail"]
             if '@' in usernameOrEmail:
+                email_verif=True
                 email= usernameOrEmail
                 loginName = User.objects.get(email=email).username
             else:
+                email_verif=False
                 loginName= usernameOrEmail
                 
             
@@ -58,7 +61,10 @@ def connexion(request):
                 login(request, user)  # nous connectons l'utilisateur
                 return HttpResponseRedirect(next)
             else: # sinon une erreur sera affichée
-                error = True
+                if email_verif==True:
+                    custom_error.append("adresse email ou mot de passe incorrect")
+                else:
+                    custom_error.append("nom d'utilisateur ou mot de passe incorrect")
     else:
         form = loginForm()
 

@@ -30,7 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+LOGIN_URL='accounts:connexion'
 # Application definition
 
 INSTALLED_APPS = [

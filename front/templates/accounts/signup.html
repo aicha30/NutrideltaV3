@@ -4,9 +4,9 @@
 
 
 {% block content %}
-<div class="content1">
 
 
+<div class="container-account-nutridelta">
   <div class="form-group title1" ><b>Inscription</b></div>
   
   <form method="post">
@@ -17,7 +17,7 @@
     <div class="alert alert-danger" role="alert">{{ elem }}</div>
     {% endfor %}
     {% endif %}
-
+    
     {% for field in form %}
     {% for error in field.errors %}
     <div class="alert alert-danger" role="alert" >{{ error }}</div>
@@ -56,8 +56,8 @@
     </div>
   </form>
 
-
 </div>
+
 {% endblock %}
 
 

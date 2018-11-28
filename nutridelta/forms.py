@@ -1,11 +1,11 @@
 from django import forms
-from .models import aliment
+from .models import Aliment
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
 class form_aliment(forms.ModelForm):
     class Meta:
-        model = aliment
+        model = Aliment
         fields = '__all__'
 
 
