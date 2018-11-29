@@ -1,18 +1,18 @@
  /* fonts */
 
- @import url("fonts/kelson_light_macroman/stylesheet.css");
+ @import url("../fonts/kelson_light_macroman/stylesheet.css");
  /* police : kelson_lt */
 
- @import url("fonts/kelson_medium_macroman/stylesheet.css");
+ @import url("../fonts/kelson_medium_macroman/stylesheet.css");
  /* police : kelson_md */
 
- @import url("fonts/kelson_regular_macroman/stylesheet.css");
+ @import url("../fonts/kelson_regular_macroman/stylesheet.css");
  /* police : kelson_rg */
 
- @import url("fonts/kelson_thin_macroman/stylesheet.css");
+ @import url("../fonts/kelson_thin_macroman/stylesheet.css");
  /* police : kelson_ultralt */
 
- @import url("/fonts/gotham/style.css");
+ @import url("../fonts/gotham/style.css");
  /* police : kelson_ultralt */
 
  @import url("buttons.css");
@@ -54,6 +54,7 @@
 
  /* permet de déclarer nos variables en css */
  :root {
+  
   --mediumScreen:750px;
   
  
@@ -78,7 +79,7 @@
 
  }
 
- /* si la taille d'écran est en dessous de 900px (ex: telephone, tablette) */
+ /* si la taille d'écran est en dessous de 750px (ex: telephone, tablette) */
  /* on change la valeur de nos variables  */
  @media screen and (max-width:var(--mediumScreen)) {
  	:root {
@@ -93,11 +94,15 @@
 
 
 
+/*body, html , div, container, content */
+
 body, html {
  height: 100%;
  padding: 0;
  background-image:url('../themeNutridelta/fond_result.jpg');
 font-size:var(--font_resp1);
+font-family: 'Gotham-Light', sans-serif;
+
 }
 
 
@@ -141,25 +146,16 @@ margin-top:1.5em;
 }
 
 
-@media screen and (max-width:900px){
-	.content1{
-
-
-}
-}
-
-/*container*/
 
 
 
-/*container*/
- 
 
 
 /*title*/
-.title1{
+.title-nutridelta{
 color:var(--nutrideltaColor);
 font-size:var(--respTitle1);
+font-family: 'kelson_md', sans-serif;
 }
 
 /*title*/
@@ -219,7 +215,9 @@ footer .linksite a:hover{
 
 
 
-
+#form_account label{
+font-family: 'kelson_rg', sans-serif;
+}
 
 
 
