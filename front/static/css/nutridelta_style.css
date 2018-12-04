@@ -58,24 +58,26 @@
   --mediumScreen:750px;
   
  
- 
+ 	--normal_spacing:1em;
 
 
   --smallMargin:0.77em;
 	
 	--smallBorderRadius:3px;
 
-	--font_resp1:13px;
+	--font_resp1:15px;
 	--respFont1:14px;
 	--respTitle1:20px;
 	--respMargin1:2em;
 
 	--nutrideltaColor:#E64632;
 
-	--light_shadow:0px 0px 1.5px #999999;
-	--hard_shadow:0px 0px 7px #666666;
+	--light_shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	--light_shadow_special_footer: 0 -1px 3px rgba(0,0,0,0.12), 0 -1px 2px rgba(0,0,0,0.24);
+	
+	--hard_shadow:0px 2px 3px #cccccc;
 
-	--border_radius:2px;
+	--border_radius:7px;
 
  }
 
@@ -87,7 +89,7 @@
 		 --respFont1:19px;
 		 --respTitle1:15px;
 		 --respMargin1:0.5em;
-		 --font_resp1:14px;
+		 --font_resp1:12px;
 		
  	}
 }
@@ -114,20 +116,20 @@ div {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-
+  
 }
 
 .content-nutridelta {
  	width:100%;height:auto;
   	margin:auto;
-   
+   padding:var(--normal_spacing);
  
 }
 
 .container-acceuil-nutridelta{
-margin:auto;
+
 max-width:1000px;
-padding:1.5em;
+padding:var(--normal_spacing);
 margin-top:1.5em;
 }
 
@@ -135,11 +137,11 @@ margin-top:1.5em;
 .container-account-nutridelta{
 background-color:rgba(255,255,255,0.96);
 margin:auto;
-box-shadow:var(--hard_shadow);
+box-shadow:var(--light_shadow);
 font-size:var(--font_resp1);
 border-radius:var(--border_radius);
-max-width:555px;
-padding:1.5em;
+max-width:600px;
+padding:var(--normal_spacing);
 margin-top:1.5em;
 
 
@@ -220,19 +222,41 @@ font-family: 'kelson_rg', sans-serif;
 }
 
 
+#nav{
 
+	box-shadow:var(--light_shadow);
+}
 
+#footer{
+	box-shadow:var(--light_shadow_special_footer);
+}
 
 
 .left_side_index{padding-top:65px;padding-right:10vw;padding-left:2vw;width:75%;}
 .logo{width:23%;}
+#logo{
+-webkit-transition:-webkit-transform .5s; 
+  -moz-transition:-moz-transform .5s;       
+  -o-transition:-o-transform .5s;           
+  -ms-transition:-ms-transform .5s;         
+  transition:transform .5s;
 
+
+}
+#logo:hover{
+	-webkit-transform:rotate(360deg); 
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg); 
+  -ms-transform:rotate(360deg); 
+  transform:rotate(360deg);
+}
 .logo  img{
   -webkit-transition:-webkit-transform .5s; 
   -moz-transition:-moz-transform .5s;       
   -o-transition:-o-transform .5s;           
   -ms-transition:-ms-transform .5s;         
   transition:transform .5s;
+  
 }
   .logo  img:hover{
   -webkit-transform:rotate(360deg); 
@@ -243,8 +267,14 @@ font-family: 'kelson_rg', sans-serif;
 } 
 
 @media screen and (max-width:900px){
+	#logo{
+		display:none;
+	}
 	.logo{
 		display:none;
 	}
 	.left_side_index{width:96%;margin:auto;padding-right:2vw;}
 }
+
+
+.nav-link{font-size:12px;}
