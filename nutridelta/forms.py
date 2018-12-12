@@ -1,12 +1,8 @@
 from django import forms
-from .models import Aliment
+from .models import *
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 
-class form_aliment(forms.ModelForm):
-    class Meta:
-        model = Aliment
-        fields = '__all__'
 
 
 class SignUpForm(UserCreationForm):
