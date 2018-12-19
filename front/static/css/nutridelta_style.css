@@ -117,25 +117,27 @@ div {
 
 
 /*CONTAINER*/
-.container-nutridelta {
+.main-content-nutridelta {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   
 }
 
-.content-nutridelta {
- 	width:100%;height:auto;
+.block-content-nutridelta {
+ 	width:100%;
+ 	max-width:1000px;
   	margin:auto;
-  
+  	min-height: 72vh;
+  	
+  display:flex;
  }
 
 
 
 .container-acceuil-nutridelta{
 
-max-width:1000px;
-margin-top:1.5em;
+
 margin:auto;
 }
 
