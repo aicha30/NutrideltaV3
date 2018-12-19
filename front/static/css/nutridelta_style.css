@@ -1,6 +1,5 @@
- /* fonts */
 
- @import url("../fonts/kelson_light_macroman/stylesheet.css");
+@import url("../fonts/kelson_light_macroman/stylesheet.css");
  /* police : kelson_lt */
 
  @import url("../fonts/kelson_medium_macroman/stylesheet.css");
@@ -15,7 +14,7 @@
  @import url("../fonts/gotham/style.css");
  /* police : kelson_ultralt */
 
- @import url("buttons.css");
+ @import url("headerAndFooter.css");
 
  .font-title-rg {
  	/*corespond au font utilisée pour les titres*/
@@ -55,65 +54,69 @@
  /* permet de déclarer nos variables en css */
  :root {
   
- 
-  
- 
- 	--normal_spacing:1em;
-
-
-  --smallMargin:0.77em;
-	
-	--smallBorderRadius:3px;
-	--fontSizeTitle1:18px;
+ 	--fontSizeTitle1:calc(10px + 1.33vmin);
 	--font_resp1:15px;
 	--respFont1:14px;
-	--respTitle1:20px;
-	--respMargin1:2em;
-
+	
+	
 	--nutrideltaColor:#E64632;
 
 	--light_shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	--light_shadow_special_footer: 0 -1px 3px rgba(0,0,0,0.12), 0 -1px 2px rgba(0,0,0,0.24);
-	
-	--hard_shadow:0px 2px 3px #cccccc;
+	--normal_shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);;
+	--hard_shadow:0px 2px 6px #555555;
 
-	--border_radius:7px;
-
+	--borderRadius:7px;
+	--smallFontSize:10px;
 	--navLinkFontSize:15px;
 
  }
+
+
 
  /* si la taille d'écran est en dessous de 750px (ex: telephone, tablette) */
  /* on change la valeur de nos variables  */
  @media screen and (max-width:700px) {
  	:root {
 		 --Smargin1: 0.15em;
-		 --fontSizeTitle1:14px;
+		 
 		 --respTitle1:10px;
-		 --respMargin1:0.5em;
-		 --font_resp1:12px;
+		--font_resp1:12px;
 		--navLinkFontSize:13px;
  	}
 }
+/*RESPONSIVE*/
+.magic_flos_responsive{
+	display:flex;flex-wrap: wrap;justify-content:center;
+}
+/*RESPONSIVE*/
 
 
 
-/*body, html , div, container, content */
-
-body, html {
- height: 100%;
+html {
+min-height: 100vh;
  padding: 0;
  background-image:url('../themeNutridelta/fond_result.jpg');
-font-size:var(--font_resp1);
-font-family: 'kelson_rg', sans-serif;
 
+font-family: 'font-title-ultralt ', sans-serif;
+font-size: calc(10px + 1vmin);
 }
 
+body{
+	
+	font-family: 'Gotham-Book', sans-serif;
+	margin:auto;
+	background-color:rgba(255,255,255,0);
+}
 
 div {
 	border:0px solid black;
 
 }
+
+
+
+/*CONTAINER*/
 .container-nutridelta {
   display: flex;
   flex-direction: column;
@@ -124,191 +127,109 @@ div {
 .content-nutridelta {
  	width:100%;height:auto;
   	margin:auto;
-   padding:var(--normal_spacing);
- 
-}
+  
+ }
 
-.title1-nutridelta{
-	font-size:var(--fontSizeTitle1);
-}
+
 
 .container-acceuil-nutridelta{
 
 max-width:1000px;
-
 margin-top:1.5em;
 margin:auto;
 }
 
 
 .container-account-nutridelta{
-background-color:rgba(255,255,255,0.96);
+
 margin:auto;
-box-shadow:var(--light_shadow);
-font-size:var(--font_resp1);
-border-radius:var(--border_radius);
-max-width:600px;
-padding:var(--normal_spacing);
+max-width:1000px;
+border-radius:var(--borderRadius);
 margin-top:1.5em;
-
-
 }
+/*CONTAINER*/
 
 
 
 
 
-/*title*/
+
+
+
+
+/*FONT SIZE*/
 .title-nutridelta{
 color:var(--nutrideltaColor);
-font-size:var(--respTitle1);
+font-size:var(--fontSizeTitle1);
 font-family: 'kelson_md', sans-serif;
 }
 
-/*title*/
-
-
-
-.magic_flos_responsive{
-	display:flex;flex-wrap: wrap;justify-content:center;
-}
-
-
-
 .small_font_size{
-	font-size:10px;
+	font-size:var(--smallFontSize);
 }
+/*FONT SIZE*/
 
- /*shadow*/
 
- .shadow_google {
+
+
+
+
+
+/*SHADOW*/
+.shadow_google {
 
   box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
  
  }
-
- /*shadow*/
-
-
-footer .linksite a{
-	color:white;
-}
-footer .linksite a:hover{
-	
-	
-}
-
-
- /*margin */
-
- .margin-right {
- 	margin-right: var(--smallMargin);
- }
-
- .margin-left {
- 	margin-left: var(--smallMargin);
- }
-
- .margin-bottom {
- 	margin-bottom: var(--smallMargin);
- }
-
-
-  /*margin */
+/*SHADOW*/
 
 
 
 
 
 
+
+
+
+/*FORM*/
 
 #form_account label{
 font-family: 'kelson_rg', sans-serif;
 }
+/*FORM*/
 
 
-#nav{
-
-	box-shadow:var(--light_shadow);
-}
-
-#footer{
-	box-shadow:var(--light_shadow_special_footer);
-}
 
 
-.left_side_index{
+
+
+/*BUTTONS*/
+
+.button1
+{
+
 	
-	width:75%;
-	padding:3vw;
-}
-.logo{width:180px;margin:auto;}
-
-#logo{
-	max-height:34px;margin:auto;margin-left:34px;
- -webkit-transition:-webkit-transform .5s; 
-  -moz-transition:-moz-transform .5s;       
-  -o-transition:-o-transform .5s;           
-  -ms-transition:-ms-transform .5s;         
-  transition:transform .5s;
-
-
-}
-#logo:hover{
-	-webkit-transform:rotate(360deg); 
-  -moz-transform:rotate(360deg);
-  -o-transform:rotate(360deg); 
-  -ms-transform:rotate(360deg); 
-  transform:rotate(360deg);
-}
-.logo  img{
-  -webkit-transition:-webkit-transform .5s; 
-  -moz-transition:-moz-transform .5s;       
-  -o-transition:-o-transform .5s;           
-  -ms-transition:-ms-transform .5s;         
-  transition:transform .5s;
+  box-shadow: 3px 3px;
   
-}
-  .logo  img:hover{
-  -webkit-transform:rotate(360deg); 
-  -moz-transform:rotate(360deg);
-  -o-transform:rotate(360deg); 
-  -ms-transform:rotate(360deg); 
-  transform:rotate(360deg);
-} 
+  font-family: 'kelson_md', sans-serif;
+  background-color: #e6432e;
+  transition: all 0.13s;
+  cursor: pointer;
+  padding: 25px;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+  display: block;
+  font-size:var(--fontSizeTitle1);
 
-@media screen and (max-width:900px){
-	#logo{
-		
-	}
-	.logo{
-		display:none;
-	}
-	.left_side_index{width:96%;margin:auto;padding:2vw;padding-top:3em;padding-bottom:3em;}
 }
+.button1:hover{
 
-
-
-
-/* change the background color */
-.navbar-custom {
-    background-color: #444444;
+  opacity:0.75;
 }
-/* change the brand and text color */
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
-    
-}
-/* change the link color and add padding for height */
-.navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
-    padding:1em;
-}
-/* change the color of active or hovered links */
-.navbar-custom .nav-item.active .nav-link,
-.navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
-    background-color: #AAAAAA; /* add background-color to active links */
+.button1:active 
+{
+  transform: translate(3px, 3px);
+  box-shadow: none;
 }
 
+/*BUTTONS*/

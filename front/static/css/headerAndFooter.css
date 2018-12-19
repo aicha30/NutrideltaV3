@@ -1,0 +1,99 @@
+/*HEADER AND FOOTER*/
+#nav{
+
+	box-shadow:var(--light_shadow);
+}
+
+#footer{
+	box-shadow:var(--light_shadow_special_footer);
+}
+
+
+.footer-center a{
+  margin-right:0.5em;
+}
+
+.left_side_index{
+	
+	width:75%;
+	padding:3vw;
+}
+.logo{width:180px;margin:auto;}
+
+#logo{
+	max-height:34px;margin:auto;margin-left:34px;
+ -webkit-transition:-webkit-transform .5s; 
+  -moz-transition:-moz-transform .5s;       
+  -o-transition:-o-transform .5s;           
+  -ms-transition:-ms-transform .5s;         
+  transition:transform .5s;
+
+
+}
+#logo:hover{
+	-webkit-transform:rotate(360deg); 
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg); 
+  -ms-transform:rotate(360deg); 
+  transform:rotate(360deg);
+}
+.logo  img{
+  -webkit-transition:-webkit-transform .5s; 
+  -moz-transition:-moz-transform .5s;       
+  -o-transition:-o-transform .5s;           
+  -ms-transition:-ms-transform .5s;         
+  transition:transform .5s;
+  
+}
+  .logo  img:hover{
+  -webkit-transform:rotate(360deg); 
+  -moz-transform:rotate(360deg);
+  -o-transform:rotate(360deg); 
+  -ms-transform:rotate(360deg); 
+  transform:rotate(360deg);
+} 
+
+@media screen and (max-width:900px){
+	#logo{
+		
+	}
+	.logo{
+		display:none;
+	}
+	.left_side_index{width:96%;margin:auto;padding:2vw;padding-top:3em;padding-bottom:3em;}
+}
+
+footer .linksite a{
+  color:white;
+}
+footer .linksite a:hover{
+}
+
+
+
+/* change the background color */
+.navbar-custom {
+    background-color: #444444;
+}
+/* change the brand and text color */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text {
+    color: rgba(255,255,255,.8);
+    
+}
+/* change the link color and add padding for height */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(255,255,255,.5);
+    padding:1em;
+}
+/* change the color of active or hovered links */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+    background-color: #AAAAAA; /* add background-color to active links */
+}
+
+
+
+
+/*HEADER AND FOOTER*/
