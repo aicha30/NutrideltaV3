@@ -6,39 +6,42 @@ from .models import *
 from .forms import *
 from django.contrib.auth import logout, login, authenticate,get_user_model
 from django.contrib.auth.forms import UserCreationForm
-
+import random 
+from random import randint
+from django.contrib.sessions.models import Session
+from django.contrib.sessions.backends.db import SessionStore
 
 
 app_name='nutridelta'
 # Create your views here.
+def generate_anonymous_id():
+    anonymous_have_id=False
+    while(anonymous_have_id==False):
+                rand_id=randint(0,100000)
+                test_user_id=User.objects.filter(id=rand_id)
+                if test_user_id:
+                    None
+                else:
+                    user_id=rand_id
+                    anonymous_have_id=True
+    return user_id
 
 def index(request):
-
-	return render(request, 'index.html', locals())
-
-def mytest(request):
-	if request.method == "GET":
-		form= form_aliment(request.GET)
-
-		if(form.is_valid()):
-
-			aliment_name=request.GET['aliment_name']
-			Aliment_obj = aliment.objects.filter(aliment_name=aliment_name)[:1]
-			
-
-			if not Aliment_obj:
-				form.save()
-
-			return render(request, 'MyTest.html', locals())
-
-	return render(request, app_name+'MyTest.html', locals())
+    user=request.user
+    if user.is_authenticated:
+        request.session['session_id']=request.user.id
+        
+    if user.is_anonymous:
+        test1=request.session.get('session_id')
+        if test1:
+            user_id=test1
+        else:
+            request.session['session_id']= generate_anonymous_id()
+            user_id=request.session['session_id']
+    user_id= request.session['session_id']
+    # userObjectifs=ObjectifChoice.objects.filter(user_id= user_id).values_list('objectif', flat=True)
+    # testlist=ObjectifQuestion.objects.filter(objectif__in=userObjectifs)
+    return render(request, 'index.html', locals())
 
 
 
-
-
-
-
-
-def test(request, numberQuestion):
-    return render(request,'questions/Question1.html')

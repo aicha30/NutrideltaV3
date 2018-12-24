@@ -48,6 +48,8 @@ class Anc(models.Model):
 class Sport(models.Model):
 	sport = models.CharField(max_length=100)
 	depense_energetique = models.FloatField()
+	def __str__(self):
+		return self.sport
 
 
 
@@ -123,7 +125,6 @@ class Prescription_microNutri_user(models.Model):
 
 
 
-
 class MicroNutriment(models.Model):
 	name=models.CharField(max_length=100)
 	def __str__(self):
@@ -138,7 +139,7 @@ class Objectif(models.Model):
 
 #QUESTIONS
 
-class ObjectiveQuestion(models.Model):
+class ObjectifQuestion(models.Model):
 	name=models.CharField(max_length=100)
 	objectif=models.ForeignKey(Objectif, on_delete=models.CASCADE)
 	def __str__(self):
@@ -152,7 +153,7 @@ class LinkObjectifMicro(models.Model):
 
 class MicroQuestion(models.Model):
 	name=models.CharField(max_length=100)
-	objectif=models.ForeignKey(MicroNutriment, on_delete=models.CASCADE)
+	microNutriment=models.ForeignKey(MicroNutriment, on_delete=models.CASCADE)
 	def __str__(self):
 		return self.name
 	
@@ -162,6 +163,11 @@ class MicroQuestion(models.Model):
 #REPONSES
 class Regime(models.Model):
 	name=models.CharField(max_length=100)
+
+class ObjectifChoice(models.Model):
+	user_id=models.IntegerField()
+	objectif=models.ForeignKey(Objectif, on_delete=models.CASCADE)
+	
 
 class ReponseProfil(models.Model):
 	user_id=models.IntegerField()
@@ -195,9 +201,9 @@ class ReponsesMicroQuestion(models.Model):
 	def __str__(self):
 		return '%s %s' % (self.user_id, self.question)	
 
-class ReponsesObjectiveQuestion(models.Model):
+class ReponsesObjectifQuestion(models.Model):
 	user_id=models.IntegerField()
-	question=models.ForeignKey(ObjectiveQuestion, on_delete=models.CASCADE)
+	# question=models.ForeignKey(ObjectifQuestion, on_delete=models.CASCADE)
 	value=models.FloatField()
 	
 	date=models.DateField(auto_now=False,auto_now_add=True)

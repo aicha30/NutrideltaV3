@@ -7,11 +7,4 @@ app_name = 'nutridelta'
 urlpatterns = [
     path('', views.index, name='index'),
     
-    path('test/<int:numberQuestion>', views.test, name='test'),
-
-  
-    path('mytest', views.mytest, name='mytest'),
-    
-    
-    
 ]

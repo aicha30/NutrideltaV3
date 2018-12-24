@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'import_export',
     'nutridelta',
     'front',
-    'accounts'
+    'accounts',
+    'questionnaire'
+    
     
 ]
 

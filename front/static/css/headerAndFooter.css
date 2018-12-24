@@ -84,7 +84,7 @@ footer .linksite a:hover{
 /* change the link color and add padding for height */
 .navbar-custom .navbar-nav .nav-link {
     color: rgba(255,255,255,.5);
-    padding:0.66em;font-size:13px;box-shadow:1px 0px 2px #000000;border-radius:4px;margin-right:0.5em;
+    padding:0.66em;font-size:13px;border-radius:4px;margin-right:0.5em;
 }
 @media screen and (max-width:767px){
   .navbar-custom .navbar-nav .nav-link {

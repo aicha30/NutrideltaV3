@@ -5,20 +5,25 @@ from import_export.admin import ImportExportModelAdmin
 
 # Create your models here.
 
-@admin.register(MicroNutriment)
-class AdminMicroNutriment(ImportExportModelAdmin):
-    pass
+# @admin.register(MicroNutriment)
+# class AdminMicroNutriment(ImportExportModelAdmin):
+#     pass
 
 
 @admin.register(Objectif)
 class AdminObjectif(ImportExportModelAdmin):
     pass
 
-@admin.register(ObjectiveQuestion)
-class AdminObjectiveQuestion(ImportExportModelAdmin):
+@admin.register(ObjectifQuestion)
+class AdminObjectifQuestion(ImportExportModelAdmin):
     pass
 
 
-@admin.register(MicroQuestion)
-class AdminMicroQuestion(ImportExportModelAdmin):
+# @admin.register(MicroQuestion)
+# class AdminMicroQuestion(ImportExportModelAdmin):
+#     pass
+
+
+@admin.register(ObjectifChoice)
+class AdminObjectifChoice(ImportExportModelAdmin):
     pass
