@@ -6,9 +6,10 @@
 {% block content %}
 
 
-<div class="container-account-nutridelta">
-
-  <div class="form-group title-nutridelta" ><b>Connexion</b></div>
+<div class="container" style="max-width:700px;">
+    <div class="card" >
+        <h5 class="card-header">Connexion</h5>
+        <div class="card-body" style="">
   
   <form method="post" id="form_account">
     {% csrf_token %}
@@ -50,6 +51,8 @@
     </div>
   </form>
 
+</div>
+</div>
 </div>
 
 {% endblock %}
