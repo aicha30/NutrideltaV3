@@ -9,31 +9,31 @@
 </style>
 
 
-<div class="container" >
-    <div class="card" >
+<div class="container">
+    <div class="card">
         <h5 class="card-header">Choisissez vos objectifs</h5>
-        <div class="card-body" style="">
-                <ul class="list-group">
-                    {% for elem in listeObjectives %}
-                   
-                    {{active}}
-                        <li class="list-group-item blockChoiceObjective" id="{{elem.id}}" >
-                            <div class="custom-control custom-checkbox">
-                                {{active}}
-                                    <input type="checkbox" class="custom-control-input" id="customCheck{{elem.id}}"  >
-                                    <label class="custom-control-label" for="customCheck{{elem.id}}">{{elem.name}}</label>
-                            </div>
-                        </li>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for elem in listeObjectives %}
 
-                        {% for elem2 in userObjectives %}
-                            {% ifequal elem.id elem2.objectif_id %}
-                            <script>
-                                var x=document.getElementById("customCheck{{elem.id}}").checked=true;</script>
-                            {% endifequal %}
-                        {% endfor %}
-                    {%endfor%}
-                </ul>
-            
+                {{active}}
+                <li class="list-group-item blockChoiceObjective" id="{{elem.id}}">
+                    <div class="custom-control custom-checkbox">
+                        {{active}}
+                        <input type="checkbox" class="custom-control-input" id="customCheck{{elem.id}}">
+                        <label class="custom-control-label" for="customCheck{{elem.id}}">{{elem.name}}</label>
+                    </div>
+                </li>
+
+                {% for elem2 in userObjectives %}
+                {% ifequal elem.id elem2.objectif_id %}
+                <script>
+                    var x = document.getElementById("customCheck{{elem.id}}").checked = true;</script>
+                {% endifequal %}
+                {% endfor %}
+                {%endfor%}
+            </ul>
+
             <div style="margin-top:1em">
                 <a href="#" class="btn btn-primary">Suivant</a>
             </div>
@@ -44,4 +44,3 @@
 
 
 {% endblock %}
-
