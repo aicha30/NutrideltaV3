@@ -4,7 +4,7 @@ Use exec(open(this_file).read(), {'__file__': this_file}).
 
 This can be used when you must use an existing Python interpreter, not the virtualenv bin/python.
 """
-import os
+import environ
 import site
 import sys
 
@@ -14,27 +14,27 @@ except NameError:
     raise AssertionError("You must use exec(open(this_file).read(), {'__file__': this_file}))")
 
 # prepend bin to PATH (this file is inside the bin directory)
-bin_dir = os.path.dirname(os.path.abspath(__file__))
-os.environ["PATH"] = os.pathsep.join([bin_dir] + os.environ.get("PATH", "").split(os.pathsep))
+bin_dir = environ.path.dirname(environ.path.abspath(__file__))
+environ.environ["PATH"] = environ.pathsep.join([bin_dir] + environ.environ.get("PATH", "").split(environ.pathsep))
 
-base = os.path.dirname(bin_dir)
+base = environ.path.dirname(bin_dir)
 
 # virtual env is right above bin directory
-os.environ["VIRTUAL_ENV"] = base
+environ.environ["VIRTUAL_ENV"] = base
 
 # add the virtual environments site-package to the host python import mechanism
 IS_PYPY = hasattr(sys, "pypy_version_info")
 IS_JYTHON = sys.platform.startswith("java")
 if IS_JYTHON:
-    site_packages = os.path.join(base, "Lib", "site-packages")
+    site_packages = environ.path.join(base, "Lib", "site-packages")
 elif IS_PYPY:
-    site_packages = os.path.join(base, "site-packages")
+    site_packages = environ.path.join(base, "site-packages")
 else:
     IS_WIN = sys.platform == "win32"
     if IS_WIN:
-        site_packages = os.path.join(base, "Lib", "site-packages")
+        site_packages = environ.path.join(base, "Lib", "site-packages")
     else:
-        site_packages = os.path.join(base, "lib", "python{}".format(sys.version[:3]), "site-packages")
+        site_packages = environ.path.join(base, "lib", "python{}".format(sys.version[:3]), "site-packages")
 
 prev = set(sys.path)
 site.addsitedir(site_packages)

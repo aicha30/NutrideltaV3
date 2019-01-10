@@ -11,14 +11,15 @@ from random import randint
 from django.contrib.sessions.models import Session
 from django.contrib.sessions.backends.db import SessionStore
 
-
 app_name = 'nutridelta'
+
+
 # Create your views here.
 
 
 def generate_anonymous_id():
     anonymous_have_id = False
-    while(anonymous_have_id is False):
+    while anonymous_have_id is False:
         rand_id = randint(0, 100000)
         test_user_id = User.objects.filter(id=rand_id)
         if test_user_id:

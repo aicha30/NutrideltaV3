@@ -13,17 +13,14 @@
     <div class="card">
         <h5 class="card-header">Choisissez vos objectifs</h5>
         <div class="card-body">
-            <ul class="list-group">
+            <div class="magic_flos_responsive">
                 {% for elem in listeObjectives %}
 
-                {{active}}
-                <li class="list-group-item blockChoiceObjective" id="{{elem.id}}">
-                    <div class="custom-control custom-checkbox">
-                        {{active}}
-                        <input type="checkbox" class="custom-control-input" id="customCheck{{elem.id}}">
-                        <label class="custom-control-label" for="customCheck{{elem.id}}">{{elem.name}}</label>
-                    </div>
-                </li>
+
+                <div style="width:50px;height:40px;border:1px solid black;">
+                    {{elem.name}}
+                </div>
+
 
                 {% for elem2 in userObjectives %}
                 {% ifequal elem.id elem2.objectif_id %}
@@ -32,7 +29,7 @@
                 {% endifequal %}
                 {% endfor %}
                 {%endfor%}
-            </ul>
+            </div>
 
             <div style="margin-top:1em">
                 <a href="#" class="btn btn-primary">Suivant</a>

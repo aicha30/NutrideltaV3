@@ -7,7 +7,7 @@ that name.
 
 import functools
 import sys
-import os
+import environ
 import tokenize
 
 __all__ = ["getline", "clearcache", "checkcache"]
@@ -71,7 +71,7 @@ def checkcache(filename=None):
         if mtime is None:
             continue   # no-op for files loaded via a __loader__
         try:
-            stat = os.stat(fullname)
+            stat = environ.stat(fullname)
         except OSError:
             del cache[filename]
             continue
@@ -92,7 +92,7 @@ def updatecache(filename, module_globals=None):
 
     fullname = filename
     try:
-        stat = os.stat(fullname)
+        stat = environ.stat(fullname)
     except OSError:
         basename = filename
 
@@ -116,17 +116,17 @@ def updatecache(filename, module_globals=None):
 
         # Try looking through the module search path, which is only useful
         # when handling a relative filename.
-        if os.path.isabs(filename):
+        if environ.path.isabs(filename):
             return []
 
         for dirname in sys.path:
             try:
-                fullname = os.path.join(dirname, basename)
+                fullname = environ.path.join(dirname, basename)
             except (TypeError, AttributeError):
                 # Not sufficiently string-like to do anything useful with.
                 continue
             try:
-                stat = os.stat(fullname)
+                stat = environ.stat(fullname)
                 break
             except OSError:
                 pass

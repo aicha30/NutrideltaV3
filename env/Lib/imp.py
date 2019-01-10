@@ -22,7 +22,7 @@ from importlib._bootstrap_external import SourcelessFileLoader
 from importlib import machinery
 from importlib import util
 import importlib
-import os
+import environ
 import sys
 import tokenize
 import types
@@ -122,7 +122,7 @@ class NullImporter:
     def __init__(self, path):
         if path == '':
             raise ImportError('empty pathname', path='')
-        elif os.path.isdir(path):
+        elif environ.path.isdir(path):
             raise ImportError('existing directory', path=path)
 
     def find_module(self, fullname):
@@ -198,12 +198,12 @@ def load_compiled(name, pathname, file=None):
 
 def load_package(name, path):
     """**DEPRECATED**"""
-    if os.path.isdir(path):
+    if environ.path.isdir(path):
         extensions = (machinery.SOURCE_SUFFIXES[:] +
                       machinery.BYTECODE_SUFFIXES[:])
         for extension in extensions:
-            init_path = os.path.join(path, '__init__' + extension)
-            if os.path.exists(init_path):
+            init_path = environ.path.join(path, '__init__' + extension)
+            if environ.path.exists(init_path):
                 path = init_path
                 break
         else:
@@ -278,16 +278,16 @@ def find_module(name, path=None):
             path = sys.path
 
     for entry in path:
-        package_directory = os.path.join(entry, name)
+        package_directory = environ.path.join(entry, name)
         for suffix in ['.py', machinery.BYTECODE_SUFFIXES[0]]:
             package_file_name = '__init__' + suffix
-            file_path = os.path.join(package_directory, package_file_name)
-            if os.path.isfile(file_path):
+            file_path = environ.path.join(package_directory, package_file_name)
+            if environ.path.isfile(file_path):
                 return None, package_directory, ('', '', PKG_DIRECTORY)
         for suffix, mode, type_ in get_suffixes():
             file_name = name + suffix
-            file_path = os.path.join(entry, file_name)
-            if os.path.isfile(file_path):
+            file_path = environ.path.join(entry, file_name)
+            if environ.path.isfile(file_path):
                 break
         else:
             continue

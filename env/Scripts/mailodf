@@ -19,7 +19,7 @@
 #
 from odf.odf2xhtml import ODF2XHTML
 import zipfile
-import sys, os, smtplib, getopt
+import sys, environ, smtplib, getopt
 
 from email.mime.multipart import MIMEMultipart
 from email.mime.nonmultipart import MIMENonMultipart
@@ -37,7 +37,7 @@ except getopt.GetoptError:
     usage()
     sys.exit(2)
 
-fromaddr = os.getlogin() + "@" + os.getenv('HOSTNAME','localhost')
+fromaddr = environ.getlogin() + "@" + environ.getenv('HOSTNAME', 'localhost')
 subject = None
 for o, a in opts:
     if o in ("-f", "--from"):

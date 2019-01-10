@@ -38,7 +38,7 @@ __credits__ = "Gustavo Niemeyer, Niels Gust\u00e4bel, Richard Townsend."
 #---------
 from builtins import open as bltn_open
 import sys
-import os
+import environ
 import io
 import shutil
 import stat
@@ -146,7 +146,7 @@ PAX_NUMBER_FIELDS = {
 #---------------------------------------------------------
 # initialization
 #---------------------------------------------------------
-if os.name == "nt":
+if environ.name == "nt":
     ENCODING = "utf-8"
 else:
     ENCODING = sys.getfilesystemencoding()
@@ -315,21 +315,21 @@ class _LowLevelFile:
 
     def __init__(self, name, mode):
         mode = {
-            "r": os.O_RDONLY,
-            "w": os.O_WRONLY | os.O_CREAT | os.O_TRUNC,
+            "r": environ.O_RDONLY,
+            "w": environ.O_WRONLY | environ.O_CREAT | environ.O_TRUNC,
         }[mode]
-        if hasattr(os, "O_BINARY"):
-            mode |= os.O_BINARY
-        self.fd = os.open(name, mode, 0o666)
+        if hasattr(environ, "O_BINARY"):
+            mode |= environ.O_BINARY
+        self.fd = environ.open(name, mode, 0o666)
 
     def close(self):
-        os.close(self.fd)
+        environ.close(self.fd)
 
     def read(self, size):
-        return os.read(self.fd, size)
+        return environ.read(self.fd, size)
 
     def write(self, s):
-        os.write(self.fd, s)
+        environ.write(self.fd, s)
 
 class _Stream:
     """Class that serves as an adapter between TarFile and
@@ -1429,7 +1429,7 @@ class TarFile(object):
         self._mode = modes[mode]
 
         if not fileobj:
-            if self.mode == "a" and not os.path.exists(name):
+            if self.mode == "a" and not environ.path.exists(name):
                 # Create nonexistent files in append mode.
                 self.mode = "w"
                 self._mode = "wb"
@@ -1442,7 +1442,7 @@ class TarFile(object):
             if hasattr(fileobj, "mode"):
                 self._mode = fileobj.mode
             self._extfileobj = True
-        self.name = os.path.abspath(name) if name else None
+        self.name = environ.path.abspath(name) if name else None
         self.fileobj = fileobj
 
         # Init attributes.
@@ -1791,8 +1791,8 @@ class TarFile(object):
         # Absolute paths are turned to relative paths.
         if arcname is None:
             arcname = name
-        drv, arcname = os.path.splitdrive(arcname)
-        arcname = arcname.replace(os.sep, "/")
+        drv, arcname = environ.path.splitdrive(arcname)
+        arcname = arcname.replace(environ.sep, "/")
         arcname = arcname.lstrip("/")
 
         # Now, fill the TarInfo object with
@@ -1803,12 +1803,12 @@ class TarFile(object):
         # Use os.stat or os.lstat, depending on platform
         # and if symlinks shall be resolved.
         if fileobj is None:
-            if hasattr(os, "lstat") and not self.dereference:
-                statres = os.lstat(name)
+            if hasattr(environ, "lstat") and not self.dereference:
+                statres = environ.lstat(name)
             else:
-                statres = os.stat(name)
+                statres = environ.stat(name)
         else:
-            statres = os.fstat(fileobj.fileno())
+            statres = environ.fstat(fileobj.fileno())
         linkname = ""
 
         stmd = statres.st_mode
@@ -1832,7 +1832,7 @@ class TarFile(object):
             type = FIFOTYPE
         elif stat.S_ISLNK(stmd):
             type = SYMTYPE
-            linkname = os.readlink(name)
+            linkname = environ.readlink(name)
         elif stat.S_ISCHR(stmd):
             type = CHRTYPE
         elif stat.S_ISBLK(stmd):
@@ -1865,9 +1865,9 @@ class TarFile(object):
                 pass
 
         if type in (CHRTYPE, BLKTYPE):
-            if hasattr(os, "major") and hasattr(os, "minor"):
-                tarinfo.devmajor = os.major(statres.st_rdev)
-                tarinfo.devminor = os.minor(statres.st_rdev)
+            if hasattr(environ, "major") and hasattr(environ, "minor"):
+                tarinfo.devmajor = environ.major(statres.st_rdev)
+                tarinfo.devminor = environ.minor(statres.st_rdev)
         return tarinfo
 
     def list(self, verbose=True, *, members=None):
@@ -1918,7 +1918,7 @@ class TarFile(object):
             arcname = name
 
         # Skip if somebody tries to archive the archive...
-        if self.name is not None and os.path.abspath(name) == self.name:
+        if self.name is not None and environ.path.abspath(name) == self.name:
             self._dbg(2, "tarfile: Skipped %r" % name)
             return
 
@@ -1946,9 +1946,9 @@ class TarFile(object):
         elif tarinfo.isdir():
             self.addfile(tarinfo)
             if recursive:
-                for f in sorted(os.listdir(name)):
-                    self.add(os.path.join(name, f), os.path.join(arcname, f),
-                            recursive, filter=filter)
+                for f in sorted(environ.listdir(name)):
+                    self.add(environ.path.join(name, f), environ.path.join(arcname, f),
+                             recursive, filter=filter)
 
         else:
             self.addfile(tarinfo)
@@ -2007,7 +2007,7 @@ class TarFile(object):
 
         # Set correct owner, mtime and filemode on directories.
         for tarinfo in directories:
-            dirpath = os.path.join(path, tarinfo.name)
+            dirpath = environ.path.join(path, tarinfo.name)
             try:
                 self.chown(tarinfo, dirpath, numeric_owner=numeric_owner)
                 self.utime(tarinfo, dirpath)
@@ -2036,10 +2036,10 @@ class TarFile(object):
 
         # Prepare the link target for makelink().
         if tarinfo.islnk():
-            tarinfo._link_target = os.path.join(path, tarinfo.linkname)
+            tarinfo._link_target = environ.path.join(path, tarinfo.linkname)
 
         try:
-            self._extract_member(tarinfo, os.path.join(path, tarinfo.name),
+            self._extract_member(tarinfo, environ.path.join(path, tarinfo.name),
                                  set_attrs=set_attrs,
                                  numeric_owner=numeric_owner)
         except OSError as e:
@@ -2096,14 +2096,14 @@ class TarFile(object):
         # and build the destination pathname, replacing
         # forward slashes to platform specific separators.
         targetpath = targetpath.rstrip("/")
-        targetpath = targetpath.replace("/", os.sep)
+        targetpath = targetpath.replace("/", environ.sep)
 
         # Create all upper directories.
-        upperdirs = os.path.dirname(targetpath)
-        if upperdirs and not os.path.exists(upperdirs):
+        upperdirs = environ.path.dirname(targetpath)
+        if upperdirs and not environ.path.exists(upperdirs):
             # Create directories that are not part of the archive with
             # default permissions.
-            os.makedirs(upperdirs)
+            environ.makedirs(upperdirs)
 
         if tarinfo.islnk() or tarinfo.issym():
             self._dbg(1, "%s -> %s" % (tarinfo.name, tarinfo.linkname))
@@ -2142,7 +2142,7 @@ class TarFile(object):
         try:
             # Use a safe mode for the directory, the real mode is set
             # later in _extract_member().
-            os.mkdir(targetpath, 0o700)
+            environ.mkdir(targetpath, 0o700)
         except FileExistsError:
             pass
 
@@ -2173,15 +2173,15 @@ class TarFile(object):
     def makefifo(self, tarinfo, targetpath):
         """Make a fifo called targetpath.
         """
-        if hasattr(os, "mkfifo"):
-            os.mkfifo(targetpath)
+        if hasattr(environ, "mkfifo"):
+            environ.mkfifo(targetpath)
         else:
             raise ExtractError("fifo not supported by system")
 
     def makedev(self, tarinfo, targetpath):
         """Make a character or block device called targetpath.
         """
-        if not hasattr(os, "mknod") or not hasattr(os, "makedev"):
+        if not hasattr(environ, "mknod") or not hasattr(environ, "makedev"):
             raise ExtractError("special devices not supported by system")
 
         mode = tarinfo.mode
@@ -2190,8 +2190,8 @@ class TarFile(object):
         else:
             mode |= stat.S_IFCHR
 
-        os.mknod(targetpath, mode,
-                 os.makedev(tarinfo.devmajor, tarinfo.devminor))
+        environ.mknod(targetpath, mode,
+                      environ.makedev(tarinfo.devmajor, tarinfo.devminor))
 
     def makelink(self, tarinfo, targetpath):
         """Make a (symbolic) link called targetpath. If it cannot be created
@@ -2201,11 +2201,11 @@ class TarFile(object):
         try:
             # For systems that support symbolic and hard links.
             if tarinfo.issym():
-                os.symlink(tarinfo.linkname, targetpath)
+                environ.symlink(tarinfo.linkname, targetpath)
             else:
                 # See extract().
-                if os.path.exists(tarinfo._link_target):
-                    os.link(tarinfo._link_target, targetpath)
+                if environ.path.exists(tarinfo._link_target):
+                    environ.link(tarinfo._link_target, targetpath)
                 else:
                     self._extract_member(self._find_link_target(tarinfo),
                                          targetpath)
@@ -2222,7 +2222,7 @@ class TarFile(object):
            is False, fall back to .gid/.uid when the search based on name
            fails.
         """
-        if hasattr(os, "geteuid") and os.geteuid() == 0:
+        if hasattr(environ, "geteuid") and environ.geteuid() == 0:
             # We have to be root to do so.
             g = tarinfo.gid
             u = tarinfo.uid
@@ -2238,29 +2238,29 @@ class TarFile(object):
                 except KeyError:
                     pass
             try:
-                if tarinfo.issym() and hasattr(os, "lchown"):
-                    os.lchown(targetpath, u, g)
+                if tarinfo.issym() and hasattr(environ, "lchown"):
+                    environ.lchown(targetpath, u, g)
                 else:
-                    os.chown(targetpath, u, g)
+                    environ.chown(targetpath, u, g)
             except OSError:
                 raise ExtractError("could not change owner")
 
     def chmod(self, tarinfo, targetpath):
         """Set file permissions of targetpath according to tarinfo.
         """
-        if hasattr(os, 'chmod'):
+        if hasattr(environ, 'chmod'):
             try:
-                os.chmod(targetpath, tarinfo.mode)
+                environ.chmod(targetpath, tarinfo.mode)
             except OSError:
                 raise ExtractError("could not change mode")
 
     def utime(self, tarinfo, targetpath):
         """Set modification time of targetpath according to tarinfo.
         """
-        if not hasattr(os, 'utime'):
+        if not hasattr(environ, 'utime'):
             return
         try:
-            os.utime(targetpath, (tarinfo.mtime, tarinfo.mtime))
+            environ.utime(targetpath, (tarinfo.mtime, tarinfo.mtime))
         except OSError:
             raise ExtractError("could not change modification time")
 
@@ -2331,11 +2331,11 @@ class TarFile(object):
             members = members[:members.index(tarinfo)]
 
         if normalize:
-            name = os.path.normpath(name)
+            name = environ.path.normpath(name)
 
         for member in reversed(members):
             if normalize:
-                member_name = os.path.normpath(member.name)
+                member_name = environ.path.normpath(member.name)
             else:
                 member_name = member.name
 
@@ -2367,7 +2367,7 @@ class TarFile(object):
         """
         if tarinfo.issym():
             # Always search the entire archive.
-            linkname = "/".join(filter(None, (os.path.dirname(tarinfo.name), tarinfo.linkname)))
+            linkname = "/".join(filter(None, (environ.path.dirname(tarinfo.name), tarinfo.linkname)))
             limit = None
         else:
             # Search the archive before the link, because a hard link is
@@ -2490,7 +2490,7 @@ def main():
     elif args.extract is not None:
         if len(args.extract) == 1:
             src = args.extract[0]
-            curdir = os.curdir
+            curdir = environ.curdir
         elif len(args.extract) == 2:
             src, curdir = args.extract
         else:
@@ -2511,7 +2511,7 @@ def main():
 
     elif args.create is not None:
         tar_name = args.create.pop(0)
-        _, ext = os.path.splitext(tar_name)
+        _, ext = environ.path.splitext(tar_name)
         compressions = {
             # gz
             '.gz': 'gz',

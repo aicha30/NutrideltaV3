@@ -39,7 +39,7 @@ __all__ = [
 import functools as _functools
 import warnings as _warnings
 import io as _io
-import os as _os
+import environ as _os
 import shutil as _shutil
 import errno as _errno
 from random import Random as _Random

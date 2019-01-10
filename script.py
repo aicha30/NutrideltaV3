@@ -1,5 +1,5 @@
 #Импорт необходимых модулей
-import csv,sys,os
+import csv,sys,environ
 
 #Указываем путь до папки проекта Django в котором находится файл settings.py
 project_dir = "/Django/project/MyWebsite"
@@ -8,7 +8,7 @@ project_dir = "/Django/project/MyWebsite"
 sys.path.append(project_dir)
 
 #Определяем переменную с настройками Django
-os.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
+environ.environ['DJANGO_SETTINGS_MODULE'] = 'settings'
 
 #Импортируем модуль Django
 import django

@@ -1,109 +1,384 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b786f1aa-3856-4be6-9ebf-4a19372dd751" name="Default Changelist" comment="" />
+    <list default="true" id="b786f1aa-3856-4be6-9ebf-4a19372dd751" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/NutrideltaV3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/NutrideltaV3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_db" beforeDir="false" afterPath="$PROJECT_DIR$/django_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/distutils/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/distutils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/fnmatch.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/fnmatch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/genericpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/genericpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/imp.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/imp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/importlib/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/importlib/resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/linecache.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/linecache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/locale.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/locale.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/ntpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/ntpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/os.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/environ" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/posixpath.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/posixpath.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/random.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/random.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/shutil.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/shutil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/interpreter/_import/spec.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/interpreter/_import/spec.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/interpreter/objectmodel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/interpreter/objectmodel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/manager.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/modutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/modutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/astroid/raw_building.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/astroid/raw_building.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/autopep8.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/autopep8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/colorama/ansitowin32.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/colorama/ansitowin32.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/diff_match_patch/tests/diff_match_patch_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/diff_match_patch/tests/diff_match_patch_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/diff_match_patch/tests/diff_match_patch_test_py2.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/diff_match_patch/tests/diff_match_patch_test_py2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/diff_match_patch/tests/speedtest.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/diff_match_patch/tests/speedtest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/apps/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/apps/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/conf/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/conf/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/conf/project_template/manage.py-tpl" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/conf/project_template/manage.py-tpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/gis/gdal/libgdal.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/gis/gdal/libgdal.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/gis/gdal/raster/source.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/gis/gdal/raster/source.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/gis/geos/libgeos.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/gis/geos/libgeos.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/sessions/backends/file.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/sessions/backends/file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/finders.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/finders.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/management/commands/findstatic.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/management/commands/findstatic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/contrib/staticfiles/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/cache/backends/filebased.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/cache/backends/filebased.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/locks.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/locks.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/move.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/move.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/storage.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/storage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/temp.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/temp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/uploadedfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/files/uploadedfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/mail/backends/filebased.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/mail/backends/filebased.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/color.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/color.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/compilemessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/compilemessages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/loaddata.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/loaddata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/makemessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/makemessages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/makemigrations.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/makemigrations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/runserver.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/runserver.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/shell.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/commands/shell.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/templates.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/templates.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/core/management/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/oracle/base.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/oracle/base.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/postgresql/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/postgresql/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/sqlite3/creation.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/backends/sqlite3/creation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/questioner.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/questioner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/db/migrations/writer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/forms/fields.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/forms/fields.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/http/response.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/http/response.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/test/client.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/test/client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/test/runner.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/test/runner.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/test/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/test/signals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/_os.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/_os.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/archive.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/archive.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/autoreload.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/autoreload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/module_loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/module_loading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/translation/trans_real.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/translation/trans_real.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/version.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/utils/version.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/django/views/i18n.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/django/views/i18n.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/et_xmlfile/tests/common_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/et_xmlfile/tests/common_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/et_xmlfile/tests/test_incremental_xmlfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/et_xmlfile/tests/test_incremental_xmlfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/import_export/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/import_export/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/import_export/tmp_storages.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/import_export/tmp_storages.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/isort/isort.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/isort/isort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/isort/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/isort/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/isort/pylama_isort.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/isort/pylama_isort.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/isort/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/isort/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/attrconverters.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/attrconverters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/dr3d.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/dr3d.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/draw.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/draw.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/easyliststyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/easyliststyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/element.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/element.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/grammar.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/grammar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/manifest.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/manifest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/odf2xhtml.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/odf2xhtml.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/opendocument.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/opendocument.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/odf/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/odf/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/packaging/manifest.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/packaging/manifest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/reader/excel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/reader/excel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/worksheet/write_only.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/worksheet/write_only.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/xml/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/openpyxl/xml/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pep8.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pep8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/build_env.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/build_env.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/autocompletion.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/autocompletion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/base_command.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/base_command.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/main_parser.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/cli/main_parser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/install.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/show.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/show.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/commands/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/configuration.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/configuration.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/download.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/download.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/locations.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/locations.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/operations/freeze.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/operations/freeze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/operations/prepare.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/operations/prepare.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/pyproject.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/pyproject.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/constructors.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/constructors.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_file.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_uninstall.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/req/req_uninstall.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/appdirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/appdirs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/filesystem.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/filesystem.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/logging.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/logging.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/outdated.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/outdated.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/temp_dir.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/utils/temp_dir.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/bazaar.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/bazaar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/git.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/git.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/mercurial.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/mercurial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/subversion.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/vcs/subversion.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_internal/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/appdirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/appdirs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/cachecontrol/caches/file_cache.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/certifi/core.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/certifi/core.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/colorama/ansitowin32.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/colorama/ansitowin32.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/misc.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/misc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/shutil.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/shutil.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/sysconfig.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/tarfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/_backport/tarfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/locators.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/locators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/manifest.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/manifest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/markers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/resources.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/resources.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distlib/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distro.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/distro.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/linklockfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/linklockfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/mkdirlockfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/mkdirlockfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/pidlockfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/pidlockfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/sqlitelockfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/sqlitelockfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/symlinklockfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/lockfile/symlinklockfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/msgpack/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/msgpack/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/packaging/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/packaging/markers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/_in_process.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/_in_process.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/check.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/check.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/envbuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/envbuild.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pep517/wrappers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pkg_resources/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pkg_resources/py31compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/pkg_resources/py31compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/adapters.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/adapters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/auth.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/auth.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/sessions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/sessions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/requests/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/connection.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/connection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/contrib/_securetransport/low_level.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/contrib/appengine.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/contrib/appengine.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/contrib/securetransport.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/contrib/securetransport.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/filepost.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pip/_vendor/urllib3/filepost.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/_vendor/appdirs.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/_vendor/appdirs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/_vendor/packaging/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/_vendor/packaging/markers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/py31compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pkg_resources/py31compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pycodestyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pycodestyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/__pkginfo__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/__pkginfo__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/spelling.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/spelling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/checkers/variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/epylint.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/epylint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/lint.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/lint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/inspector.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/inspector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/pyreverse/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/reporters/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/reporters/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/reporters/text.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/reporters/text.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/reporters/ureports/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/reporters/ureports/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/acceptance/test_stdlib.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/acceptance/test_stdlib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/conftest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_bad_builtin.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_bad_builtin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_check_mccabe.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_check_mccabe.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_comparetozero.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_comparetozero.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_docstyle.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_docstyle.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_elseif_used.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_elseif_used.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_emptystring.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_emptystring.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_overlapping_exceptions.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_overlapping_exceptions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_redefined.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/extensions/test_redefined.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/deprecated_methods_py2.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/deprecated_methods_py2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/disable_ungrouped_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/disable_ungrouped_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/disable_wrong_import_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/disable_wrong_import_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/invalid_envvar_value.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/invalid_envvar_value.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/logging_format_interpolation.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/logging_format_interpolation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/logging_not_lazy.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/logging_not_lazy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/multiple_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/multiple_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/names_in__all__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/names_in__all__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/no_name_in_module.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/no_name_in_module.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/reimported.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/reimported.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/string_formatting.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/string_formatting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/ungrouped_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/ungrouped_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/unpacking_non_sequence.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/unpacking_non_sequence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/unused_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/unused_import.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/useless-import-alias.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/useless-import-alias.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_order.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_order.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_order2.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_order2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position10.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position11.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position11.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position12.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position12.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position14.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position14.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position2.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position3.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position5.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position6.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position6.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position8.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/functional/wrong_import_position8.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0404.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0404.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0405.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0405.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0611.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0611.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0612.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/input/func_w0612.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/regrtest_data/import_something.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/regrtest_data/import_something.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/regrtest_data/wrong_import_position.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/regrtest_data/wrong_import_position.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_func.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_func.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_functional.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_functional.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_import_graph.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_import_graph.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_regr.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_regr.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_self.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/test_self.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_format.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_format.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_similar.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_similar.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_variables.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_checker_variables.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_lint.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_lint.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_pyreverse_inspector.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_pyreverse_inspector.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_pyreverse_writer.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/test/unittest_pyreverse_writer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/testutils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/testutils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pylint/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pylint/utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pytz/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pytz/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/pytz/tzfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/pytz/tzfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/_vendor/packaging/markers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/_vendor/packaging/markers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/archive_util.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/archive_util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/build_meta.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/build_meta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/bdist_egg.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/bdist_egg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/build_ext.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/build_ext.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/build_py.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/build_py.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/develop.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/develop.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/dist_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/dist_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/easy_install.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/easy_install.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/egg_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/egg_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/install_egg_info.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/install_egg_info.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/install_lib.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/install_lib.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/install_scripts.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/install_scripts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/py36compat.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/py36compat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/rotate.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/rotate.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/sdist.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/sdist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/setopt.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/setopt.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/upload.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/upload.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/upload_docs.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/command/upload_docs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/dist.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/dist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/glob.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/glob.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/msvc.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/msvc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/namespaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/namespaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/package_index.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/package_index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/sandbox.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/sandbox.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/site-patch.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/site-patch.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/ssl_support.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/ssl_support.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/setuptools/wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/tablib/formats/_dbf.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/tablib/formats/_dbf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/unicodecsv/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/unicodecsv/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/__main__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/__main__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/bdist_wheel.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/bdist_wheel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/convert.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/convert.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/pack.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/pack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/unpack.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/cli/unpack.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/metadata.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/metadata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wheel/wheelfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wheel/wheelfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/wrapt/wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/wrapt/wrappers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/xlrd/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/xlrd/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site-packages/xlrd/xlsx.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site-packages/xlrd/xlsx.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/site.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/site.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/tarfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/tarfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Lib/tempfile.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Lib/tempfile.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Scripts/activate_this.py" beforeDir="false" afterPath="$PROJECT_DIR$/env/Scripts/activate_this.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Scripts/csv2ods" beforeDir="false" afterPath="$PROJECT_DIR$/env/Scripts/csv2ods" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/env/Scripts/mailodf" beforeDir="false" afterPath="$PROJECT_DIR$/env/Scripts/mailodf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/templates/questionnaire/choixObjectif.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/questionnaire/choixObjectif.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mywebsite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/mywebsite/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mywebsite/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/mywebsite/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nutridelta/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/nutridelta/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nutridelta/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/nutridelta/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nutridelta/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/nutridelta/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.py" beforeDir="false" afterPath="$PROJECT_DIR$/script.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="55467303">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="html" value="1" />
-          <entry key="py" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="1" />
-          <entry key="Python" value="5" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="django_db" type="feb32156:DbDataSourceImpl" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" module-name="NutrideltaV3" is-module-sdk="true">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+    <option name="myUseModuleSdk" value="true" />
+    <option name="myModuleName" value="NutrideltaV3" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nutridelta/forms.py">
+        <entry file="file://$PROJECT_DIR$/manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+            <state relative-caret-position="34">
+              <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding>
-                <element signature="e#0#24#0" expanded="true" />
-                <marker date="1539797119056" expanded="true" signature="294:296" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nutridelta/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-689">
-              <folding>
-                <element signature="e#0#63#0" expanded="true" />
+                <element signature="e#22#31#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/nutridelta/templates/nutridelta/login.html">
+        <entry file="file://$PROJECT_DIR$/mywebsite/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nutridelta/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nutridelta/apps.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/nutridelta/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>os</find>
+      <find>BASE_DIR</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -112,13 +387,22 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/nutridelta/forms.py" />
+        <option value="$PROJECT_DIR$/nutridelta/views.py" />
+        <option value="$PROJECT_DIR$/nutridelta/models.py" />
+        <option value="$PROJECT_DIR$/mywebsite/settings.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="width" value="960" />
-    <option name="height" value="1040" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-7" />
+    <option name="width" value="1118" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -135,20 +419,7 @@
             <path>
               <item name="NutrideltaV3" type="b2602c69:ProjectViewProjectNode" />
               <item name="NutrideltaV3" type="462c0819:PsiDirectoryNode" />
-              <item name="nutridelta" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NutrideltaV3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NutrideltaV3" type="462c0819:PsiDirectoryNode" />
-              <item name="nutridelta" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="NutrideltaV3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="NutrideltaV3" type="462c0819:PsiDirectoryNode" />
-              <item name="nutridelta" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="nutridelta" type="462c0819:PsiDirectoryNode" />
+              <item name="mywebsite" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -158,8 +429,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.externalDependencies" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="NutrideltaV3" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="NutrideltaV3" />
+      </console-settings>
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -183,82 +464,108 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1539796787123</updated>
+      <workItem from="1546724371150" duration="108000" />
+      <workItem from="1546724501916" duration="251000" />
+      <workItem from="1546724837626" duration="2334000" />
+      <workItem from="1546814876133" duration="638000" />
+      <workItem from="1546822165934" duration="1060000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="4391000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-7" y="0" width="1118" height="1047" extended-state="1" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1705757" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3194707" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="R Packages" />
-      <window_info anchor="right" id="R Graphics" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.29978117" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="4" />
+      <window_info anchor="right" id="Database" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="SciView" order="6" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nutridelta/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nutridelta/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nutridelta/templates/nutridelta/login.html" />
     <entry file="file://$PROJECT_DIR$/nutridelta/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="58" lean-forward="true" selection-start-line="20" selection-start-column="58" selection-end-line="20" selection-end-column="58" />
+        <state>
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
-            <marker date="1539797119056" expanded="true" signature="294:296" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nutridelta/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/nutridelta/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-689">
+        <state relative-caret-position="102">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <element signature="e#0#63#0" expanded="true" />
+            <element signature="e#0#64#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nutridelta/templates/nutridelta/login.html">
+    <entry file="file://$PROJECT_DIR$/nutridelta/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        <state relative-caret-position="289">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutridelta/apps.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nutridelta/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/manage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <element signature="e#22#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mywebsite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
         </state>
       </provider>
     </entry>

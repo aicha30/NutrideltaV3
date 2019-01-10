@@ -17,7 +17,7 @@ altsep = '/'
 defpath = '.;C:\\bin'
 devnull = 'nul'
 
-import os
+import environ
 import sys
 import stat
 import genericpath
@@ -45,7 +45,7 @@ def normcase(s):
     """Normalize case of pathname.
 
     Makes all characters lowercase and all slashes into backslashes."""
-    s = os.fspath(s)
+    s = environ.fspath(s)
     try:
         if isinstance(s, bytes):
             return s.replace(b'/', b'\\').lower()
@@ -66,14 +66,14 @@ def normcase(s):
 
 def isabs(s):
     """Test whether a path is absolute"""
-    s = os.fspath(s)
+    s = environ.fspath(s)
     s = splitdrive(s)[1]
     return len(s) > 0 and s[0] in _get_bothseps(s)
 
 
 # Join two (or more) paths.
 def join(path, *paths):
-    path = os.fspath(path)
+    path = environ.fspath(path)
     if isinstance(path, bytes):
         sep = b'\\'
         seps = b'\\/'
@@ -86,7 +86,7 @@ def join(path, *paths):
         if not paths:
             path[:0] + sep  #23780: Ensure compatible data type even if p is null.
         result_drive, result_path = splitdrive(path)
-        for p in map(os.fspath, paths):
+        for p in map(environ.fspath, paths):
             p_drive, p_path = splitdrive(p)
             if p_path and p_path[0] in seps:
                 # Second path is absolute
@@ -138,7 +138,7 @@ def splitdrive(p):
     Paths cannot contain both a drive letter and a UNC path.
 
     """
-    p = os.fspath(p)
+    p = environ.fspath(p)
     if len(p) >= 2:
         if isinstance(p, bytes):
             sep = b'\\'
@@ -180,7 +180,7 @@ def split(p):
 
     Return tuple (head, tail) where tail is everything after the final slash.
     Either part may be empty."""
-    p = os.fspath(p)
+    p = environ.fspath(p)
     seps = _get_bothseps(p)
     d, p = splitdrive(p)
     # set i to index beyond p's last slash
@@ -199,7 +199,7 @@ def split(p):
 # It is always true that root + ext == p.
 
 def splitext(p):
-    p = os.fspath(p)
+    p = environ.fspath(p)
     if isinstance(p, bytes):
         return genericpath._splitext(p, b'\\', b'/', b'.')
     else:
@@ -228,7 +228,7 @@ def islink(path):
     This will always return false for Windows prior to 6.0.
     """
     try:
-        st = os.lstat(path)
+        st = environ.lstat(path)
     except (OSError, AttributeError):
         return False
     return stat.S_ISLNK(st.st_mode)
@@ -238,7 +238,7 @@ def islink(path):
 def lexists(path):
     """Test whether a path exists.  Returns True for broken symbolic links"""
     try:
-        st = os.lstat(path)
+        st = environ.lstat(path)
     except OSError:
         return False
     return True
@@ -260,7 +260,7 @@ except ImportError:
 def ismount(path):
     """Test whether a path is a mount point (a drive root, the root of a
     share, or a mounted volume)"""
-    path = os.fspath(path)
+    path = environ.fspath(path)
     seps = _get_bothseps(path)
     path = abspath(path)
     root, rest = splitdrive(path)
@@ -288,7 +288,7 @@ def expanduser(path):
     """Expand ~ and ~user constructs.
 
     If user or $HOME is unknown, do nothing."""
-    path = os.fspath(path)
+    path = environ.fspath(path)
     if isinstance(path, bytes):
         tilde = b'~'
     else:
@@ -299,21 +299,21 @@ def expanduser(path):
     while i < n and path[i] not in _get_bothseps(path):
         i += 1
 
-    if 'HOME' in os.environ:
-        userhome = os.environ['HOME']
-    elif 'USERPROFILE' in os.environ:
-        userhome = os.environ['USERPROFILE']
-    elif not 'HOMEPATH' in os.environ:
+    if 'HOME' in environ.environ:
+        userhome = environ.environ['HOME']
+    elif 'USERPROFILE' in environ.environ:
+        userhome = environ.environ['USERPROFILE']
+    elif not 'HOMEPATH' in environ.environ:
         return path
     else:
         try:
-            drive = os.environ['HOMEDRIVE']
+            drive = environ.environ['HOMEDRIVE']
         except KeyError:
             drive = ''
-        userhome = join(drive, os.environ['HOMEPATH'])
+        userhome = join(drive, environ.environ['HOMEPATH'])
 
     if isinstance(path, bytes):
-        userhome = os.fsencode(userhome)
+        userhome = environ.fsencode(userhome)
 
     if i != 1: #~user
         userhome = join(dirname(userhome), path[1:i])
@@ -338,7 +338,7 @@ def expandvars(path):
     """Expand shell variables of the forms $var, ${var} and %var%.
 
     Unknown variables are left unchanged."""
-    path = os.fspath(path)
+    path = environ.fspath(path)
     if isinstance(path, bytes):
         if b'$' not in path and b'%' not in path:
             return path
@@ -349,7 +349,7 @@ def expandvars(path):
         brace = b'{'
         rbrace = b'}'
         dollar = b'$'
-        environ = getattr(os, 'environb', None)
+        environ = getattr(environ, 'environb', None)
     else:
         if '$' not in path and '%' not in path:
             return path
@@ -360,7 +360,7 @@ def expandvars(path):
         brace = '{'
         rbrace = '}'
         dollar = '$'
-        environ = os.environ
+        environ = environ.environ
     res = path[:0]
     index = 0
     pathlen = len(path)
@@ -391,7 +391,7 @@ def expandvars(path):
                     var = path[:index]
                     try:
                         if environ is None:
-                            value = os.fsencode(os.environ[os.fsdecode(var)])
+                            value = environ.fsencode(environ.environ[environ.fsdecode(var)])
                         else:
                             value = environ[var]
                     except KeyError:
@@ -413,7 +413,7 @@ def expandvars(path):
                     var = path[:index]
                     try:
                         if environ is None:
-                            value = os.fsencode(os.environ[os.fsdecode(var)])
+                            value = environ.fsencode(environ.environ[environ.fsdecode(var)])
                         else:
                             value = environ[var]
                     except KeyError:
@@ -429,7 +429,7 @@ def expandvars(path):
                     c = path[index:index + 1]
                 try:
                     if environ is None:
-                        value = os.fsencode(os.environ[os.fsdecode(var)])
+                        value = environ.fsencode(environ.environ[environ.fsdecode(var)])
                     else:
                         value = environ[var]
                 except KeyError:
@@ -449,7 +449,7 @@ def expandvars(path):
 
 def normpath(path):
     """Normalize path, eliminating double slashes, etc."""
-    path = os.fspath(path)
+    path = environ.fspath(path)
     if isinstance(path, bytes):
         sep = b'\\'
         altsep = b'/'
@@ -503,12 +503,12 @@ def _abspath_fallback(path):
 
     """
 
-    path = os.fspath(path)
+    path = environ.fspath(path)
     if not isabs(path):
         if isinstance(path, bytes):
-            cwd = os.getcwdb()
+            cwd = environ.getcwdb()
         else:
-            cwd = os.getcwd()
+            cwd = environ.getcwd()
         path = join(cwd, path)
     return normpath(path)
 
@@ -535,7 +535,7 @@ supports_unicode_filenames = (hasattr(sys, "getwindowsversion") and
 
 def relpath(path, start=None):
     """Return a relative version of a path"""
-    path = os.fspath(path)
+    path = environ.fspath(path)
     if isinstance(path, bytes):
         sep = b'\\'
         curdir = b'.'
@@ -551,7 +551,7 @@ def relpath(path, start=None):
     if not path:
         raise ValueError("no path specified")
 
-    start = os.fspath(start)
+    start = environ.fspath(start)
     try:
         start_abs = abspath(normpath(start))
         path_abs = abspath(normpath(path))
@@ -595,7 +595,7 @@ def commonpath(paths):
     if not paths:
         raise ValueError('commonpath() arg is an empty sequence')
 
-    paths = tuple(map(os.fspath, paths))
+    paths = tuple(map(environ.fspath, paths))
     if isinstance(paths[0], bytes):
         sep = b'\\'
         altsep = b'/'

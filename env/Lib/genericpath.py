@@ -3,7 +3,7 @@ Path operations common to more than one OS
 Do not use directly.  The OS specific modules import the appropriate
 functions from this module themselves.
 """
-import os
+import environ
 import stat
 
 __all__ = ['commonprefix', 'exists', 'getatime', 'getctime', 'getmtime',
@@ -16,7 +16,7 @@ __all__ = ['commonprefix', 'exists', 'getatime', 'getctime', 'getmtime',
 def exists(path):
     """Test whether a path exists.  Returns False for broken symbolic links"""
     try:
-        os.stat(path)
+        environ.stat(path)
     except OSError:
         return False
     return True
@@ -27,7 +27,7 @@ def exists(path):
 def isfile(path):
     """Test whether a path is a regular file"""
     try:
-        st = os.stat(path)
+        st = environ.stat(path)
     except OSError:
         return False
     return stat.S_ISREG(st.st_mode)
@@ -39,7 +39,7 @@ def isfile(path):
 def isdir(s):
     """Return true if the pathname refers to an existing directory."""
     try:
-        st = os.stat(s)
+        st = environ.stat(s)
     except OSError:
         return False
     return stat.S_ISDIR(st.st_mode)
@@ -47,22 +47,22 @@ def isdir(s):
 
 def getsize(filename):
     """Return the size of a file, reported by os.stat()."""
-    return os.stat(filename).st_size
+    return environ.stat(filename).st_size
 
 
 def getmtime(filename):
     """Return the last modification time of a file, reported by os.stat()."""
-    return os.stat(filename).st_mtime
+    return environ.stat(filename).st_mtime
 
 
 def getatime(filename):
     """Return the last access time of a file, reported by os.stat()."""
-    return os.stat(filename).st_atime
+    return environ.stat(filename).st_atime
 
 
 def getctime(filename):
     """Return the metadata change time of a file, reported by os.stat()."""
-    return os.stat(filename).st_ctime
+    return environ.stat(filename).st_ctime
 
 
 # Return the longest prefix of all list elements.
@@ -74,7 +74,7 @@ def commonprefix(m):
     # API and they are already doing what they need to be OS-agnostic and so
     # they most likely won't be using an os.PathLike object in the sublists.
     if not isinstance(m[0], (list, tuple)):
-        m = tuple(map(os.fspath, m))
+        m = tuple(map(environ.fspath, m))
     s1 = min(m)
     s2 = max(m)
     for i, c in enumerate(s1):
@@ -93,8 +93,8 @@ def samestat(s1, s2):
 # Are two filenames really pointing to the same file?
 def samefile(f1, f2):
     """Test whether two pathnames reference the same actual file"""
-    s1 = os.stat(f1)
-    s2 = os.stat(f2)
+    s1 = environ.stat(f1)
+    s2 = environ.stat(f2)
     return samestat(s1, s2)
 
 
@@ -102,8 +102,8 @@ def samefile(f1, f2):
 # (Not necessarily the same file descriptor!)
 def sameopenfile(fp1, fp2):
     """Test whether two open file objects reference the same file"""
-    s1 = os.fstat(fp1)
-    s2 = os.fstat(fp2)
+    s1 = environ.fstat(fp1)
+    s2 = environ.fstat(fp2)
     return samestat(s1, s2)
 
 

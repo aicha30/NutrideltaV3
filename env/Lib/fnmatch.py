@@ -9,7 +9,7 @@ expression.  They cache the compiled regular expressions for speed.
 The function translate(PATTERN) returns a regular expression
 corresponding to PATTERN.  (It does not compile it.)
 """
-import os
+import environ
 import posixpath
 import re
 import functools
@@ -31,8 +31,8 @@ def fnmatch(name, pat):
     if the operating system requires it.
     If you don't want this, use fnmatchcase(FILENAME, PATTERN).
     """
-    name = os.path.normcase(name)
-    pat = os.path.normcase(pat)
+    name = environ.path.normcase(name)
+    pat = environ.path.normcase(pat)
     return fnmatchcase(name, pat)
 
 @functools.lru_cache(maxsize=256, typed=True)
@@ -48,16 +48,16 @@ def _compile_pattern(pat):
 def filter(names, pat):
     """Return the subset of the list NAMES that match PAT."""
     result = []
-    pat = os.path.normcase(pat)
+    pat = environ.path.normcase(pat)
     match = _compile_pattern(pat)
-    if os.path is posixpath:
+    if environ.path is posixpath:
         # normcase on posix is NOP. Optimize it away from the loop.
         for name in names:
             if match(name):
                 result.append(name)
     else:
         for name in names:
-            if match(os.path.normcase(name)):
+            if match(environ.path.normcase(name)):
                 result.append(name)
     return result
 

@@ -1,5 +1,5 @@
 import imp
-import os
+import environ
 import sys
 import warnings
 
@@ -8,10 +8,10 @@ import warnings
 # lib-python/modified-x.y.z directory
 import opcode
 
-dirname = os.path.dirname
+dirname = environ.path.dirname
 
-distutils_path = os.path.join(os.path.dirname(opcode.__file__), "distutils")
-if os.path.normpath(distutils_path) == os.path.dirname(os.path.normpath(__file__)):
+distutils_path = environ.path.join(environ.path.dirname(opcode.__file__), "distutils")
+if environ.path.normpath(distutils_path) == environ.path.dirname(environ.path.normpath(__file__)):
     warnings.warn("The virtualenv distutils package at %s appears to be in the same location as the system distutils?")
 else:
     __path__.insert(0, distutils_path)  # noqa: F821
@@ -41,9 +41,9 @@ if sys.platform == "win32":
             if self.library_dirs is None:
                 self.library_dirs = []
             elif isinstance(self.library_dirs, basestring):
-                self.library_dirs = self.library_dirs.split(os.pathsep)
+                self.library_dirs = self.library_dirs.split(environ.pathsep)
 
-            self.library_dirs.insert(0, os.path.join(sys.real_prefix, "Libs"))
+            self.library_dirs.insert(0, environ.path.join(sys.real_prefix, "Libs"))
             old_build_ext.finalize_options(self)
 
     from distutils.command import build_ext as build_ext_module
@@ -57,12 +57,12 @@ old_find_config_files = dist.Distribution.find_config_files
 
 def find_config_files(self):
     found = old_find_config_files(self)
-    if os.name == "posix":
+    if environ.name == "posix":
         user_filename = ".pydistutils.cfg"
     else:
         user_filename = "pydistutils.cfg"
-    user_filename = os.path.join(sys.prefix, user_filename)
-    if os.path.isfile(user_filename):
+    user_filename = environ.path.join(sys.prefix, user_filename)
+    if environ.path.isfile(user_filename):
         for item in list(found):
             if item.endswith("pydistutils.cfg"):
                 found.remove(item)
@@ -104,7 +104,7 @@ old_get_config_vars = sysconfig.get_config_vars
 def sysconfig_get_config_vars(*args):
     real_vars = old_get_config_vars(*args)
     if sys.platform == "win32":
-        lib_dir = os.path.join(sys.real_prefix, "libs")
+        lib_dir = environ.path.join(sys.real_prefix, "libs")
         if isinstance(real_vars, dict) and "LIBDIR" not in real_vars:
             real_vars["LIBDIR"] = lib_dir  # asked for all
         elif isinstance(real_vars, list) and "LIBDIR" in args:

@@ -1,4 +1,4 @@
-import os
+import environ
 import tempfile
 
 from . import abc as resources_abc
@@ -28,7 +28,7 @@ __all__ = [
 
 
 Package = Union[str, ModuleType]
-Resource = Union[str, os.PathLike]
+Resource = Union[str, environ.PathLike]
 
 
 def _get_package(package) -> ModuleType:
@@ -56,7 +56,7 @@ def _normalize_path(path) -> str:
 
     If the resulting string contains path separators, an exception is raised.
     """
-    parent, file_name = os.path.split(path)
+    parent, file_name = environ.path.split(path)
     if parent:
         raise ValueError('{!r} must be only a file name'.format(path))
     else:
@@ -90,9 +90,9 @@ def open_binary(package: Package, resource: Resource) -> BinaryIO:
     if reader is not None:
         return reader.open_resource(resource)
     _check_location(package)
-    absolute_package_path = os.path.abspath(package.__spec__.origin)
-    package_path = os.path.dirname(absolute_package_path)
-    full_path = os.path.join(package_path, resource)
+    absolute_package_path = environ.path.abspath(package.__spec__.origin)
+    package_path = environ.path.dirname(absolute_package_path)
+    full_path = environ.path.join(package_path, resource)
     try:
         return open(full_path, mode='rb')
     except OSError:
@@ -124,9 +124,9 @@ def open_text(package: Package,
     if reader is not None:
         return TextIOWrapper(reader.open_resource(resource), encoding, errors)
     _check_location(package)
-    absolute_package_path = os.path.abspath(package.__spec__.origin)
-    package_path = os.path.dirname(absolute_package_path)
-    full_path = os.path.join(package_path, resource)
+    absolute_package_path = environ.path.abspath(package.__spec__.origin)
+    package_path = environ.path.dirname(absolute_package_path)
+    full_path = environ.path.join(package_path, resource)
     try:
         return open(full_path, mode='r', encoding=encoding, errors=errors)
     except OSError:
@@ -205,12 +205,12 @@ def path(package: Package, resource: Resource) -> Iterator[Path]:
         # Windows properly.
         fd, raw_path = tempfile.mkstemp()
         try:
-            os.write(fd, data)
-            os.close(fd)
+            environ.write(fd, data)
+            environ.close(fd)
             yield Path(raw_path)
         finally:
             try:
-                os.remove(raw_path)
+                environ.remove(raw_path)
             except FileNotFoundError:
                 pass
 
@@ -256,7 +256,7 @@ def contents(package: Package) -> Iterable[str]:
         return ()
     else:
         package_directory = Path(package.__spec__.origin).parent
-        return os.listdir(package_directory)
+        return environ.listdir(package_directory)
 
 
 # Private implementation of ResourceReader and get_resource_reader() called

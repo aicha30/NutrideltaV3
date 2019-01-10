@@ -29,7 +29,7 @@ from odf.style import Style, TextProperties, ParagraphProperties, TableColumnPro
 from odf.text import P
 from odf.table import Table, TableColumn, TableRow, TableCell
 from optparse import OptionParser
-import sys,csv,re, os, codecs
+import sys,csv,re, environ, codecs
 
 if sys.version_info[0]==3: unicode=str
 
@@ -203,7 +203,7 @@ if __name__ == "__main__":
     ###########################################################
     ## try to guess the encoding; this is implemented only with
     ## POSIX platforms. Can it be improved?
-    output = os.popen('/usr/bin/file ' + pathFileCSV).read()
+    output = environ.popen('/usr/bin/file ' + pathFileCSV).read()
     m=re.match(r'^.*: ([-a-zA-Z0-9]+) text$', output)
     if m:
         encoding=m.group(1)
