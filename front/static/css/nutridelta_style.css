@@ -1,116 +1,124 @@
-
 @import url("../fonts/kelson_light_macroman/stylesheet.css");
- /* police : kelson_lt */
+/* police : kelson_lt */
 
- @import url("../fonts/kelson_medium_macroman/stylesheet.css");
- /* police : kelson_md */
+@import url("../fonts/kelson_medium_macroman/stylesheet.css");
+/* police : kelson_md */
 
- @import url("../fonts/kelson_regular_macroman/stylesheet.css");
- /* police : kelson_rg */
+@import url("../fonts/kelson_regular_macroman/stylesheet.css");
+/* police : kelson_rg */
 
- @import url("../fonts/kelson_thin_macroman/stylesheet.css");
- /* police : kelson_ultralt */
+@import url("../fonts/kelson_thin_macroman/stylesheet.css");
+/* police : kelson_ultralt */
 
- @import url("../fonts/gotham/style.css");
- /* police : kelson_ultralt */
+@import url("../fonts/gotham/style.css");
+/* police : kelson_ultralt */
 
- @import url("headerAndFooter.css");
+@import url("headerAndFooter.css");
 
- .font-title-rg {
- 	/*corespond au font utilisée pour les titres*/
- 	font-family: 'kelson_rg', sans-serif;
- }
-
- .font-title-lt {
- 	/*corespond au font utilisée pour les titres*/
- 	font-family: 'kelson_lt', sans-serif;
- }
-
- .font-title-md {
- 	/*corespond au font utilisée pour les titres*/
- 	font-family: 'kelson_md', sans-serif;
- }
-
- .font-title-ultralt {
- 	/*corespond au font utilisée pour les titres*/
- 	font-family: 'kelson_ultralt', sans-serif;
- }
-
- .font-text-Book {
- 	/*corespond au font utilisée pour les textes courants*/
- 	font-family: 'Gotham-Book', sans-serif;
- }
-
- .font-text-Bold {
- 	/*corespond au font utilisée pour les textes courants*/
- 	font-family: 'Gotham-Bold', sans-serif;
- }
-
- .font-text-Light {
- 	/*corespond au font utilisée pour les textes courants*/
- 	font-family: 'Gotham-Light', sans-serif;
- }
-
- /* permet de déclarer nos variables en css */
- :root {
-  
- 	--fontSizeTitle1:calc(10px + 1.33vmin);
-	--font_resp1:15px;
-	--respFont1:14px;
-	
-	
-	--nutrideltaColor:#E64632;
-
-	--light_shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	--light_shadow_special_footer: 0 -1px 3px rgba(0,0,0,0.12), 0 -1px 2px rgba(0,0,0,0.24);
-	--normal_shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);;
-	--hard_shadow:0px 2px 6px #555555;
-
-	--borderRadius:7px;
-	--smallFontSize:10px;
-	--navLinkFontSize:15px;
-
- }
-
-
-
- /* si la taille d'écran est en dessous de 750px (ex: telephone, tablette) */
- /* on change la valeur de nos variables  */
- @media screen and (max-width:700px) {
- 	:root {
-		 --Smargin1: 0.15em;
-		 
-		 --respTitle1:10px;
-		--font_resp1:12px;
-		--navLinkFontSize:13px;
- 	}
+.font-title-rg {
+  /*corespond au font utilisée pour les titres*/
+  font-family: 'kelson_rg', sans-serif;
 }
+
+.font-title-lt {
+  /*corespond au font utilisée pour les titres*/
+  font-family: 'kelson_lt', sans-serif;
+}
+
+.font-title-md {
+  /*corespond au font utilisée pour les titres*/
+  font-family: 'kelson_md', sans-serif;
+}
+
+.font-title-ultralt {
+  /*corespond au font utilisée pour les titres*/
+  font-family: 'kelson_ultralt', sans-serif;
+}
+
+.font-text-Book {
+  /*corespond au font utilisée pour les textes courants*/
+  font-family: 'Gotham-Book', sans-serif;
+}
+
+.font-text-Bold {
+  /*corespond au font utilisée pour les textes courants*/
+  font-family: 'Gotham-Bold', sans-serif;
+}
+
+.font-text-Light {
+  /*corespond au font utilisée pour les textes courants*/
+  font-family: 'Gotham-Light', sans-serif;
+}
+
+/* permet de déclarer nos variables en css */
+:root {
+
+  --fontSizeTitle1: calc(10px + 1.33vmin);
+  --font_resp1: 15px;
+  --respFont1: 14px;
+
+
+  --nutrideltaColor: #E64632;
+
+  --light_shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --light_shadow_special_footer: 0 -1px 3px rgba(0, 0, 0, 0.12), 0 -1px 2px rgba(0, 0, 0, 0.24);
+  --normal_shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  ;
+  --hard_shadow: 0px 2px 6px #555555;
+
+  --borderRadius: 7px;
+  --smallFontSize: 10px;
+  --navLinkFontSize: 15px;
+
+}
+
+
+
+/* si la taille d'écran est en dessous de 750px (ex: telephone, tablette) */
+/* on change la valeur de nos variables  */
+@media screen and (max-width:700px) {
+  :root {
+    --Smargin1: 0.15em;
+
+    --respTitle1: 10px;
+    --font_resp1: 12px;
+    --navLinkFontSize: 13px;
+  }
+
+  .container {
+    padding: 0em;
+  }
+}
+
 /*RESPONSIVE*/
-.magic_flos_responsive{
-	display:flex;flex-wrap: wrap;justify-content:center;
+.magic_flos_responsive {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
 /*RESPONSIVE*/
 
 
 
 html {
-min-height: 100vh;
- padding: 0;
- background-image:url('../themeNutridelta/fond_result.jpg');
+  min-height: 100vh;
+  padding: 0;
+  background-image: url('../themeNutridelta/fond_result.jpg');
 
-font-family: 'font-title-ultralt ', sans-serif;
-font-size: calc(10px + 1vmin);
+  font-family: 'font-title-ultralt ', sans-serif;
+  font-size: calc(10px + 1vmin);
 }
 
-body{
-	
-	font-family: 'Gotham-Book', sans-serif;
-	margin:auto;
-	background-color:rgba(255,255,255,0);
+body {
+
+  font-family: 'Gotham-Book', sans-serif;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0);
 }
 
 div {
-	border:0px solid black;
+  border: 0px solid black;
 
 }
 
@@ -122,34 +130,35 @@ div {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  
+
 }
 
 .block-content-nutridelta {
- 	width:100%;
- 	max-width:1000px;
-  	margin:auto;
-  	min-height: 72vh;
-  	margin-top:1em;
-  display:flex;
- }
-
-
-
-.container-acceuil-nutridelta{
-
-
-margin:auto;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  min-height: 72vh;
+  margin-top: 1em;
+  display: flex;
 }
 
 
-.container-account-nutridelta{
 
-margin:auto;
-max-width:1000px;
-border-radius:var(--borderRadius);
-margin-top:1.5em;
+.container-acceuil-nutridelta {
+
+
+  margin: auto;
 }
+
+
+.container-account-nutridelta {
+
+  margin: auto;
+  max-width: 1000px;
+  border-radius: var(--borderRadius);
+  margin-top: 1.5em;
+}
+
 /*CONTAINER*/
 
 
@@ -161,15 +170,16 @@ margin-top:1.5em;
 
 
 /*FONT SIZE*/
-.title-nutridelta{
-color:var(--nutrideltaColor);
-font-size:var(--fontSizeTitle1);
-font-family: 'kelson_md', sans-serif;
+.title-nutridelta {
+  color: var(--nutrideltaColor);
+  font-size: var(--fontSizeTitle1);
+  font-family: 'kelson_md', sans-serif;
 }
 
-.small_font_size{
-	font-size:var(--smallFontSize);
+.small_font_size {
+  font-size: var(--smallFontSize);
 }
+
 /*FONT SIZE*/
 
 
@@ -181,9 +191,10 @@ font-family: 'kelson_md', sans-serif;
 /*SHADOW*/
 .shadow_google {
 
-  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
- 
- }
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+}
+
 /*SHADOW*/
 
 
@@ -192,9 +203,10 @@ font-family: 'kelson_md', sans-serif;
 
 /*FORM*/
 
-#form_account label{
-font-family: 'kelson_rg', sans-serif;
+#form_account label {
+  font-family: 'kelson_rg', sans-serif;
 }
+
 /*FORM*/
 
 
@@ -204,29 +216,29 @@ font-family: 'kelson_rg', sans-serif;
 
 /*BUTTONS*/
 
-.button1
-{
+.button1 {
 
-	
+
   box-shadow: 3px 3px;
-  
+
   font-family: 'kelson_md', sans-serif;
   background-color: #e6432e;
   transition: all 0.07s;
   cursor: pointer;
   padding: 20px;
-  border: 1px solid rgba(255,255,255,0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   color: white;
   display: block;
-  font-size:var(--fontSizeTitle1);
+  font-size: var(--fontSizeTitle1);
 
 }
-.button1:hover{
 
-  opacity:0.75;
+.button1:hover {
+
+  opacity: 0.75;
 }
-.button1:active 
-{
+
+.button1:active {
   transform: translate(2px, 2px);
   box-shadow: none;
 }
@@ -234,24 +246,42 @@ font-family: 'kelson_rg', sans-serif;
 /*BUTTONS*/
 
 
-.img1{
-	width:100%;
-	height:100%;
+.img1 {
+  width: 100%;
+  height: 100%;
 }
 
 
 
 
-.list_objectives{
-	cursor:pointer;
-}
-.list_objectives:hover{
-	background-color:#EEEEEE;
+.list_objectives {
+  cursor: pointer;
 }
 
+.list_objectives:hover {
+  background-color: #EEEEEE;
+}
 
 
 
-.blockChoiceObjective{
-	border:0px solid black;
+
+.blockChoiceObjective {
+  border: 0px solid black;
+}
+
+.choixObjectif {
+  width: 125px;
+  margin: 0.5em;
+  box-shadow: 0px 1px 3px #AAAAAA;
+  border-radius: 3px;
+}
+
+
+
+
+
+
+.choixObjectif:hover {
+  cursor: pointer;
+  box-shadow: 0px 1px 14px #555555;
 }

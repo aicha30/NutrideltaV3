@@ -10,33 +10,39 @@
 
 
 <div class="container">
-    <div class="card">
-        <h5 class="card-header">Choisissez vos objectifs</h5>
-        <div class="card-body">
-            <div class="magic_flos_responsive">
-                {% for elem in listeObjectives %}
+  <div class="card">
+    <h5 class="card-header">Choisissez vos objectifs</h5>
+    <div class="card-body">
+      <div class="magic_flos_responsive">
+        {% for elem in listeObjectives %}
+        <div class="choixObjectif">
+
+          <img src="{% static 'img/humanBodySystem/os.png' %}" class="imgChoixObjectif" style="border-radius:3px 3px 0px 0px;border:1px solid #EEEEEE;padding:0.33em;width:100%;height:250px;" />
+
+          <div style="width:100%;background-color: #F5F5F5;text-align:center;border-radius:0px 0px 3px 3px;border:1px solid #EEEEEE;">
 
 
-                <div style="width:50px;height:40px;border:1px solid black;">
-                    {{elem.name}}
-                </div>
-
-
-                {% for elem2 in userObjectives %}
-                {% ifequal elem.id elem2.objectif_id %}
-                <script>
-                    var x = document.getElementById("customCheck{{elem.id}}").checked = true;</script>
-                {% endifequal %}
-                {% endfor %}
-                {%endfor%}
-            </div>
-
-            <div style="margin-top:1em">
-                <a href="#" class="btn btn-primary">Suivant</a>
-            </div>
-
+            {{elem.name}}
+          </div>
         </div>
+
+        {% for elem2 in userObjectives %}
+        {% ifequal elem.id elem2.objectif_id %}
+        <script>
+          var x = document.getElementById("customCheck{{elem.id}}").checked = true;
+
+        </script>
+        {% endifequal %}
+        {% endfor %}
+        {%endfor%}
+      </div>
+
+      <div style="margin-top:1em">
+        <a href="#" class="btn btn-primary">Suivant</a>
+      </div>
+
     </div>
+  </div>
 </div>
 
 

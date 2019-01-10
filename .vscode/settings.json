@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\testnutridelta\\python.exe",
+    "python.pythonPath": "venv\\Scripts\\python.exe",
     "git.ignoreLimitWarning": true
 }

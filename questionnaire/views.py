@@ -14,8 +14,10 @@ def index(request):
 
 def choixObjectif(request):
     listeObjectives = Objectif.objects.all()
-    userObjectives = ObjectifChoice.objects.filter(
+    if(request.session['session_id']):
+        userObjectives = ObjectifChoice.objects.filter(
         user_id=request.session['session_id'])
+
     return render(request, app_name + '/choixObjectif.html', locals())
 
 
