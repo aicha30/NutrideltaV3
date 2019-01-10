@@ -21,6 +21,14 @@ class ObjectifAdmin(ImportExportModelAdmin):
 
 
 
+
+@admin.register(ReponseProfil)
+class ReponseProfil(ImportExportModelAdmin):
+    pass
+
+
+
+
 # @admin.register(MicroQuestion)
 # class AdminMicroQuestion(ImportExportModelAdmin):
 #     pass

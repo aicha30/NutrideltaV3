@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+<style>
+
+
+</style>
+
+
+<div class="container">
+  <div class="card">
+    <h5 class="card-header">Votre profil:</h5>
+    <div class="card-body" style="">
+      <ul class="list-group">
+        {% for Plogin in listeProfils %}
+
+        {{active}}
+        <li class="list-group-item blockChoiceProfil" id="{{Plogin.id}}">
+          <div class="custom-control custom-checkbox">
+            {{active}}
+            <input type="checkbox" class="custom-control-input" id="customCheck3{{Plogin.id}}">
+            <label class="custom-control-label" for="customCheck3{{Plogin.id}}">{{login.name}}</label>
+          </div>
+        </li>
+
+        {% for Plogin2 in userProfils %}
+        {% ifequal Plogin.id Plogin2.profil_id %}
+        <script>
+          var x = document.getElementById("customCheck3{{Plogin.id}}").checked3 = true;
+
+        </script>
+        {% endifequal %}
+        {% endfor %}
+        {%endfor%}
+      </ul>
+
+      <div style="margin-top:1em">
+        <a href="#" class="btn btn-primary">Suivant</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

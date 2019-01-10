@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import JsonResponse
-from nutridelta.models import Objectif, ObjectifChoice
+from nutridelta.models import Objectif, ObjectifChoice, ReponseProfil
 import logging
 import json
 
@@ -10,6 +10,13 @@ app_name = 'questionnaire'
 
 def index(request):
     return render(request, 'index.html', locals())
+
+
+
+def choixProfil(request):
+    userProfils=ReponseProfil.objects.filter(user_id=request.session['session_id'])
+    return render(request, app_name+'/choixProfil.html', locals())
+
 
 
 def choixObjectif(request):
@@ -32,3 +39,6 @@ def deleteObjective(request, objectif_id):
     ObjectifChoice.objects.filter(
         user_id=user_id, objectif_id=objectif_id).delete()
     return JsonResponse({"t": "t"})
+
+
+

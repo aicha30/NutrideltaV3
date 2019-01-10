@@ -9,5 +9,9 @@ urlpatterns = [
     path('choixObjectif', views.choixObjectif, name='choixObjectif'),
     
     path('addObjective/<slug:objectif_id>', views.addObjective, name='addObjective'),
-    path('deleteObjective/<slug:objectif_id>', views.deleteObjective, name='deleteObjective')
+    path('deleteObjective/<slug:objectif_id>', views.deleteObjective, name='deleteObjective'),
+
+
+   
+    path('choixProfil', views.choixProfil, name='choixProfil'),
 ]
