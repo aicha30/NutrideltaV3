@@ -1,15 +1,16 @@
 // initialisation jquery (javascript simplifié)
 $(document).ready(function () {
-
     // si user clique sur un des block objectif
-    $(".blockChoiceObjective").unbind('click').bind('click', function () {
-        id = this.id;
-        var checked = $("#customCheck" + id).prop("checked");
-        if (checked == true) {
-            addObjective(id);
+    $(".choixObjectif").unbind('click').bind('click', function () {
+        if (!$(this).hasClass("objectifSelected")) {
+            addObjective(this.id);
+            $(this).addClass("objectifSelected");
+
         }
         else {
-            deleteObjective(id);
+            deleteObjective(this.id);
+            $(this).removeClass("objectifSelected");
+
         }
 
 
@@ -32,7 +33,7 @@ function getCookie(name) {
 }
 
 function addObjective(id) {
-    $("#customCheck" + id).prop("checked", true);
+
     $.ajax({
         headers: {
             'Content-Type': 'application/json',
@@ -48,7 +49,7 @@ function addObjective(id) {
 
 }
 function deleteObjective(id) {
-    $("#customCheck" + id).prop("checked", false);
+
     $.ajax({
         headers: {
             'Content-Type': 'application/json',

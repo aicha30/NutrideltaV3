@@ -10,8 +10,5 @@ urlpatterns = [
     
     path('addObjective/<slug:objectif_id>', views.addObjective, name='addObjective'),
     path('deleteObjective/<slug:objectif_id>', views.deleteObjective, name='deleteObjective'),
-
-
-   
     path('choixProfil', views.choixProfil, name='choixProfil'),
 ]

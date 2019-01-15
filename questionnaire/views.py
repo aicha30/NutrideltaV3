@@ -13,14 +13,13 @@ def index(request):
 
 
 
-def choixProfil(request):
-    userProfils=ReponseProfil.objects.filter(user_id=request.session['session_id'])
-    return render(request, app_name+'/choixProfil.html', locals())
-
 
 
 def choixObjectif(request):
+
+    
     listeObjectives = Objectif.objects.all()
+
     if(request.session['session_id']):
         userObjectives = ObjectifChoice.objects.filter(
         user_id=request.session['session_id'])
@@ -30,15 +29,24 @@ def choixObjectif(request):
 
 def addObjective(request, objectif_id):
         user_id = request.session['session_id']
-        ObjectifChoice(user_id=user_id, objectif_id=objectif_id).save()
+
+        test, created=ObjectifChoice.objects.get_or_create(user_id=user_id, objectif_id=objectif_id)
+        if created:
+            test.save()
         return JsonResponse({"t": "t"})
 
 
 def deleteObjective(request, objectif_id):
     user_id = request.session['session_id']
-    ObjectifChoice.objects.filter(
-        user_id=user_id, objectif_id=objectif_id).delete()
+    ObjectifChoice.objects.filter(user_id = user_id, objectif_id=objectif_id).delete()
     return JsonResponse({"t": "t"})
+
+
+
+def choixProfil(request):
+    userProfils=ReponseProfil.objects.filter(user_id=request.session['session_id'])
+    return render(request, app_name+'/choixProfil.html', locals())
+
 
 
 

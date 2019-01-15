@@ -127,7 +127,6 @@ class MicroNutriment(models.Model):
 
 class Objectif(models.Model):
     name = models.CharField(max_length=100)
-
     def __str__(self):
         return self.name
 
@@ -138,7 +137,6 @@ class Objectif(models.Model):
 class ObjectifQuestion(models.Model):
     name = models.CharField(max_length=100)
     objectif = models.ForeignKey(Objectif, on_delete=models.CASCADE)
-
     def __str__(self):
         return self.name
 
@@ -151,7 +149,6 @@ class LinkObjectifMicro(models.Model):
 class MicroQuestion(models.Model):
     name = models.CharField(max_length=100)
     microNutriment = models.ForeignKey(MicroNutriment, on_delete=models.CASCADE)
-
     def __str__(self):
         return self.name
 
@@ -204,7 +201,7 @@ class ReponsesMicroQuestion(models.Model):
 
 class ReponsesObjectifQuestion(models.Model):
     user_id = models.IntegerField()
-    # question=models.ForeignKey(ObjectifQuestion, on_delete=models.CASCADE)
+    question=models.ForeignKey(ObjectifQuestion, on_delete=models.CASCADE)
     value = models.FloatField()
 
     date = models.DateField(auto_now=False, auto_now_add=True)
