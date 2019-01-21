@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b786f1aa-3856-4be6-9ebf-4a19372dd751" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/static/css/nutridelta_style.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/static/css/nutridelta_style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/templates/questionnaire/choixObjectif.html" beforeDir="false" afterPath="$PROJECT_DIR$/front/templates/questionnaire/choixObjectif.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mydatabase" beforeDir="false" afterPath="$PROJECT_DIR$/mydatabase" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -276,7 +271,7 @@
       <workItem from="1547749439047" duration="1485000" />
       <workItem from="1547770674850" duration="599000" />
       <workItem from="1548014028458" duration="234000" />
-      <workItem from="1548072309194" duration="2412000" />
+      <workItem from="1548072309194" duration="2478000" />
     </task>
     <servers />
   </component>
@@ -286,7 +281,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44059000" />
+    <option name="totallyTimeSpent" value="44125000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
