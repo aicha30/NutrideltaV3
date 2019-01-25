@@ -16,8 +16,6 @@ def index(request):
 
 
 def choixObjectif(request):
-
-    
     listeObjectives = Objectif.objects.all()
 
     if(request.session['session_id']):
@@ -43,9 +41,11 @@ def deleteObjective(request, objectif_id):
 
 
 
+
+
 def choixProfil(request):
     userProfils=ReponseProfil.objects.filter(user_id=request.session['session_id'])
-    return render(request, app_name+'/choixProfil.html', locals())
+    return render(request, app_name+'/choixProfil.html', locals(),)
 
 
 

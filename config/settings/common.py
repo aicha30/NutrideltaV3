@@ -188,7 +188,7 @@ TEMPLATES = [
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
-                'django.contrib.messages.context_processors.messages',
+                'django.contrib.messages.context_processors.messages'
                 #'front.context_processors.site_processor',
             ],
             #'libraries': {
