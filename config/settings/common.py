@@ -98,17 +98,17 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 #PRODUCTION
-#DATABASES = {
-#    'default': env.db('DATABASE_URL', default='mysql://bdelpech@localhost/bdelpech_checkmymeal'),
-#}
+DATABASES = {
+    'default': env.db('DATABASE_URL', default='mysql://bdelpech@localhost/bdelpech_testnutridelta'),
+}
 
 #LOCALHOST
-DATABASES = {
-    'default': {
-       'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'mydatabase',
-    }
-}
+#DATABASES = {
+ #   'default': {
+  #     'ENGINE': 'django.db.backends.sqlite3',
+  #      'NAME': 'mydatabase',
+  #  }
+#}
 
 #DATABASES['default']['ATOMIC_REQUESTS'] = True
 #DATABASES['default']['OPTIONS'] = {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}

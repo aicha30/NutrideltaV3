@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from nutridelta.models import Objectif, ObjectifChoice, ReponseProfil
+from nutridelta.functions import *
 import logging
 import json
 
@@ -12,9 +13,10 @@ app_name = 'questionnaire'
 
 def index(request):
     listeObjectives = Objectif.objects.all()
-    if(request.session['session_id']):
-        userObjectives = ObjectifChoice.objects.filter(
-        user_id=request.session['session_id'])
+
+
+
+    userObjectives = ObjectifChoice.objects.filter(user_id = giveMeUserId(request) )
 
 
     specificTemplate='questionnaire/choixObjectifTest.html'
