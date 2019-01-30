@@ -5,7 +5,14 @@ from django.utils import timezone
 import datetime
 from django.contrib.auth import get_user_model
 
+
 User = get_user_model()
+
+class Profile(models.Model):
+    user=models.OneToOneField(User, on_delete=models.CASCADE)
+    identifiant=models.IntegerField()
+
+
 
 
 # Besoin officiels en vitamines selon sexe, age ,lactation et grossesse
@@ -153,6 +160,7 @@ class MicroQuestion(models.Model):
         return self.name
 
 
+
 # REPONSES
 class Regime(models.Model):
     name = models.CharField(max_length=100)
@@ -161,7 +169,7 @@ class Regime(models.Model):
 class ObjectifChoice(models.Model):
     user_id = models.IntegerField()
     objectif = models.ForeignKey(Objectif, on_delete=models.CASCADE)
-
+    
 
 class ReponseProfil(models.Model):
     user_id = models.IntegerField()

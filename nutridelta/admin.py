@@ -19,13 +19,23 @@ class ObjectifAdmin(ImportExportModelAdmin):
     resource_class = ObjectifResource
 
 
-
+@admin.register(Profile)
+class ProfileAdmin(ImportExportModelAdmin):
+    pass
 
 
 @admin.register(ReponseProfil)
-class ReponseProfil(ImportExportModelAdmin):
+class ReponseProfilAdmin(ImportExportModelAdmin):
     pass
 
+
+@admin.register(ObjectifQuestion)
+class ObjectifQuestion(ImportExportModelAdmin):
+    pass
+
+@admin.register(ReponsesObjectifQuestion)
+class ReponsesObjectifQuestionAdmin(ImportExportModelAdmin):
+    pass
 
 
 

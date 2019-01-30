@@ -73,22 +73,26 @@ footer .linksite a:hover{
 
 /* change the background color */
 .navbar-custom {
-    background-color: #444444;box-shadow:1px 0px 2px #000000;
+    
+    
 }
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {
-    color: rgba(255,255,255,.8);
+    color: black;
     
 }
 /* change the link color and add padding for height */
 .navbar-custom .navbar-nav .nav-link {
-    color: rgba(255,255,255,.5);
-    padding:0.66em;font-size:13px;border-radius:4px;margin-right:0.5em;
+    color: black;
+    padding:0.66em;font-size:13px;border-radius:4px;margin-right:0.5em;margin:0.66em 0.4em;
 }
 @media screen and (max-width:767px){
   .navbar-custom .navbar-nav .nav-link {
     box-shadow:0px 0px 0px;
+  }
+  .navbar-brand-logo{
+    display:none;
   }
 }
 
@@ -96,9 +100,20 @@ footer .linksite a:hover{
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
     color: #ffffff;
-    background-color: #AAAAAA; /* add background-color to active links */
+    background-color: black; /* add background-color to active links */
 }
 
+
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  margin:0.3em;
+  vertical-align: middle;
+  content: "";
+  background: no-repeat center center;
+  background-size: 100% 100%;
+}
 
 
 

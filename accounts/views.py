@@ -6,7 +6,7 @@ from django.contrib import messages
 from .forms import *
 from django.contrib.auth import logout, login, authenticate, get_user_model
 from django.contrib.auth.forms import UserCreationForm
-
+from nutridelta.models import Profile
 
 # from django.contrib.sites.shortcuts import get_current_site
 # from django.utils.encoding import force_bytes, force_text
@@ -20,6 +20,7 @@ app_name = 'accounts'
 
 
 def register(request):
+    user_id=request.session.get('session_id')
     if request.method == 'POST':
         custom_error = []
         next = request.POST.get('next', '/')
@@ -45,9 +46,19 @@ def register(request):
                 # )
                 # email.send()
                 # return HttpResponse("Veillez confirmer votre adresse mail pour compléter l'inscription")
-                form.save()
+               
+
                 username = form.cleaned_data.get('username')
                 raw_password = form.cleaned_data.get('password1')
+
+
+                
+                newUser=form.save()
+
+                Profile(user=newUser,identifiant=request.session['session_id']).save()
+
+                del request.session['session_id']
+
                 # user = authenticate(username=username, password=raw_password)
                 # login(request, user)
                 messages.success(

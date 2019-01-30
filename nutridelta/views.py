@@ -31,9 +31,12 @@ def generate_anonymous_id():
 
 
 def index(request):
+
     user = request.user
     if user.is_authenticated:
-        request.session['session_id'] = request.user.id
+        test = request.user.id
+        profil=Profile.objects.get(user=test)
+        user_id=profil.identifiant
 
     if user.is_anonymous:
         test1 = request.session.get('session_id')
@@ -42,7 +45,10 @@ def index(request):
         else:
             request.session['session_id'] = generate_anonymous_id()
             user_id = request.session['session_id']
-    user_id = request.session['session_id']
-    # userObjectifs=ObjectifChoice.objects.filter(user_id= user_id).values_list('objectif', flat=True)
-    # testlist=ObjectifQuestion.objects.filter(objectif__in=userObjectifs)
+
+    request.session['session_id']=user_id
+    #lost when the user leave the browser
+    request.session.set_expiry(0)
+    
+   
     return render(request, 'index.html', locals())

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <div class="containerQuestionnaire">
+    {% include 'questionnaire/titleQuestionnaire.html' with title="Choisissez vos objectifs" %}
+     
+
+
+    {% include specificTemplate %} 
+     
+
+
+
+    {% include 'questionnaire/suivant.html' %}
+  </div>
+{% endblock %}

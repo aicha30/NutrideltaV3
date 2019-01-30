@@ -8,21 +8,19 @@ app_name = 'questionnaire'
 # Create your views here.
 
 
+
+
 def index(request):
-    return render(request, 'index.html', locals())
-
-
-
-
-
-def choixObjectif(request):
     listeObjectives = Objectif.objects.all()
-
     if(request.session['session_id']):
         userObjectives = ObjectifChoice.objects.filter(
         user_id=request.session['session_id'])
 
-    return render(request, app_name + '/choixObjectif.html', locals())
+
+    specificTemplate='questionnaire/choixObjectifTest.html'
+
+    return render(request, app_name+'/index.html', locals())
+
 
 
 def addObjective(request, objectif_id):

@@ -9,11 +9,9 @@ class SignUpForm(UserCreationForm):
 	
 	class Meta:
 		model= User
-		fields=('username','email','password1', 'password2')
+		fields=('id','username','email','password1', 'password2')
 		
 		
-
-
 
 class loginForm(forms.Form):
     usernameOrEmail = forms.CharField(label="Pseudo ou Email", max_length=50)

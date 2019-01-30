@@ -18,6 +18,7 @@
 
 
 
+
 </head>
 
 <body>
@@ -25,20 +26,17 @@
   
 <div class="main-content-nutridelta">
   
-<nav class="navbar navbar-expand-md navbar-dark navbar-custom p-0" style="margin:0;padding:0;width:100%;">
-   
-    <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-md navbar-light navbar-custom p-0" style="margin:0;padding-bottom:1.2em;width:100%;">
+   <button class="navbar-toggler mr-3" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarContent">
         <div class="navbar-header" style="display:flex;">
           <!--L'emplancement du logo de Nutridelta -->
          <div style="margin:auto;display:inline-block;">
-          <a class="navbar-brand" href="{% url 'nutridelta:index' %}"><img id="logo" src="{% static 'themeNutridelta/logo-minimaliste.png' %}"></a>
+          <a class="navbar-brand navbar-brand-logo" href="{% url 'nutridelta:index' %}"><img id="logo" src="{% static 'themeNutridelta/logo-minimaliste.png' %}"></a>
         </div>
           <!--L'emplancement du logo de Nutridelta -->
-
-          
       </div>
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
@@ -87,7 +85,9 @@
 {% endif %}   
 
      
-           <div class="block-content-nutridelta">
+          
+            <div class="content">
+              <div class="ss-content">
             {% block content %}
            
               <!--  On affiche ici les messages(qu'on peut generer dans les views) -->
@@ -96,6 +96,9 @@
 
             {% endblock %}
           </div>
+        </div>
+             
+         
 <!-- Footer -->
          <!-- Footer -->
           <footer class="mastfoot mt-auto" style="border-radius:0;">
