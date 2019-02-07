@@ -1,0 +1,58 @@
+ {% load static %}
+
+ <div class="magic_flos_responsive">
+
+        {% for elem in listeObjectives %}
+        <div class="containerChoixObjectif" >
+        <div class="choixObjectif card-1 " id="choixObjectif_{{ elem.id }}"   style="background-image:url('{% static 'img/humanBodySystem/'%}{{ elem.name }}.png');"></div>
+          <div class="descriptionChoixObjectif"><B>{{elem.name}}</B></div>
+        </div>
+
+
+       {% for elem2 in userObjectives %}
+          {% ifequal elem2.objectif_id  elem.id %}
+
+  <script>
+  $("#choixObjectif_{{ elem.id }}").addClass("objectSelected");
+  </script>
+
+        {% endifequal %}
+
+        {% endfor %}
+
+
+           <script>
+
+          $("#choixObjectif_{{ elem.id }}").click(function () {
+
+            if(!$("#choixObjectif_{{ elem.id }}").hasClass("objectSelected")){
+               $("#choixObjectif_{{ elem.id }}").addClass("objectSelected");
+               addObjective({{ elem.id}});
+            }else{
+              $("#choixObjectif_{{ elem.id }}").removeClass("objectSelected");
+               deleteObjective({{ elem.id}});
+            }
+          });
+ </script>
+
+
+
+        {%endfor%}
+
+
+
+
+
+
+
+ <div class="container-suivant">
+ <button class="button1" onclick="window.location.href='choixProfil'">Suivant</button>
+</div>
+
+
+
+</div>
+
+
+
+

@@ -1,0 +1,17 @@
+ <div class="form-group">
+  <label for="id_{{ id }}" class="col-form-label  requiredField">
+        {{ name_select }}<span class="asteriskField">*</span>
+      </label>
+      <div class="">
+        <select name="{{ id }}" id="id_{{ id }}" required class="select form-control">
+          <option value="" selected>--</option>
+          {% for elem in list %}
+            <option value="{{ elem.name }}"
+              {% ifequal elem.name option_value %}
+                    selected
+              {% endifequal %}
+            >{{ elem.name }}</option>
+          {% endfor %}
+        </select>
+      </div>
+ </div>

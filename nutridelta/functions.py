@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from random import randint
-from .models import *
-
+from .models import Profile
+from django.contrib.auth.models import User
 
 def generate_anonymous_id():
     anonymous_have_id = False

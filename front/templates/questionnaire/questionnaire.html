@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+  <div class="containerQuestionnaire">
+<div class="progress" style="margin-bottom:1em;">
+  <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress_bar_width }}%"></div>
+</div>
+    {% include 'questionnaire/titleQuestionnaire.html' %}
+
+
+
+    {% include specificTemplateQuestionnaire   %}
+     
+
+
+
+  </div>
+{% endblock %}

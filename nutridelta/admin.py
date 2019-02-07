@@ -18,8 +18,19 @@ class ObjectifResource(resources.ModelResource):
 class ObjectifAdmin(ImportExportModelAdmin):
     resource_class = ObjectifResource
 
+@admin.register(Sport)
+class SportAdmin(ImportExportModelAdmin):
+    pass
+
+@admin.register(SportChoice)
+class SportChoiceAdmin(ImportExportModelAdmin):
+    pass
 
 @admin.register(Profile)
+class ProfileAdmin(ImportExportModelAdmin):
+    pass
+
+@admin.register(Regime)
 class ProfileAdmin(ImportExportModelAdmin):
     pass
 

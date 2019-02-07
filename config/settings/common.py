@@ -41,8 +41,9 @@ DJANGO_APPS = (
     'front',
     'accounts',
     'questionnaire',
-    'import_export'
-    
+    'import_export',
+    'rest_framework',
+    'crispy_forms',
 
 )
 
@@ -97,18 +98,18 @@ MANAGERS = ADMINS
 # ------------------------------------------------------------------------------
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
-#PRODUCTION
+# #PRODUCTION
 DATABASES = {
     'default': env.db('DATABASE_URL', default='mysql://bdelpech@localhost/bdelpech_testnutridelta'),
 }
 
-#LOCALHOST
-#DATABASES = {
- #   'default': {
-  #     'ENGINE': 'django.db.backends.sqlite3',
-  #      'NAME': 'mydatabase',
-  #  }
-#}
+# LOCALHOST
+# DATABASES = {
+#    'default': {
+#       'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': 'mydatabase',
+#    }
+# }
 
 #DATABASES['default']['ATOMIC_REQUESTS'] = True
 #DATABASES['default']['OPTIONS'] = {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'"}
@@ -189,6 +190,7 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages'
+
                 #'front.context_processors.site_processor',
             ],
             #'libraries': {
@@ -199,7 +201,7 @@ TEMPLATES = [
 ]
 
 # See: http://django-crispy-forms.readthedocs.io/en/latest/install.html#template-packs
-CRISPY_TEMPLATE_PACK = 'bootstrap3'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # STATIC FILE CONFIGURATION
 # ------------------------------------------------------------------------------
@@ -357,3 +359,14 @@ MESSAGE_TAGS = {message_constants.DEBUG: 'debug',
                 message_constants.SUCCESS: 'success',
                 message_constants.WARNING: 'warning',
                 message_constants.ERROR: 'danger',}
+
+
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny',
+    ]
+}
+
+

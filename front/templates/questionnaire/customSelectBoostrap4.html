@@ -1,0 +1,15 @@
+<div class="form-group">
+
+      <label for="id_{{ name_select }}">{{ name_select }}</label>
+      <select name="{{ name_select }}" class="form-control" id="id_{{ name_select }}">
+        {% for i in range_select %}
+        <option value="{{ i }}"
+          {% ifequal i option_value %}
+            selected
+          {% endifequal %}
+        >
+         {{ i }}
+        </option>
+        {% endfor %}
+      </select>
+    </div>

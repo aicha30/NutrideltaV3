@@ -52,7 +52,7 @@
 
 /* permet de déclarer nos variables en css */
 :root {
-
+  --smallSize:800px;
   --fontSizeTitle1: calc(10px + 1.33vmin);
   --font_resp1: 15px;
   --respFont1: 14px;
@@ -76,7 +76,7 @@
 
 /* si la taille d'écran est en dessous de 750px (ex: telephone, tablette) */
 /* on change la valeur de nos variables  */
-@media screen and (max-width:700px) {
+@media screen and (max-width:var(--smallSize)) {
   :root {
     --Smargin1: 0.15em;
 
@@ -87,6 +87,8 @@
 
   .container {
     padding: 0em;
+    font-family: 'kelson_rg', sans-serif;
+
   }
 }
 
@@ -142,30 +144,47 @@ div {
   
 }
 .content{
-  width:98%;margin:auto;
-
-  min-height: 85vh;
+  width:100%;margin:auto;
+margin-top:1em;
+min-height:60vh;
   display:flex;
+  padding-top:1em;
 }
 .ss-content{
   margin:auto;
+
+  width:100%;
 }
 .containerQuestionnaire{
+
   box-shadow:var(--normal_shadow);
-  width:100%;max-width:750px;margin:auto;background-color:white;padding:1.25em;border-radius:5px;
+  width:96%;max-width:650px;
+  margin:auto;margin-top:1em;
+
+  background-color:white;
+  padding:1.25em;
+  border-radius:5px;
 }
 
 @media screen and (max-width:800px){
   .content{
-    min-height: 0;
- padding-top:1em;
+
+  padding-top:0.11em;
   display:flex;
+    margin-top:0em;
 }
 .containerQuestionnaire{
-  padding:0.5em;
+padding:0.66em 0.44em;
+  margin-top:0em;
+}
+.main-content-nutridelta {
+  min-height: 0vh;
 }
 }
 
+h5{
+  font-family: 'kelson_md', sans-serif;
+}
 
 .container-acceuil-nutridelta {
 
@@ -215,7 +234,7 @@ max-width:950px;
 /*SHADOW*/
 .shadow_google {
 
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 }
 
@@ -299,7 +318,7 @@ margin:auto;
   cursor:pointer;
   
   border-radius:50%;
-  box-shadow:var(--hard_shadow);
+
   padding:0.9em;
   
   
@@ -310,7 +329,7 @@ background-repeat: no-repeat;
 
     
 }
-@media screen and (max-width:800px){
+@media screen and (max-width: 800px){
   .choixObjectif{
     width:95px;height:95px;
 
@@ -322,7 +341,33 @@ background-repeat: no-repeat;
  box-shadow:var(--hard_shadow);;
 
 }
-.objectifSelected{
+.choixSexe{
+  width:48%;text-align:center;padding:0.8em;cursor:pointer;margin-right:1%;border-radius:0.25em;
+  border:3px solid white;
+
+}
+.choixSexe:hover{
+ box-shadow:var(--hard_shadow);;
+
+}
+
+.choixAllaitante{
+  width:48%;text-align:center;padding:0.8em;cursor:pointer;margin-right:1%;border-radius:0.25em;
+border:3px solid white;
+}
+.choixSexe:hover{
+ box-shadow:var(--hard_shadow);;
+
+}
+
+.choixEnceinte{
+  width:48%;text-align:center;padding:0.8em;cursor:pointer;margin-right:1%;border-radius:0.25em;
+border:3px solid white;
+}
+
+
+
+.objectSelected{
   
   border:3px solid #7abc1e;
   background-color:rgba(200,255,200, 0.5);
@@ -382,19 +427,74 @@ border-width: 20px 30px 20px 0;
 border-color: transparent #000000 transparent transparent;
 }
 .prev:hover{
-  border-color: transparent #e64621; transparent transparent;
+  border-color: transparent #e64621; transparent: transparent;
 }
 .next:hover{
   border-color: transparent transparent transparent  #e64621;
 }
+@media screen and (max-width: 800px){
+  .next{
+    border-width: 10px 0 10px 15px;
+  }
+  .prev{
+    border-width: 10px 15px 10px 0;
+  }
+}
+
 
 .container-suivant{
   display:flex;width:100%;margin-top:1em;
 }
 
 .container-title-questionnaire{
-text-align:center;padding:1em; position:relative;display:flex;width:100%; font-family: 'kelson_rg', sans-serif;
+text-align:center;padding:0.5em;
+  position:relative;
+  display:flex;width:100%;
+  font-family: 'kelson_rg', sans-serif;
+  font-size:var(--fontSizeTitle1);
 }
 .title-questionnaire{
   margin:auto;padding-left:1em;padding-right:1em;
 }
+
+.div_user_sport{
+  padding:0.77em;margin-top:0.5em;
+}
+
+.card {
+  background: #fff;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 300px;
+}
+
+.card-1 {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.card-1:hover {
+  box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+
+.card-2 {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.card-3 {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.card-4 {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.card-5 {
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+
+

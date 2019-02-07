@@ -51,11 +51,11 @@ class Anc(models.Model):
 
 # Influence du sport sur la depense calorique
 class Sport(models.Model):
-    sport = models.CharField(max_length=100)
+    name = models.CharField(max_length=100)
     depense_energetique = models.FloatField()
 
     def __str__(self):
-        return self.sport
+        return self.name
 
 
 # quantite en vitamine pour une categorie d'aliment donnée
@@ -165,34 +165,51 @@ class MicroQuestion(models.Model):
 class Regime(models.Model):
     name = models.CharField(max_length=100)
 
+    def __str__(self):
+        return  self.name
+
 
 class ObjectifChoice(models.Model):
     user_id = models.IntegerField()
     objectif = models.ForeignKey(Objectif, on_delete=models.CASCADE)
+
+
     
 
 class ReponseProfil(models.Model):
+    @classmethod
+    def create(cls, user_id):
+        cls(user_id = user_id)
+        return ReponseProfil
+
+    TAILLE_CHOICES = [(i, i) for i in range(30, 220)]
+    AGE_CHOICES = [(i, i) for i in range(0, 110)]
+    POID_CHOICES = [(i, i) for i in range(2, 200)]
+
     user_id = models.IntegerField()
-    age = models.FloatField()
-    taille = models.FloatField()
-    poid = models.FloatField()
-    sexe = models.BooleanField()
+    age = models.IntegerField(default = 40, choices=AGE_CHOICES)
+    taille = models.IntegerField(default=170, choices=TAILLE_CHOICES)
+    poid = models.IntegerField(default=70, choices=POID_CHOICES)
+    sexe = models.BooleanField(default = True, help_text="True=Homme")
     enceinte = models.BooleanField(default=False)
-    allaitnte = models.BooleanField(default=False)
-    regime = models.ForeignKey(Regime, on_delete=models.CASCADE)
-    alcool = models.FloatField()
-    cigarette = models.FloatField()
+    allaitante = models.BooleanField(default=False)
+    regime = models.ForeignKey(Regime, on_delete=models.CASCADE, null= True)
+    alcool = models.IntegerField(default = 0)
+    cigarette = models.IntegerField(default = 0)
 
     date = models.DateField(auto_now=False, auto_now_add=True)
     last_modif = models.DateField(auto_now=True, auto_now_add=False)
 
 
-class ReponseSport(models.Model):
+
+
+class SportChoice(models.Model):
     user_id = models.IntegerField()
     sport = models.ForeignKey(Sport, on_delete=models.CASCADE)
+    frequency = models.IntegerField(default = 0)
 
     def __str__(self):
-        return '%s %s' % (self.user_id, self.sport)
+        return '%s %s' % (self.user_id, self.name)
 
 
 class ReponsesMicroQuestion(models.Model):

@@ -69,11 +69,13 @@ footer .linksite a{
 footer .linksite a:hover{
 }
 
-
+.navbar-light .navbar-toggler{
+  border-color:rgba(0,0,0,0);
+}
 
 /* change the background color */
 .navbar-custom {
-    
+
     
 }
 /* change the brand and text color */
@@ -84,7 +86,7 @@ footer .linksite a:hover{
 }
 /* change the link color and add padding for height */
 .navbar-custom .navbar-nav .nav-link {
-    color: black;
+   color:black;
     padding:0.66em;font-size:13px;border-radius:4px;margin-right:0.5em;margin:0.66em 0.4em;
 }
 @media screen and (max-width:767px){
@@ -99,7 +101,7 @@ footer .linksite a:hover{
 /* change the color of active or hovered links */
 .navbar-custom .nav-item.active .nav-link,
 .navbar-custom .nav-item:hover .nav-link {
-    color: #ffffff;
+  color:white;
     background-color: black; /* add background-color to active links */
 }
 

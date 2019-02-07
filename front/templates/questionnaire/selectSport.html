@@ -1,0 +1,96 @@
+ {% load static %}
+
+<div class="container">
+
+
+  <!-- Div:va permettre d'afficher les sports que l'utilisateur à sélectionner et va pouvoir aussi les supprimé -->
+  <div id="sportUserDiv" style="text-align: left;">
+
+    {#        MARCHE#}
+{#    <div style="margin-top:1.5em;">#}
+{#      <div style="width:100%;display:flex;">#}
+{#        <div style="margin-top:auto;">Marche</div>#}
+{#        <div style="margin-left:auto;">#}
+{#          <button type="button" class="btn btn-danger" style="margin-left:1em;">X</button>#}
+{#        </div>#}
+{#      </div>#}
+{#      <select class="form-control inputstl" style="margin-top:0.2em;">#}
+{#        <div>#}
+{#          <option>0h</option>#}
+{#          <option>1h</option>#}
+{#          <option>2h</option>#}
+{#          <option>3h</option>#}
+{#          <option>4h</option>#}
+{#          <option>5h</option>#}
+{#          <option>Plus de 5h</option>#}
+{#        </div>#}
+{##}
+{#      </select>#}
+{#    </div>#}
+
+
+
+    {% for a in userSport %}
+      <div class="card-1 div_user_sport" id="div_user_Sport_{{ a.sport.id }}" >
+        <div style="width:100%;display:flex;">
+        <div style="margin-top:auto;">{{ a.sport }}</div>
+        <div style="margin-left:auto;">
+          <button type="button" class="btn btn-danger deleteSport"  onclick="deleteSportChoice(this.id, '{{ a.sport.name }}')" id="{{ a.sport.id }}" style="margin-left:1em;">X</button>
+        </div>
+      </div>
+        <select class="form-control inputstl" style="margin-top:0.2em;">
+          <div>
+            <option>30min</option>
+            <option>1h</option>
+            <option>2h</option>
+            <option>3h</option>
+            <option>4h</option>
+            <option>5h</option>
+            <option>Plus de 5h</option>
+          </div>
+
+        </select>
+      </div>
+
+      <div class="container">
+        <span class="glyphicon glyphicon-remove"></span>
+      </div>
+
+    {% endfor %}
+
+    <!-- Fin de la div de sélection des sports -->
+
+
+    <!-- Select qui va afficher tous les sports dans une liste déroulante -->
+  </div>
+  <div style="margin-top:4em;width:100%;">
+
+    <div style="width:100%;margin-bottom:1em;"><b>Ajouter un sport</b></div>
+
+
+    <div style="width:100%;margin:auto;display:flex;">
+      <select id="select_sport"
+              class="form-control inputstl"
+              style="margin-right:0.5em;"
+      >
+       <option value="" selected>--</option>
+        {% for h in listSports %}
+          <option value="{{ h.id }}" id="{{ h.id }}" onclick="addSport({{ h.id }},{{ h.name }})">{{ h.name }}</option>
+        {% endfor %}
+      </select>
+
+
+      <button class="btn btn-primary" id="addSport">Ajouter</button>
+    </div>
+  </div>
+
+
+</div>
+
+
+<div class="container-suivant" style="margin-top:3em;">
+  <button class="button1" onclick="window.location.href='choixProfil'">Suivant</button>
+</div>
+
+
+</div>

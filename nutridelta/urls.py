@@ -6,5 +6,4 @@ from django.contrib import admin
 app_name = 'nutridelta'
 urlpatterns = [
     path('', views.index, name='index'),
-    
 ]

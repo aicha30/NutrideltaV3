@@ -1,48 +1,63 @@
-{% extends 'base.html' %}
-{% block content %}
 {% load static %}
-
-
-<style>
-
-
-</style>
+{% load crispy_forms_tags %}
 
 
 <div class="container">
-  <div class="card">
-    <h5 class="card-header">Votre profil:</h5>
-    <div class="card-body" style="">
-      <ul class="list-group">
-        {% for Plogin in listeProfils %}
+  <form method="POST">
+    {% csrf_token %}
 
-        {{active}}
-        <li class="list-group-item blockChoiceProfil" id="{{Plogin.id}}">
-          <div class="custom-control custom-checkbox">
-            {{active}}
-            <input type="checkbox" class="custom-control-input" id="customCheck3{{Plogin.id}}">
-            <label class="custom-control-label" for="customCheck3{{Plogin.id}}">{{login.name}}</label>
-          </div>
-        </li>
-
-        {% for Plogin2 in userProfils %}
-        {% ifequal Plogin.id Plogin2.profil_id %}
-        <script>
-          var x = document.getElementById("customCheck3{{Plogin.id}}").checked3 = true;
-
-        </script>
-        {% endifequal %}
-        {% endfor %}
-        {%endfor%}
-      </ul>
-
-      <div style="margin-top:1em">
-        <a href="#" class="btn btn-primary">Suivant</a>
-      </div>
-
+    <div class="form-group" style="width:100%;display:flex;">
+      <div class="choixSexe card-1" id="True">Homme</div>
+      <div class="choixSexe card-1" id="False">Femme</div>
     </div>
-  </div>
+
+
+    <div class="form-group" id="specific-div-for-women"  style="width:100%;display:flex;">
+      <div class="choixEnceinte card-2" id="enceinte_{{ rep_profil_user.enceinte }}">Enceinte</div>
+      <div class="choixAllaitante card-2" id="allaitante_{{ rep_profil_user.allaitante }}">Aillante</div>
+    </div>
+
+{% if not rep_profil_user.sexe %}
+<script>
+
+$("#specific-div-for-women").show();
+
+</script>
+  {% else %}
+  <script>
+
+$("#specific-div-for-women").hide();
+
+</script>
+{% endif %}
+
+
+    {% include 'questionnaire/customSelectBoostrap4.html' with name_select="taille"  option_value=rep_profil_user.taille  range_select=range_taille %}
+
+    {% include 'questionnaire/customSelectBoostrap4.html' with name_select="poid"  option_value=rep_profil_user.poid range_select=range_poid %}
+
+    {% include 'questionnaire/customSelectBoostrap4.html' with name_select="age"  option_value=rep_profil_user.age range_select=range_age %}
+
+    {% include 'questionnaire/customSelectForeignObject.html' with name_select="RegimeAlimentaire" id="regime" list=list_regime option_value=rep_profil_user.regime.name %}
+
+
+    <div class="container-suivant">
+      <input type="submit" class="button1"> </input>
+    </div>
+  </form>
 </div>
 
+<script>
+  document.getElementById("{{ rep_profil_user.sexe }}").classList.add("objectSelected");
 
-{% endblock %}
+  if( $("#enceinte_True")){
+    $("#enceinte_True").addClass("objectSelected");
+  }
+  if( $("#allaitante_True")){
+    $("#allaitante_True").addClass("objectSelected");
+  }
+</script>
+
+
+
+

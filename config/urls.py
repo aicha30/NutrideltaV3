@@ -13,6 +13,8 @@ urlpatterns = [
     path('admin/', admin.site.urls, name="admin"),
    	path('accounts/', include('accounts.urls')),
     path('questionnaire/', include('questionnaire.urls'), name="questionnaire"),
+    path('api-auth', include('rest_framework.urls')),
+    path('api/', include('api.urls'), name="api"),
     
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
