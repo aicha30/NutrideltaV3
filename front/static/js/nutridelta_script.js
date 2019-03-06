@@ -36,6 +36,29 @@ $(document).ready(function () {
 
    });
 
+
+
+var csrftoken = $.cookie('csrftoken');
+
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+
+
+
+
+
+
 function hideOrShowSpecificDivForWomen(id){
     if(id=="True"){
        $("#specific-div-for-women").hide(200);
@@ -60,6 +83,11 @@ function getCookie(name) {
     }
     return cookieValue;
 }
+
+
+
+
+
 
 function addSportChoice(id, sport_name){
     $.ajax({
@@ -179,7 +207,7 @@ function updateEnceinte(enceinte) {
     $.ajax({
         headers: {
             'Content-Type': 'application/json',
-            'X-CSRFToken': getCookie('csrftoken')
+            'csrfmiddlewaretoken': getCookie('csrftoken')
         },
         url: "updateEnceinte/" + enceinte,
         type: "POST",
@@ -193,14 +221,12 @@ function updateAllaitante(allaitante) {
 
     $.ajax({
         headers: {
-            'Content-Type': 'application/json',
-            'X-CSRFToken': getCookie('csrftoken')
+            'Content-Type': 'application/json'
         },
         url: "updateAllaitante/" + allaitante,
         type: "POST",
 
         success: function (data) {
-
         }
     });
 }

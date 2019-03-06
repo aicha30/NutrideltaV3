@@ -11,7 +11,7 @@ from random import randint
 from django.contrib.sessions.models import Session
 from django.contrib.sessions.backends.db import SessionStore
 from .functions import *
-
+from django.core.mail import send_mail
 app_name = 'nutridelta'
 
 
@@ -20,6 +20,12 @@ app_name = 'nutridelta'
 
 
 def index(request):
+    send_mail(
+        'Subject here',
+        'Here is the message.',
+        'from@example.com',
+        ['benjamin.delpech66@gmail.com'],
+        fail_silently=False,
+    )
     user_id = giveMeUserId(request)
-
     return render(request, 'index.html', locals())

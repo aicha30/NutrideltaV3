@@ -1,0 +1,60 @@
+{% load static %}
+
+
+<div class="container" style="min-height:300px;">
+<div id="cadreQuestionsObjectives" style="margin-top:4vh;margin-bottom:2vh;">
+{{ userObjectifs.0.objectif.name }}
+</div>
+
+<div  style="display:block;margin-bottom:0em;">
+{% for elem in user_objectives_questions %}
+
+<div class="cadre_question" style="width:100%;  padding:0.5em;margin-top:1.5em;background-color: white;">
+<div class="title-question-nutridelta" style="width:100%;text-align:center;">{{elem.name}}</div>
+	<div style="margin:auto;">
+		<div class="titreQuestion1" style="display:flex;margin:auto;margin-bottom:1em">
+
+		</div>
+		<div class="magic_flos_responsive" style="display:flex;margin:auto;width:100%;text-align:center;">
+			<div  class="magic_flos_responsive" style="margin:auto;display:flex;text-align:center;">
+
+
+				<div class="buttonChoice buttonChoice_wideSize buttonChoice_greenBorder question{{elem.id}}"  value="-3"  onclick="remplissage({{elem.id}},this,-3);">
+				</div>
+				<div class="buttonChoice buttonChoice_mediumSize buttonChoice_greenBorder question{{elem.id}}"  value="-2" onclick="remplissage({{elem.id}},this,-2);">
+				</div>
+
+				<div class="buttonChoice buttonChoice_littleSize buttonChoice_greenBorder question{{elem.id}}" value="-1" onclick="remplissage({{elem.id}},this,-1);">
+				</div>
+				<div class="buttonChoice buttonChoice_neutralSize buttonChoice_grayBorder question{{elem.id}}" value="0"  onclick="remplissage({{elem.id}},this,0);">
+				</div>
+				<div class="buttonChoice buttonChoice_littleSize buttonChoice_redBorder question{{elem.id}}" value="1"  onclick="remplissage({{elem.id}},this,+1);">
+				</div>
+				<div class="buttonChoice buttonChoice_mediumSize buttonChoice_redBorder question{{elem.id}}" value="2"  onclick="remplissage({{elem.id}},this,+2);">
+				</div>
+				<div class="buttonChoice buttonChoice_wideSize buttonChoice_redBorder question{{elem.id}}" value="3"  onclick="remplissage({{elem.id}}, this,+3);">
+				</div>
+
+
+
+			</div>
+		</div>
+	</div>
+  </div>
+
+
+
+{%endfor%}
+
+</div>
+</div>
+
+
+
+
+<script>
+
+$("#suivantQuestionnaire").addClass("forbiddenButton");
+giveMeQuestionsAnswered();
+
+</script>

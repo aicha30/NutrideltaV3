@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-{% load static %}
+  {% load static %}
 
 
 
@@ -8,40 +8,42 @@
 
 
 
-<div class="container-acceuil-nutridelta" style="display:flex;
+  <div class="container-acceuil-nutridelta" style="display:flex;
 ">
-  {% for elem in testlist %}
-  {{elem}}
-  {% endfor %}
-  <div class="left_side_index">
+    {% for elem in testlist %}
+      {{ elem }}
+    {% endfor %}
+    <div class="left_side_index">
 
-    <div style="padding-bottom:1em;"><b>80%</b> de la population est en <b>déficience ou carrence</b> d'un ou plusieurs
-      micro-nutriments. Grace au test Nutridelta detectez en moins de <b>5 minutes</b> vos défiences ou carrences en
-      vitamine, minéraux et oligo-élèments.</div>
+      <div style="padding-bottom:1em;"><b>80%</b> de la population est en <b>déficience ou carrence</b> d'un ou
+        plusieurs
+        micro-nutriments. Grace au test Nutridelta detectez en moins de <b>5 minutes</b> vos défiences ou carrences en
+        vitamine, minéraux et oligo-élèments.
+      </div>
 
-    <div class="" style="display:flex;">
-      <div class="button1" style="margin:auto;width:100%;" onclick="location.href='/questionnaire/'">DEMARRER
-        LE TEST NUTRIDELTA</div>
+      <div class="" style="display:flex;">
+        <div class="button1" style="margin:auto;width:100%;" onclick="location.href='/questionnaire/'">DEMARRER
+          LE TEST NUTRIDELTA
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:0.5em">Gratuit, et sans inscription.</div>
+
+      <div class="" style="padding-top:1em;">
+        <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-bienetre.png' %}"
+                         style="width: 15%;"/></a>
+        <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-sport.png' %}" style="width: 15%; "/></a>
+        <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-examen.png' %}" style="width: 15%;"/></a>
+        <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-grossesse.png' %}"
+                         style="width: 15%;"/></a>
+        <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-regime.png' %}" style="width: 15%;"/></a>
+        <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-sante.png' %}" style="width: 15%;"/></a>
+      </div>
     </div>
 
-    <div style="text-align:center;margin-top:0.5em">Gratuit, et sans inscription.</div>
 
-    <div class="" style="padding-top:1em;">
-      <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-bienetre.png' %}" style="width: 15%;" /></a>
-      <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-sport.png' %}" style="width: 15%; " /></a>
-      <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-examen.png' %}" style="width: 15%;" /></a>
-      <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-grossesse.png' %}" style="width: 15%;" /></a>
-      <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-regime.png' %}" style="width: 15%;" /></a>
-      <a href="#"><img class="images" src="{% static 'themeNutridelta/form/picto-sante.png' %}" style="width: 15%;" /></a>
-    </div>
+    <div class="logo"><img style="width:100%;  " src="{% static 'themeNutridelta/logo_transparent.png' %}"></div>
+
   </div>
-
-
-
-
-
-  <div class="logo"><img style="width:100%;  " src="{% static 'themeNutridelta/logo_transparent.png' %}"></div>
-
-</div>
 
 {% endblock %}

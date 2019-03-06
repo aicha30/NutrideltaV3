@@ -57,3 +57,15 @@ class ReponsesObjectifQuestionAdmin(ImportExportModelAdmin):
 @admin.register(ObjectifChoice)
 class AdminObjectifChoice(ImportExportModelAdmin):
     pass
+
+
+@admin.register(MicroNutriment)
+class AdminMicroNutriment(ImportExportModelAdmin):
+    pass
+
+@admin.register(LinkObjectifMicro)
+class AdminLinkObjectifMicro(ImportExportModelAdmin):
+    pass
+
+
+

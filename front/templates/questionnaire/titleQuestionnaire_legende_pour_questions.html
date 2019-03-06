@@ -1,0 +1,43 @@
+<div class="container-title-questionnaire">
+  <div style="margin-right:auto;display:flex;">
+    {% if prev_parameter %}
+      <a style="margin:auto;" href="{% url prev_url prev_parameter %}">
+        <div class="prev"></div>
+      </a>
+    {% else %}
+      <a style="margin:auto;" href="{% url prev_url %}">
+        <div class="prev"></div>
+      </a>
+    {% endif %}
+  </div>
+  <div class="title-questionnaire magic_flos_responsive">
+    <div >{{ title }}&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+
+   <div class="magic_flos_responsive">
+   <div class="magic_flos_responsive" style="margin-right:1.25vh;">
+      <div class="buttonChoice buttonChoice_neutralSize buttonChoice_greenBorder" style="background-color:#45AA32;">
+      </div>
+     <div style="margin:auto;font-size:16px;">Oui</div>
+     </div>
+<div class="magic_flos_responsive">
+     <div class="buttonChoice buttonChoice_neutralSize buttonChoice_redBorder" style="background-color:#E64632;">
+      </div>
+     <div style="margin:auto;font-size:16px;;">Non</div>
+  </div>
+</div>
+
+
+  </div>
+  <div style="margin-left:auto;display:flex;">
+    {% if next_parameter %}
+      <a style="margin:auto;" href="{% url next_url next_parameter %}">
+        <div class="next"></div>
+      </a>
+    {% else %}
+      <a  style="margin:auto;" href="{% url next_url %}">
+        <div class="next"></div>
+      </a>
+    {% endif %}
+  </div>
+</div>

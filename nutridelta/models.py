@@ -3,13 +3,11 @@ import datetime
 from django.db import models
 from django.utils import timezone
 import datetime
-from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 
-
-User = get_user_model()
 
 class Profile(models.Model):
-    user=models.OneToOneField(User, on_delete=models.CASCADE)
+    user=models.IntegerField()
     identifiant=models.IntegerField()
 
 
@@ -134,6 +132,7 @@ class MicroNutriment(models.Model):
 
 class Objectif(models.Model):
     name = models.CharField(max_length=100)
+    image_name = models.CharField(max_length=100, default="")
     def __str__(self):
         return self.name
 
@@ -145,12 +144,14 @@ class ObjectifQuestion(models.Model):
     name = models.CharField(max_length=100)
     objectif = models.ForeignKey(Objectif, on_delete=models.CASCADE)
     def __str__(self):
-        return self.name
+        return '%s %s %s' % (self.id, self.name, self.objectif)
 
 
 class LinkObjectifMicro(models.Model):
     objectif = models.ForeignKey(Objectif, on_delete=models.CASCADE)
     microNutriment = models.ForeignKey(MicroNutriment, on_delete=models.CASCADE)
+    def __str__(self):
+        return '%s %s' % (self.objectif, self.microNutriment)
 
 
 class MicroQuestion(models.Model):
@@ -226,8 +227,8 @@ class ReponsesMicroQuestion(models.Model):
 
 class ReponsesObjectifQuestion(models.Model):
     user_id = models.IntegerField()
-    question=models.ForeignKey(ObjectifQuestion, on_delete=models.CASCADE)
-    value = models.FloatField()
+    question = models.ForeignKey(ObjectifQuestion, on_delete=models.CASCADE)
+    value = models.IntegerField()
 
     date = models.DateField(auto_now=False, auto_now_add=True)
     last_modif = models.DateField(auto_now=True, auto_now_add=False)

@@ -17,19 +17,6 @@
       <div class="choixAllaitante card-2" id="allaitante_{{ rep_profil_user.allaitante }}">Aillante</div>
     </div>
 
-{% if not rep_profil_user.sexe %}
-<script>
-
-$("#specific-div-for-women").show();
-
-</script>
-  {% else %}
-  <script>
-
-$("#specific-div-for-women").hide();
-
-</script>
-{% endif %}
 
 
     {% include 'questionnaire/customSelectBoostrap4.html' with name_select="taille"  option_value=rep_profil_user.taille  range_select=range_taille %}
@@ -41,9 +28,6 @@ $("#specific-div-for-women").hide();
     {% include 'questionnaire/customSelectForeignObject.html' with name_select="RegimeAlimentaire" id="regime" list=list_regime option_value=rep_profil_user.regime.name %}
 
 
-    <div class="container-suivant">
-      <input type="submit" class="button1"> </input>
-    </div>
   </form>
 </div>
 
@@ -56,6 +40,23 @@ $("#specific-div-for-women").hide();
   if( $("#allaitante_True")){
     $("#allaitante_True").addClass("objectSelected");
   }
+
+
+
+{% if not rep_profil_user.sexe %}
+
+
+$("#specific-div-for-women").show();
+
+
+  {% else %}
+
+
+$("#specific-div-for-women").hide();
+
+
+{% endif %}
+
 </script>
 
 

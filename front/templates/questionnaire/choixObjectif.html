@@ -1,10 +1,11 @@
  {% load static %}
 
- <div class="magic_flos_responsive">
+<div class="container">
+ <div class="magic_flos_responsive" style="margin-top:1em;">
 
         {% for elem in listeObjectives %}
         <div class="containerChoixObjectif" >
-        <div class="choixObjectif card-1 " id="choixObjectif_{{ elem.id }}"   style="background-image:url('{% static 'img/humanBodySystem/'%}{{ elem.name }}.png');"></div>
+        <div class="choixObjectif card-1 " id="choixObjectif_{{ elem.id }}"   style="margin:auto;background-image:url('{% static 'img/humanBodySystem/'%}{{ elem.image_name }}.png');"></div>
           <div class="descriptionChoixObjectif"><B>{{elem.name}}</B></div>
         </div>
 
@@ -45,14 +46,11 @@
 
 
 
- <div class="container-suivant">
- <button class="button1" onclick="window.location.href='choixProfil'">Suivant</button>
-</div>
 
 
 
 </div>
 
-
+</div>
 
 

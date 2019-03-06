@@ -78,6 +78,17 @@ footer .linksite a:hover{
 
     
 }
+
+.social-icon{
+  width:40px;height:40px;
+  background-size:cover;
+  margin:0 0.4em;
+}
+@media screen and (max-width:767px){
+  .social-icon{
+  width:24px;height:24px;
+}
+}
 /* change the brand and text color */
 .navbar-custom .navbar-brand,
 .navbar-custom .navbar-text {

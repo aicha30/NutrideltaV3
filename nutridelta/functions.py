@@ -23,14 +23,12 @@ def giveMeUserId(request):
 
     # Si l'utilisateur est authentifié
     if user.is_authenticated:
-        my_profil = Profile.objects.get(user=request.user.id)
-
-        # Si il y a un profil, l'user id correspond à lidentifiant du profil
-        if my_profil:
+        try:
+            my_profil = Profile.objects.get(user=request.user.id)
             user_id = my_profil.identifiant
 
         # Sinon on cree un profil
-        else:
+        except:
             if request.session.get('session_id'):
                 new_identifiant = request.session.get('session_id')
                 Profile(user=request.user.id, identifiant = request.session.get('session_id'))
