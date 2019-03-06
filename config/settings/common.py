@@ -44,7 +44,6 @@ DJANGO_APPS = (
     'questionnaire',
     'import_export',
     'rest_framework',
-    'crispy_forms',
 
 )
 

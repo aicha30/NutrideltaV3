@@ -1,5 +1,5 @@
 {% load static %}
-{% load crispy_forms_tags %}
+
 
 
 <div class="container">
@@ -12,7 +12,7 @@
     </div>
 
 
-    <div class="form-group" id="specific-div-for-women"  style="width:100%;display:flex;">
+    <div class="form-group" id="specific-div-for-women" style="width:100%;display:flex;">
       <div class="choixEnceinte card-2" id="enceinte_{{ rep_profil_user.enceinte }}">Enceinte</div>
       <div class="choixAllaitante card-2" id="allaitante_{{ rep_profil_user.allaitante }}">Aillante</div>
     </div>
@@ -34,31 +34,27 @@
 <script>
   document.getElementById("{{ rep_profil_user.sexe }}").classList.add("objectSelected");
 
-  if( $("#enceinte_True")){
+  if ($("#enceinte_True")) {
     $("#enceinte_True").addClass("objectSelected");
   }
-  if( $("#allaitante_True")){
+  if ($("#allaitante_True")) {
     $("#allaitante_True").addClass("objectSelected");
   }
 
 
 
-{% if not rep_profil_user.sexe %}
+  {% if not rep_profil_user.sexe %}
 
 
-$("#specific-div-for-women").show();
+  $("#specific-div-for-women").show();
 
 
   {% else %}
 
 
-$("#specific-div-for-women").hide();
+  $("#specific-div-for-women").hide();
 
 
-{% endif %}
+  {% endif %}
 
 </script>
-
-
-
-
