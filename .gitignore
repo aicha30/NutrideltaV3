@@ -57,12 +57,15 @@ node_modules/
 
 # virtual environments
 .env
+.venv
+/venv
 
 # User-uploaded media
 front/media/
 
 # collected static file directory
 staticfiles/
+
 
 # SQL dumps
 *.sql
@@ -73,3 +76,6 @@ staticfiles/
 
 # core dumps
 core
+
+#database
+mydatabase
