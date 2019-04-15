@@ -29,3 +29,15 @@ def index(request):
     )
     user_id = giveMeUserId(request)
     return render(request, 'index.html', locals())
+
+def aboutUs(request):
+	return render(request, 'aboutUs.html', locals())
+
+def about(request):
+    return render(request, 'about.html', locals())
+
+def contact(request):
+	return render(request, 'contact.html', locals())
+
+def mentions_legales(request):
+	return render(request, 'mentions_legales.html', locals())

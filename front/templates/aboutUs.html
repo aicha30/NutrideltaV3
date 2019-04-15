@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% load static %}
+
+  <div class="container">
+    <div class="jumbotron text-center">
+    <h1>Qui sommes nous?</h1>
+    </div>
+ 
+
+      <!-- presentation fondateurs -->
+       <div class="font-title-md about-intro" style="margin-top:25px;">Version 1 de Nutridelta</div>
+      <div class="mdl-grid about-grid-presentation-fondateur pull-center">
+
+
+        <div class="aboutus-container">
+          <img src="{% static 'images/aboutus/AlexisAmiand.jpg' %}" class="aboutus-portrait border-shadow" alt="Alexis Amiand"></img>
+          <div class="about-fondateur-name">Alexis Amiand
+            <br>
+            Chef de projet <a href="https://www.linkedin.com/in/alexisamiand/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+            Le couteau suisse, le vrai.
+        </div>
+
+        <div class="aboutus-container">
+          <img src="{% static 'images/aboutus/SeverinLhommelet.jpg' %}" class="aboutus-portrait border-shadow" alt="SeverinLhommelet THE GAME"></img>
+          <div class="about-fondateur-name">Severin L'Hommelet
+            <br>
+            Développeur full-stack <a href="https://www.linkedin.com/in/s%C3%A9verin-l-hommelet/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+            Motivé par une bonne bouteille de rhum, il peut faire des miracles.
+        </div>
+
+        <div class="aboutus-container">
+           <img src="{% static 'images/aboutus/Wassim.jpg' %}" class="aboutus-portrait border-shadow" alt="Wassim Kerkri"></img>
+        <div class="about-fondateur-name">Wassim Kerkri
+          <br>
+          Responsable qualité <a href="https://www.linkedin.com/in/wassim-kerkri/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+          Un homme de qualité pour une assurance qualité de qualité.
+        </div>
+
+        <div class="aboutus-container">
+           <img src="{% static 'images/aboutus/BabujhiSaspaanithy.jpg' %}" class="aboutus-portrait border-shadow" alt="Babujhi Saspaanithy"></img>
+        <div class="about-fondateur-name"> Babujhi Saspaanithy
+          <br>
+          Le scientifique <a href="https://www.linkedin.com/in/babujhisaspaanithy/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+          Présent au début du projet, il a contribué à poser les bases scientifiques du projet.
+        </div>
+
+
+
+
+<div class="font-title-md about-intro" style="margin-top:25px;">Version 2 de Nutridelta</div>
+      <div class="mdl-grid about-grid-presentation-fondateur pull-center">
+
+
+        <div class="aboutus-container">
+          <img src="{% static 'images/aboutus/b_delpech.png' %}" class="aboutus-portrait border-shadow" alt="Benjamin Delpech"></img>
+          <div class="about-fondateur-name">Benjamin DELPECH
+            <br>
+            Développeur full-stack <a href="https://www.linkedin.com/in/benjamin-delpech-10b9ba153/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></div>
+            Le profil technique.
+        </div>
+
+        <div class="aboutus-container">
+          <img src="{% static 'images/aboutus/c_risso.png' %}" class="aboutus-portrait border-shadow" alt="Clément Risso"></img>
+          <div class="about-fondateur-name">Clément Risso
+            <br>
+            Développeur full-stack <a href="https://www.linkedin.com/in/cl%C3%A9ment-risso-0973a66a/"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          </div>
+            L'oganisation.
+        </div>
+
+  </div>
+
+
+  <!-- texte d'introduction -->
+      <div class="about-intro" style="margin-top:100px;">
+          <div class="font-title-md">
+           Nutridelta, c’est avant tout une équipe.
+           <br><br>
+           Son histoire...
+           <br><br><br>
+          </div>
+
+          <div class="font-text-Book" id="aboutusintro">
+            Préserver sa santé, c’est aussi avoir une bonne hygiène de vie, et cela passe avant tout par la qualité de son alimentation. Mais dans nos sociétés modernes, où les repas sont de moins en moins riches et où les mauvaises habitudes s’installent, il est de plus en plus difficile de maintenir un apport suffisant en vitamines. Le constat est même alarmant.<br><br>
+            La prise de compléments alimentaires a longtemps été proposée comme étant une solution efficace. Cela est vrai, à condition que l’individu soit remis au centre de l’affaire avec une prescription sur-mesure. Ce n’est qu’en calculant précisément les carences de chacun qu’il est possible de relever un tel défi.<br><br>
+            Mais comment permettre à chacun de déterminer ses carences sans passer par un bilan sanguin ? Il fallait créer un outil capable de cela. Un tel outil, ce fut au départ une simple idée, mais c’est aujourd’hui Nutridelta. Avant d’en arriver là, c’est la coopération entre l’entreprise Benefik et une équipe de jeunes étudiants qui marque le début de cette histoire.<br><br>
+            Issus du Master Génie Physiologique, Biotechnologique et Informatique de l’université de Poitiers, une double formation en sciences de la santé et en informatique, ces étudiants ont conçu l’application Nutridelta et sa méthode de calcul unique et ingénieuse.<br><br>
+            Ils ont mobilisé leurs connaissances scientifiques pour extraire des données fiables, qui à l’origine étaient éparpillées dans des livres et des publications scientifiques, pour mettre en place leur méthode de calcul précise et juste. Leurs connaissances techniques et leur sens de la gestion leur ont permis de créer l’application web Nutridelta.
+          </div>
+          <br>
+      </div>
+
+
+{% endblock %}

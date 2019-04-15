@@ -168,6 +168,28 @@ min-height:65vh;
   border-radius:5px;
 }
 
+.containerContact{
+
+  box-shadow:var(--normal_shadow);
+  width:99%;max-width:800px;
+  margin:auto;margin-top:1em;
+
+  background-color:white;
+  padding:1.25em 1.6em;
+  border-radius:5px;
+}
+
+.containerMentionsLegales{
+
+  box-shadow:var(--normal_shadow);
+  width:99%;max-width:800px;
+  margin:auto;margin-top:1em;
+
+  background-color:white;
+  padding:1.25em 1.6em;
+  border-radius:5px;
+}
+
 @media screen and (max-width:800px){
   .content{
 
@@ -291,6 +313,11 @@ margin:auto;
 .button1:active {
   transform: translate(2px, 2px);
   box-shadow: none;
+}
+
+.button,input{
+  overflow: visible;
+  width: 100%;
 }
 
 /*BUTTONS*/
@@ -632,4 +659,218 @@ text-align:center;
 .forbiddenButton{
   background-color:transparent;
   color:#AAAAAA;
+}
+
+/**********************************************/
+/*     Page aboutUs                           */
+/**********************************************/
+
+.aboutus-portrait{
+  border-radius: 50%;
+  width: 50%;
+  margin:  20px;
+  background-color: red;
+}
+
+.aboutus-container{
+  text-align: center;
+}
+
+#aboutusintro{
+  font-size:0.8em;
+  text-align: justify;
+}
+
+.about-grid-presentation-fondateur{
+  padding: 2%;
+}
+
+
+/**********************************************/
+/*     Page about                             */
+/**********************************************/
+
+.center_menu{position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+
+.TitrePage{
+color:white; font-size:30px; font-family: 'kelson_rg', sans-serif;
+   }
+.font_responsive1{font-size:14px;}
+}
+.title_resp1{font-size:30px;}
+@media screen and (max-width:1000px){
+.title_resp1{font-size:24px;}
+  .TitrePage{font-size:20px;}
+  .font_responsive1{font-size:13px;}
+}
+@media screen and (max-width:900px){
+  .title_resp1{font-size:22px;}
+   .TitrePage{font-size:16px;}
+  .font_responsive1{font-size:12px;}
+}
+@media screen and (max-width:800px){
+  .title_resp1{font-size:20px;}
+  .TitrePage{font-size:13px;}
+  .lien2{font-size:11px;border:1px solid white;}
+  .font_responsive1{font-size:12px;}
+  .left_menu{left:5px;}
+  .right_menu{right:5px;}
+}
+@media screen and (max-width:700px){
+  .title_resp1{font-size:18px;}
+  .lien2{font-size:11px;}
+  .TitrePage{font-size:13px;}
+  .font_responsive1{font-size:12px;}
+}
+
+.about-grid-presentation-fondateur{
+  padding: 2%;
+
+.pull-center{
+  display: block;
+  margin : auto;
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.about-align-left{
+  text-align: left;
+  margin: calc(10px+4%);
+}
+
+.about-align-right{
+  text-align: right;
+  margin: calc(10px+4%);
+}
+
+.about-fondateur-name{
+ font-size: 1.4em;
+ font-family: 'kelson_rg', sans-serif;
+ color: #e6432e;
+
+}
+@media screen and (max-width:800px){
+  .about-fondateur-name{font-size:1.1em;
+}
+
+
+.about-grid-cestaussi{
+  width: 100%;
+  padding: 10px;
+  display: block;
+  font-size: 1.8em;
+  line-height: 1em;
+  color: white;
+  background-color : #e6432e;
+  text-align: center;
+  align-content: center;
+  padding: 2% 10% 2% 10%;
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+
+  /* TODO REGARDER LA DOC*/
+}
+
+.about-grid-team{
+  margin: 5%;
+  text-align: center;
+  margin-bottom: -5%;
+}
+
+
+.about-grid-logo-paternariat{
+  margin: 5%;
+  text-align: center;
+  z-index: 1;
+
+}
+
+.about-grid-logo-paternariat img{
+  margin: auto;
+  max-width: 60%;
+  height: auto;
+}
+.about-grid-team img{
+  margin: auto;
+  max-width: 70%;
+  height: auto;
+}
+
+.about-btn-more{
+  text-transform: bold;
+  z-index: 1000;
+  margin-top: 5%;
+  color: white;
+}
+
+.about-grid-futuralia{
+  font-size: 1.4em;
+  line-height: 1em;
+  text-align: center;
+  margin: 6% auto ;
+
+}
+
+.about-grid-futuralia img{
+  margin: auto;
+  padding-top: 2%;
+
+  max-width: 50%;
+  height: auto;
+}
+
+.mdl-layout__content{
+  min-height: 200px;
+}
+
+.titlesection{ /*met en forme le bandeau de titre*/
+  position:relative;
+  width: 100%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  min-height: 3em;
+  
+  background-color: #e6432e;
+  
+  
+  white-space: nowrap;
+  min-height:50px;
+
+  /*opacity: 0.4;*/ /*je le desactive car sinon on c'est pas vraimment qu'elle couleur on fait*/
+  box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0, 0.3);
+}
+
+.bg-color-pomegranate{
+  background-color: #c0392b;
+}
+
+.mdl-card-result{
+  padding: 15px;
+}
+
+.contact-card-title{
+  font-size: 1.4em;
+  color: #e6432e;
+  margin-top: 7%;
+}
+
+.contact-div-message .mdl-textfield__input{
+  border-bottom: 1px solid #acb5bc;
+}
+
+.contact-div-message .mdl-textfield__input:focus{
+  border-bottom: 1px solid white;
+}
+
+.contact-right-sidebar{
+  background-image: repeating-linear-gradient(145deg, rgba(230,67,46,0.4), rgba(230,67,46,0.4), 1px,rgba(255,255,255,0.4)  2px, rgba(255,255,255,0.4)7px);
+  padding:20px 0 0 20px;
 }

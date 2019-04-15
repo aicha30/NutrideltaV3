@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block content %}
+  {% load static %}
+
+
+  <!-- titre de la section (avec un bandeau) -->
+    <div class= "containerContact">
+  	<div class="container">
+    	<div class="jumbotron text-center">
+        <h1>CONTACT</h1> 
+   		</div>
+
+
+<!--<div class="page-top-description mdl-typography--text-center">-->
+    <div> <span style="color:#e6432e;font-size:2.5em;font-weight: bold;text-align: center;">Bienvenue</span><br/> </div>
+
+    <div class="font-text-center">Nous sommes là pour répondre à toutes vos questions. N'hésitez pas à nous laisser un message, nous vous recontacterons très vite. A très bientôt.
+    </div>
+
+    <div class="font-text-center">L'équipe nutridelta</div>
+
+
+    <div class="form-group">
+      
+
+      <div class="font-text-Book" style="font-size:1.3em;font-weight: bold;text-align: center;">Formulaire</div>
+
+      <div>
+        <form class="contact-div-message" method="POST" action="">
+           <label class="mdl-textfield__label mdl-color-text--grey" for="firstname-input" style="font-weight: bold;">Prénom: </label>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="firstname-input" name="firstname" required>
+
+          </div>
+          <label class="mdl-textfield__label mdl-color-text--grey" for="lastname-input" style="font-weight: bold;">Nom: </label>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="lastname-input" name="lastname" required>
+           
+          </div>
+          <label class="mdl-textfield__label mdl-color-text--grey" for="email-input" style="font-weight: bold;">Email</label>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="email-input" name="email" required>
+            
+          </div>
+          <label class="mdl-textfield__label mdl-color-text--grey" for="contact-message"style="font-weight: bold;">Mon message...</label>
+          <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" rows= "8" id="contact-message" name="message" required>
+            
+          </div>
+         
+          <div class="contact-form-button">
+            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored font-text-Light" id="send-message" name="submit_message" style="width:30%">
+              Envoyer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="contact-right-sidebar">
+      <span class="contact-title-sidebar font-text-Book" style="font-weight: bold;">Email</span><br/>
+      <span class="font-text">contact@nutridelta.fr</span><br/><br/>
+      <span class="contact-title-sidebar font-text-Book" style="font-weight: bold;">Téléphone</span><br/>
+      <span class="font-text">05 46 48 34 30</span><br/><br/>
+      <span class="contact-title-sidebar font-text-Book" style="font-weight: bold;">Adresse</span><br/>
+      <span class="font-text">79 avenue de la république 17210 MONTLIEU LA GARDE, France</span><br/>
+    </div>
+  </div>
+  </div>
+</div>
+
+{% endblock %}

@@ -1,23 +1,120 @@
-{% extends "base.html" %}
-{% load staticfiles i18n %}
-
-{% get_current_language as LANGUAGE_CODE %}
-{% get_available_languages as LANGUAGES %}
-
-{% block title %}{{ site.name }}{% endblock %}
-
+{% extends 'base.html' %}
 {% block content %}
+  {% load static %}
+
+
 <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>{% trans 'Imprint' %}</h1>
-      <p>
-        {% if site.ownership.company_name %}{{ site.ownership.company_name }}<br />{% endif %}
-        {{ site.ownership.first_name }} {{ site.ownership.last_name }}<br />
-        {{ site.ownership.postal_code }} {{ site.ownership.place }}<br />
-        {{ site.ownership.country_name }}<br />
-      </p>
+    <div class="jumbotron text-center">
+    <h1>Qui sommes nous?</h1>
     </div>
+
+      <!-- texte d'introduction -->
+        <div >
+
+          <div class="font-title-md" style="margin: 2%;">
+            Nutridelta est née de la passion et de l’envie d’une équipe
+            d’entrepreneurs de créer un outil  innovant,unique
+            avec une technologie et un savoir-faire 100 % français.
+          </div>
+
+          <div class="font-text-Book">
+            L’innovation Nutridelta, s’appuie sur la French Tech, association regroupant des start-up Françaises, en partenariat avec l’Université de Poitiers
+            Nous sommes au service de la santé et du bien-être au quotidien.
+          </div>
+
+
+        </div>
+     
+      <!-- presentation fondteurs -->
+      <div class="about-grid-presentation-fondateur pull-center">
+
+        <div class="about-align-left">
+          <div class="about-fondateur-name">Vincent VITTE : Coordinateur de développement </div>
+
+          Vincent a un cursus mathématique. Il a eu l’idée de développer l’algorithme de NUTRIDELTA pour déterminer les besoins uniques de chacun. Il s’est appuyé sur les compétences de la faculté de Génie Physiologique et informatique et la Faculté des Sciences du Sport de Poitiers. Il a précédemment cofondé une entreprise de compléments alimentaires spécialisée dans le suivi et l’adaptation du complément alimentaire aux consommateurs.
+
+        </div>
+
+        <div class="about-align-left">
+          <div class="about-fondateur-name">Sophie ALONSO : Directrice Administrative et Financière</div>
+
+          Sophie opère à ce poste depuis plus de 20 ans dans plusieurs entreprises et partage son savoir faire dans la croissance exponentielle d’une start-up. Elle a précédemment cofondée une entreprise de compléments alimentaires qui connait une croissance à 2 chiffres.
+        </div>
+
+        <div class="about-align-left" style="display:none;">
+          <div class="about-fondateur-name">Marie DUSSSIEUX : Recherche et développement produits</div>
+
+          En coordination avec  son équipe scientifique, Marie s’occupe de la formulation des produits finis ainsi que des relations avec les laboratoires fabricants. Depuis plusieurs années, elle a participé à la création de compléments alimentaires innovants qui font référence au niveau international.
+        </div>
+
+
+        <div class="about-align-right" style="display:none;">
+          <div class="about-fondateur-name"> Eric DUSSIEUX : Développement  du réseau</div>
+
+          Eric est spécialisé dans la commercialisation de produits et service innovants. Ainsi il a développé des méthodes et  outils en autre informatique qui permettent  de faciliter la diffusion des compléments alimentaires. Il a pu constater que l’offre en matière d’accompagnement et conseils auprès des acteurs indépendants ou de réseaux spécialisés était pratiquement inexistante. Il a décidé de rejoindre l’équipe NUTRIDELTA afin de nous faire profiter de son savoir faire pour un développement pérenne.
+        </div>
+      </div>
+
+      <!-- bandeau " cest aussi" -->
+      <div class="about-grid-cestaussi pull-center" >
+
+        <div class="font-text-Book">
+         Nutridelta c'est aussi :
+       </div>
+       <div class="font-title-lt">
+        Tatiana, Nathalie, Sabine, Julien, Sophie...<br>
+        Chacun investit dans sa mission : juridique, logistique, informatique, accueil...<br>
+        Au plus proche du projet et des utlisateurs.
+      </div>
+
+
+   
   </div>
+
+    <!-- photo useless -->
+    <div class="pull-center">
+       <div class="about-grid-team">
+      <img src="{% static 'images/team.jpg' %}">
+    </div>
+
+    </div>
+       <!-- photo partenaria -->
+    <div class="pull-center">
+       <div class="about-grid-logo-paternariat">
+      <img src="{% static 'images/partenariat.PNG' %}">
+    </div>
+
+    </div>
+
+    <!-- bandeau paternanti" -->
+    <div class="about-grid-partenariat pull-center ">
+
+      <div class="font-text-Light">
+        L'application Nutridelta est le résultat de la coopération d'une équipe de jeunes ingénieurs issus du Master Génie Physiologique, Biologique et Informatique de l'Université de Poitiers et des quatre fondateurs du projet.<br>
+        Le savoir-faire de chacun est dédié à la conception, le développement et la maintenance de cette application unique et personnalisée au service de l'utlisateur.
+      </div>
+        <button class="mdl-js-button mdl-button--raised mdl-js-ripple-effect noBg-button font-text-Light about-btn-more" onclick="document.location.href='aboutus.php'">
+          Découvrez l'équipe au complet
+        </button>
+   
+ </div>
+
+
+   <!-- bandeau futuralia -->
+   <div class="about-grid-futuralia pull-center">
+     <div class="">
+      <div class="font-text-Light">
+      NUTRIDELTA, a été élue <b>Entreprise la plus innovante</b><br>
+       parmi les 15 finalistes sur les 600 entreprises<br>
+       venues de 25 pays au salon <b>FUTURALLIA 2016.</b>
+     </div>
+
+     <div class="about-futurallia-logo">
+      <img src="{% static 'images/logo_futurallia.png' %}">
+    </div>
+     </div>
 </div>
+  </div>
+
+
 {% endblock %}

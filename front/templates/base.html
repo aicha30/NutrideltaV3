@@ -140,9 +140,10 @@
                    <a href=" {% url 'nutridelta:index' %}">Acceuil</a>
                 <a href="{% url 'questionnaire:choixObjectif' %}">Faire le test</a>
                 <a href="#">Mon profil</a>
-                <a href="#"> A propos</a>
-                <a href="#">Contact</a>
-                <a href="#">Mention légales et CGU</a>
+                <a href="{% url 'nutridelta:aboutUs' %}"> A propos de nous</a>
+                <a href="{% url 'nutridelta:about' %}"> A propos de Nutridelta</a>
+                <a href="{% url 'nutridelta:contact' %}">Contact</a>
+                <a href="{% url 'nutridelta:mentions_legales' %}">Mention légales et CGU</a>
               </div>
             </div>
 
